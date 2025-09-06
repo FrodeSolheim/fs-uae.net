@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Nvidia &#8211; FS-UAE Amiga Emulator</title>
+	<atom:link href="https://fs-uae.net/tag/nvidia/feed/" rel="self" type="application/rss+xml" />
+	<link>https://fs-uae.net</link>
+	<description></description>
+	<lastBuildDate>Fri, 26 Apr 2019 11:16:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.2</generator>
+	<item>
+		<title>FS-UAE on Ubuntu 13.04</title>
+		<link>https://fs-uae.net/2013/07/17/fs-uae-on-ubuntu-13-04/</link>
+		
+		<dc:creator><![CDATA[FrodeSolheim]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2013 14:32:44 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Nvidia]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+		<guid isPermaLink="false">http://fs-uae.net/?p=2591</guid>
+
+					<description><![CDATA[I upgraded to Ubuntu 13.04 a while ago, and were curious to see how well FS-UAE runs on the current version of Unity (the default desktop in Ubuntu). Unfortunately, it does not run that well by default (same as 12.10). &#8230; <a href="https://fs-uae.net/2013/07/17/fs-uae-on-ubuntu-13-04/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I upgraded to Ubuntu 13.04 a while ago, and were curious to see how well FS-UAE runs on the current version of Unity (the default desktop in Ubuntu). Unfortunately, it does not run that well by default (same as 12.10).</p>
+<p>The problem is really only in windowed mode. FS-UAE syncs to vblank by default, and in combination with the Unity compositing / indirect rendering, the performance is bad, with laggy / choppy rendering (1). When using video_sync = off, the performance is &#8220;normal&#8221;. On the bright side, full-screen performance seems to be improved when syncing to vblank. </p>
+<p>Let&#8217;s hope Ubuntu / Canonical manage to fix the OpenGL support with Mir (though I would rather see them joining forces with Wayland). For the time being, I&#8217;m using the MATE desktop on Ubuntu. Without any compositing / desktop effects, OpenGL performance is nice, and FS-UAE frame rates are as smooth as can be (2) <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>(1) With official closed-source Nvidia drivers.<br />
+(2) With monitor running @50Hz of course.</p>
+<p>FS-UAE for Ubuntu 13.04 is <a href="http://fs-uae.net/download">available from a PPA</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
