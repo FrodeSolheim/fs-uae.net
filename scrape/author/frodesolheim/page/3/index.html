@@ -187,83 +187,37 @@ body.custom-background { background-color: #ffffff; }
 				
 				
 					
-	<article id="post-3581" class="post-3581 post type-post status-publish format-standard hentry category-uncategorized">
+	<article id="post-3446" class="post-3446 post type-post status-publish format-standard hentry category-development-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2016/04/02/server-upgrade-https-available/" rel="bookmark">Server Upgrade, HTTPS Available</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/31/fs-uae-2-5-40dev-released/" rel="bookmark">FS-UAE 2.5.40dev Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2016/04/02/server-upgrade-https-available/" title="22:59" rel="bookmark"><time class="entry-date" datetime="2016-04-02T22:59:13+02:00">2016-04-02</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/31/fs-uae-2-5-40dev-released/" title="20:09" rel="bookmark"><time class="entry-date" datetime="2015-08-31T20:09:39+02:00">2015-08-31</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>The operating system has been upgraded to Ubuntu 14.04 LTS, and hard drive capacity has been increased. This has caused some intermittent maintenance downtime the last few days.</p>
-<p>A new feature is support for HTTPS, so you can now download your FS-UAE updates from <a href="https://fs-uae.net/">https://fs-uae.net/</a> 🙂</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3581 -->
-
-				
-					
-	<article id="post-3578" class="post-3578 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2016/03/30/fs-uae-2-7-9dev-released/" rel="bookmark">FS-UAE 2.7.9dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2016/03/30/fs-uae-2-7-9dev-released/" title="23:47" rel="bookmark"><time class="entry-date" datetime="2016-03-30T23:47:54+02:00">2016-03-30</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.9dev:</p>
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.40dev:</p>
 <ul>
-<li>Plugin layout changed &#8211; new plugins must be downloaded.</li>
-<li>Detect screen refresh rate for correct display with multiple displays.</li>
-<li>Simplified video_sync option (is a boolean now).</li>
-<li>Low latency vsync is enabled by default.</li>
+<li>Use SetUnhandledExceptionFilter on Windows for JIT direct memory.</li>
+<li>Unified (segfault) exception handler for Windows and Linux.</li>
+<li>Fixed mman for compatibility with JIT direct memory access.</li>
+<li>Re-enable uae_comp_trust* = indirectKS options.</li>
+<li>Allow uae_rtc to be set without disabling uae_chipset_compatible.</li>
+<li>Fixed flickering caused by undefined behavior in shift operations.</li>
+<li>Added new option log_bsdsocket (boolean).</li>
 </ul>
-<p>Notes:</p>
+<p>Known and reported issues:</p>
 <ul>
-<li>You need updated plugins for this version, the old ones will not work. The plugins are now found on the download page: <a href="https://fs-uae.net/download-devel#plugins">https://fs-uae.net/download-devel#plugins</a>, and the simplified plugin downloads include support for all operating systems (32-bit and 64-bit).</li>
+<li>Amiga key sticks when opening/closing FS-UAE menu with modifier+F12 https://github.com/FrodeSolheim/fs-uae/issues/77</li>
+<li>FS-UAE freezes with black screen on Windows / nVIDIA? https://github.com/FrodeSolheim/fs-uae/issues/75</li>
+<li>Black screen when FS-UAE is started from FS-UAE Arcade? https://github.com/FrodeSolheim/fs-uae/issues/76 https://github.com/FrodeSolheim/fs-uae-arcade/issues/6</li>
 </ul>
-<p>Known issues:</p>
+<p>Changes in FS-UAE Launcher 2.5.40dev:</p>
 <ul>
-<li>Allocating 32-bit memory fails on some OS X / BSD setups. With 2.7.5dev+, 32-bit memory is avoided when JIT is not enabled, but real fix is needed for JIT. Problem (and cause) is known, just</li>
-<li>Amiga key sticks when opening/closing FS-UAE menu with modifier+F12 <a href="https://github.com/FrodeSolheim/fs-uae/issues/77">https://github.com/FrodeSolheim/fs-uae/issues/77</a></li>
-</ul>
-<p>Changes in FS-UAE Launcher 2.7.9dev:</p>
-<ul>
-<li>Warn about old plugin versions, if detected.</li>
-<li>Detect ~/.wine/users/Public/Documents/Amiga Files, if present.</li>
-<li>Some changes to the settings dialog, video pages merged from 3 to 2.</li>
-<li>Scanned files were not stored with proper relative paths on Windows.</li>
-<li>New GUI controls for monitor, fullscreen mode, video sync and monitor info.</li>
-<li>New settings control for starting FS-UAE with full keyboard emulation.</li>
-<li>Fixed issue when you have a mouse with the same device name as a joystick.</li>
-<li>More compact binary distributions, far fewer data files.</li>
-<li>OS X: New skeleton .app launchers for portable suite.</li>
-<li>Windows: Proxy executables passes on arguments.</li>
-<li>CD-based games are now downloadable from OAGD.net locker (if the user has them stored there).</li>
-<li>Recognize .ccd CD variants from the online game database.</li>
-</ul>
-<p>Notes:</p>
-<ul>
-<li>The file database in FS-UAE Launcher must be updated (full re-scan) due to a fixed bug &#8211; sorry!</li>
-</ul>
-<p>Notes for the portable packages:</p>
-<ul>
-<li>The structure of the portable versions for different operating systems have been unified somewhat, and the versions are also able to share a lot of data files. You may want to remove the old <strong>program</strong> directories when upgrading to the new portable version.</li>
-<li>If you use the portable version, you should also delete the any FS-UAE Launcher[.exe|.app] or FS-UAE Arcade[.exe|.app] executable / script in the root folder. The new ones are called Launcher[.exe|.app] and Arcade[.exe|.app], and are &#8211; for all operating systems &#8211; simple &#8220;shortcut executables&#8221; / scripts. New in this version is that all the &#8220;shortcut executables&#8221; pass any arguments to the real programs.</li>
-<li>Portable.ini is no longer a 0-byte file.</li>
-<li>OS X Note: The .app bundles in the portable version are not self-contained, so you should not drag these to the Applications folder or similar. Use the non-portable version instead for this!</li>
+<li>New option launcher_font_size.</li>
+<li>Enable screenshot bar for 1280&#215;720 resolution.</li>
+<li>Launcher WHDLoad zip (command line): use A1200 model.</li>
 </ul>
 					</div><!-- .entry-content -->
 		
@@ -275,235 +229,39 @@ body.custom-background { background-color: #ffffff; }
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3578 -->
+	</article><!-- #post-3446 -->
 
 				
 					
-	<article id="post-3549" class="post-3549 post type-post status-publish format-standard hentry category-development-releases">
+	<article id="post-3442" class="post-3442 post type-post status-publish format-standard hentry category-development-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2016/02/25/fs-uae-2-7-8dev-released/" rel="bookmark">FS-UAE 2.7.8dev Released</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/15/fs-uae-2-5-39dev-released/" rel="bookmark">FS-UAE 2.5.39dev Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2016/02/25/fs-uae-2-7-8dev-released/" title="22:59" rel="bookmark"><time class="entry-date" datetime="2016-02-25T22:59:05+01:00">2016-02-25</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/15/fs-uae-2-5-39dev-released/" title="22:18" rel="bookmark"><time class="entry-date" datetime="2015-08-15T22:18:01+02:00">2015-08-15</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.8dev:</p>
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.39dev:</p>
 <ul>
-<li>Disable use of fullscreen spaces on OS X by default. Use <code>SDL_VIDEO_MAC_FULLSCREEN_SPACES = 1</code> (advanced settings or environment) if you want to re-enable it.</li>
-<li>Fixed a crash when using (experimental and) unsupported re-recording.</li>
-</ul>
-<p>Changes in FS-UAE Launcher 2.7.8dev:</p>
-<ul>
-<li>You can add custom config on startup (<code>--config:key=value</code>). Especially useful when auto-launching games and you want to override config.</li>
-<li>You can start with custom settings (<code>--settings:key=value</code>). Note that the changed settings will be permanent / saved.</li>
-<li>Make distinction between Amiga device type and host device more explicit.</li>
-<li>Made launch dialog non-modal.</li>
-<li>Net play feature is enabled by default.</li>
-<li>Moved net play UI into a separate window.</li>
-<li>Clear search field when changing game/config list in dropdown.</li>
-<li>All .sqlite databases moved into Data/Databases.</li>
-<li>Some user interface adjustments.</li>
-<li>Quite a bit of code cleanup and some restructuring.</li>
-</ul>
-<p>Changes in FS-UAE Arcade 2.7.8dev:</p>
-<ul>
-<li>Open FS-UAE Arcade as a maximized borderless window as default for now.</li>
-<li>Idle (stop rendering) when animations are done.</li>
-<li>Do not process joystick input in the background while running FS-UAE (Fixes problem where Arcade has disappeared when quitting FS-UAE).</li>
-<li>Do not run needless render loop in the background while running FS-UAE (Also fixes FS-UAE performance issue when running via Arcade).</li>
-<li><code>Alt+Return</code> (<code>Cmd+Return</code>) can be used to toggle fullscreen, <code>Alt+Q</code> (<code>Cmd+Q</code>) to quit.</li>
-<li>Delay loading GL widget until window has been shown.</li>
-<li>Delay loading of PyOpenGL functions until first time needed.</li>
-<li>Possibly fixes black screen for some ATI users on Windows.</li>
-<li>Cleanup in the code base, removed some unused code.</li>
-<li>Updated PyOpenGL to 3.1.0.</li>
-</ul>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3549 -->
-
-				
-					
-	<article id="post-3531" class="post-3531 post type-post status-publish format-standard hentry category-uncategorized">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2016/01/17/fs-uae-2-7-7dev-released/" rel="bookmark">FS-UAE 2.7.7dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2016/01/17/fs-uae-2-7-7dev-released/" title="00:03" rel="bookmark"><time class="entry-date" datetime="2016-01-17T00:03:03+01:00">2016-01-17</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.7dev:</p>
-<ul>
-<li>Compile with hardening disabled for Fedora 23+.</li>
-<li>Automatically scan $BASE/AmigaForever/Amiga Files/Shared/rom for Kickstarts.</li>
-</ul>
-<p>Changes in FS-UAE Launcher 2.7.7dev:</p>
-<ul>
-<li>Always sort variant list in rated order from oagd.net, but prefer locally available variants.</li>
-<li>Automatically scan $BASE/AmigaForever/Amiga Files/Shared/rom for Kickstarts.</li>
-<li>Automatically add $BASE/AmigaForever/Amiga Files to file scanner.</li>
-<li>Kickstart import: Show how many ROM files were imported (or warn if none).</li>
-<li>Blacklist mouse_integration from advanced settings (use per-config instead).</li>
-<li>Added support for WHDLoad 18.2, set as default version.</li>
-</ul>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3531 -->
-
-				
-					
-	<article id="post-3525" class="post-3525 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/12/23/fs-uae-2-7-6dev-released/" rel="bookmark">FS-UAE 2.7.6dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/12/23/fs-uae-2-7-6dev-released/" title="01:05" rel="bookmark"><time class="entry-date" datetime="2015-12-23T01:05:40+01:00">2015-12-23</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.6dev:</p>
-<ul>
-<li>Fix AGA flickering bug introduced in 2.5.40dev.</li>
-<li>Do not use R12 register in x86-64 JIT due to addressing issue.</li>
-<li>Lowered default floppy drive sound volume.</li>
-<li>Warn when uae_cachesize is used without jit_compiler enabled.</li>
-<li>Theme options override options from config.</li>
-<li>Updated emulation core from WinUAE 3220.</li>
-</ul>
-<p>Changes in FS-UAE Launcher 2.7.6dev:</p>
-<ul>
-<li>Most dialogs are non-modal again.</li>
-<li>Misc user interface updates.</li>
-</ul>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3525 -->
-
-				
-					
-	<article id="post-3517" class="post-3517 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/11/23/fs-uae-2-7-5dev-released/" rel="bookmark">FS-UAE 2.7.5dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/11/23/fs-uae-2-7-5dev-released/" title="21:05" rel="bookmark"><time class="entry-date" datetime="2015-11-23T21:05:25+01:00">2015-11-23</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.5dev:</p>
-<ul>
-<li>Fix abort in OpenAL on OS X on shutdown.</li>
-<li>On x86-64, do not try to use &#8220;32-bit memory&#8221; unless JIT is enabled.</li>
-<li>If x87_fldcw dynamic function cannot be created, fall back to inline asm.</li>
-<li>Fix loading controller configs from non-ASCII paths on Windows.</li>
-<li>Better (build-time) OpenAL detection on OS X.</li>
-<li>New configure option &#8211;with-libmpeg2=yes/builtin (no won&#8217;t work yet), defaults to yes (using system library).</li>
-<li>Fix additional custom joystick ports.</li>
-<li>New boolean option full_keyboard to set the initial state.</li>
-<li>Auto-choose joystick device for port 0 when not started in mouse mode.</li>
-<li>Support deflate compression in fs-uae.dat.</li>
-<li>Updated emulation core from WinUAE 3210.</li>
-</ul>
-<p>Known issues:</p>
-<ul>
-<li>Allocating 32-bit memory fails on some OS X / BSD setups. With 2.7.5dev+, 32-bit memory is avoided when JIT is not enabled, but real fix is needed for JIT. Problem (and cause) is known, just not fixed yet.</li>
-</ul>
-<p>Changes in FS-UAE Launcher 2.7.5dev:</p>
-<ul>
-<li>Remember maximized state.</li>
-</ul>
-<p>Also, an updated <a href="http://fs-uae.net/2015/11/23/updated-qemu-uae-plugins-available-2">QEMU-UAE plugin</a> version is available.</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3517 -->
-
-				
-					
-	<article id="post-3514" class="post-3514 post type-post status-publish format-standard hentry category-uncategorized">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/11/23/updated-qemu-uae-plugins-available-2/" rel="bookmark">Updated QEMU-UAE Plugins Available</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/11/23/updated-qemu-uae-plugins-available-2/" title="21:01" rel="bookmark"><time class="entry-date" datetime="2015-11-23T21:01:46+01:00">2015-11-23</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>Updated QEMU-UAE plugins are available from the <a href="/plugins">plugin download</a> page. The new plugin version is based on the older QEMU 2.2.0, but with the x86-64 fixes backported (there were some issues with the plugin based on QEMU 2.4.01). Also, generic Linux versions of the plugin are now available.</p>
-<p>I recommended all users using QEMU-UAE to update to the latest version.</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3514 -->
-
-				
-					
-	<article id="post-3508" class="post-3508 post type-post status-publish format-standard hentry category-stable-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/27/fs-uae-2-6-2-released/" rel="bookmark">FS-UAE 2.6.2 Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/27/fs-uae-2-6-2-released/" title="22:03" rel="bookmark"><time class="entry-date" datetime="2015-10-27T22:03:33+01:00">2015-10-27</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>FS-UAE 2.6.2 is a minor bugfix release. Changes include:</p>
-<ul>
-<li>Do not use built-in libmpeg2.</li>
-<li>Fixed crash (abort) with A1200 Blizzard CPU board models.</li>
-<li>Added more gamepad controller configurations.</li>
-<li>Fixed non-blocking socket I/O support in bsdsocket_posix [Jens Maus].</li>
+<li>Updated config for Logitech F310 and added Thrustmaster Dual Action 4.</li>
+<li>Updated AROS kickstart replacement to ver. 2015-05-20 from WinUAE 3.1.0.</li>
+<li>Config files must end with .fs-uae or .conf to be loaded by FS-UAE.</li>
+<li>If you give fs-uae a command line argument with path to a .adf, it will be used as value for floppy_drive_0.</li>
 <li>Imported updated translations from crowdin.com.</li>
 </ul>
-<p>And for FS-UAE Launcher:</p>
+<p>Known issues:</p>
 <ul>
-<li>Fixed /hostgame netplay command (server was started on wrong port).</li>
+<li>When entering the GUI using modifier+F12, the modifier key(s) sticks in the emulated Amiga when you return to the emulation.</li>
+<li>Graphical flickering in Workbench with non-cycle-exact emulation.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.39dev:</p>
+<ul>
+<li>CD images for database games will now be extracted from archives on demand. (there will always be a temp copy made right now, even when not needed).</li>
+<li>If you give the launcher (command line) the path to a zip or lha, it will try to find a contained WHDLoad slave and configure an A600 + 8MB fast RAM and start FS-UAE.</li>
+<li>Updated Info.plist and specified 10.7.0 as minimum OS X version.</li>
+<li>Added version update check for beta branch.</li>
 <li>Imported updated translations from crowdin.com.</li>
 </ul>
 					</div><!-- .entry-content -->
@@ -511,45 +269,72 @@ body.custom-background { background-color: #ffffff; }
 		<footer class="entry-meta">
 			
 										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/stable-releases/" rel="category tag">Stable Releases</a>			</span>
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
 							
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3508 -->
+	</article><!-- #post-3442 -->
 
 				
 					
-	<article id="post-3505" class="post-3505 post type-post status-publish format-standard hentry category-uncategorized">
+	<article id="post-3422" class="post-3422 post type-post status-publish format-standard hentry category-controllers">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/26/fs-uae-2-7-4dev-released/" rel="bookmark">FS-UAE 2.7.4dev Released</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/09/using-an-xbox-one-controller-with-fs-uae/" rel="bookmark">Using an Xbox One Controller with FS-UAE</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/26/fs-uae-2-7-4dev-released/" title="23:13" rel="bookmark"><time class="entry-date" datetime="2015-10-26T23:13:09+01:00">2015-10-26</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/09/using-an-xbox-one-controller-with-fs-uae/" title="20:17" rel="bookmark"><time class="entry-date" datetime="2015-08-09T20:17:31+02:00">2015-08-09</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.4dev:</p>
+			<p><a href="/wp-content/uploads/2015/08/xboxonepad1.png"><img decoding="async" class="alignright wp-image-3435" src="/wp-content/uploads/2015/08/xboxonepad1-300x255.png" alt="" width="200" height="170" srcset="https://fs-uae.net/wp-content/uploads/2015/08/xboxonepad1-300x255.png 300w, https://fs-uae.net/wp-content/uploads/2015/08/xboxonepad1-352x300.png 352w, https://fs-uae.net/wp-content/uploads/2015/08/xboxonepad1.png 410w" sizes="(max-width: 200px) 100vw, 200px" /></a>For Windows 7 and 8.1, you need to install an <a href="http://support.xbox.com/en-US/xbox-on-windows/accessories/connect-xbox-one-controller-to-pc">official Microsoft driver</a> before the device starts working. For Windows 10, this driver should already be installed and the controller should work out of the box.</p>
+<p>For OS X, you need to install an unofficial driver, such as the open source <a href="https://github.com/FranticRain/Xone-OSX">Xone-OSX driver</a>. Alternatively, you can install the 0.15 preview version (or newer) of the <a href="https://github.com/d235j/360Controller">improved 360Controller driver</a> which incorporates code from Xone-OSX, and also supports Xbox 360 controllers. Please note, I do not take any responsibility for your use of unofficial drivers!</p>
+<p>On recent Linux distributions, the Xbox One controller should work out of the box 🙂</p>
+<p>As far as I know, you need to connect the controller via a Micro-USB cable on all platforms, due to Microsoft using a proprietary wireless protocol.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/controllers/" rel="category tag">Controllers</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3422 -->
+
+				
+					
+	<article id="post-3432" class="post-3432 post type-post status-publish format-standard hentry category-beta-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/09/fs-uae-2-6-0beta2-released/" rel="bookmark">FS-UAE 2.6.0beta2 Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/09/fs-uae-2-6-0beta2-released/" title="20:05" rel="bookmark"><time class="entry-date" datetime="2015-08-09T20:05:07+02:00">2015-08-09</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A <a href="/download">new beta version</a> has been released. Changes since FS-UAE 2.6.0beta1:</p>
 <ul>
-<li>New action_mute_floppy_sounds, mapped to MOD+N by default.</li>
-<li>Added support for audioprev, audionext, audiostop, audioplay keys.</li>
-<li>Map audioprev, audionext and audioplay to disk swapper actions by default.</li>
-<li>Show on-screen messages when using disk swapper prev/next/insert actions.</li>
-<li>New option relative_paths (see docs).</li>
-<li>Support for three additional custom &#8220;joystick ports&#8221; (maps to Amiga keys).</li>
-<li>Also recognize .ipf and .dms floppy paths as standalone parameters.</li>
-<li>Fixed building with ./configure &#8211;disable-drivesound &#8211;disable-slirp &#8211;disable-prowizard &#8211;disable-cdtv &#8211;disable-savestate &#8211;disable-parallel-port and others.</li>
-<li>Can build with many CPU emu cores disabled.</li>
-<li>Some cleanup in the configure script.</li>
-<li>Remove dependency on GLU.</li>
-<li>Do not use built-in libmpeg2.</li>
+<li>Several new and updated joystick and gamepad configs.</li>
+<li>Built-in configs for Xbox 360 / One pads on OS X (requires driver).</li>
+<li>Changed default stereo separation setting to 70%.</li>
+<li>Windows builds are digitally signed again.</li>
+<li>Fixed a joystick issue where SDL_JoystickID was not used properly.</li>
+<li>Added new option log_input (replaces environment variable FS_DEBUG_INPUT).</li>
+<li>Also log joystick button and hat events when log_input is enabled.</li>
 <li>Imported updated translations from crowdin.com.</li>
-<li>Updated emulation core from WinUAE 3200b18.</li>
 </ul>
-<p>Changes in FS-UAE Launcher 2.7.4dev:</p>
+<p>Changes in FS-UAE Launcher:</p>
 <ul>
-<li>Fixed bug when base-dir in config file had a trailing slash.</li>
+<li>Updated joystick configuration dialog.</li>
+<li>Save SDL 2.0 GUIDs (and more info) in the controller configurations.</li>
+<li>Configuration dialog: load builtin config if no user config exists.</li>
+<li>Fixed bug in login window, added close buttons to login/logout.</li>
+<li>Fixed OAGD.net locker uploader.</li>
+<li>Added new logging options panel to settings dialog.</li>
 <li>Imported updated translations from crowdin.com.</li>
 </ul>
 					</div><!-- .entry-content -->
@@ -557,73 +342,44 @@ body.custom-background { background-color: #ffffff; }
 		<footer class="entry-meta">
 			
 										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/beta-releases/" rel="category tag">Beta Releases</a>			</span>
 							
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3505 -->
+	</article><!-- #post-3432 -->
 
 				
 					
-	<article id="post-3502" class="post-3502 post type-post status-publish format-standard hentry category-uncategorized">
+	<article id="post-3430" class="post-3430 post type-post status-publish format-standard hentry category-development-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/18/updated-qemu-uae-plugins-available/" rel="bookmark">Updated QEMU-UAE Plugins Available</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/09/fs-uae-2-5-38dev-released/" rel="bookmark">FS-UAE 2.5.38dev Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/18/updated-qemu-uae-plugins-available/" title="20:37" rel="bookmark"><time class="entry-date" datetime="2015-10-18T20:37:39+02:00">2015-10-18</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/09/fs-uae-2-5-38dev-released/" title="19:59" rel="bookmark"><time class="entry-date" datetime="2015-08-09T19:59:31+02:00">2015-08-09</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>Updated QEMU-UAE plugins are available from the <a href="/plugins">plugin download</a> page. The new plugin version is based on QEMU 2.4.0.1, and x86-64 version are also now available.</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3502 -->
-
-				
-					
-	<article id="post-3496" class="post-3496 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/18/fs-uae-2-7-3dev-released/" rel="bookmark">FS-UAE 2.7.3dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/18/fs-uae-2-7-3dev-released/" title="18:56" rel="bookmark"><time class="entry-date" datetime="2015-10-18T18:56:58+02:00">2015-10-18</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.3dev:</p>
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.38dev:</p>
 <ul>
-<li>Support for multimedia keys: volume up, volume down and mute.</li>
-<li>New shortcut Mod+K to toggle full keyboard emulation.</li>
-<li>Using (Left) Alt (Cmd on OS X) as default keyboard shortcut modifier.</li>
-<li>Workaround to allow Alt+Tab to work on non-Windows/non-OS-X platforms.</li>
-<li>Most built-in shortcuts are now configurable.</li>
-<li>Actions for built-in shortcuts are now available for mapping.</li>
-<li>Actions for F11 and F12 (release) can be customized.</li>
-<li>Ungrab mouse and keyboard when entering the menu.</li>
-<li>Added support for reading controller configs from fs-uae.dat.</li>
-<li>Support for creating static / fully self-contained .exe on Windows.</li>
-<li>JIT: Better fldcw_m_indexed fix (can use all x86-64 registers).</li>
-<li>Fixed RSP inc/dec for x86-64, shadow stack space on Windows / x86-64.</li>
-<li>Fix callee-saved registers for Windows x64 ABI.</li>
-<li>Fixed crash when using Blizzard accelerators and x86-64 JIT.</li>
-<li>Respect cpu option when checking for Zorro III config problems.</li>
-<li>Compile with -fno-strict-aliasing to avoid potential aliasing bugs.</li>
-<li>Removed some SDL 1.2 code.</li>
+<li>Several new and update joystick and gamepad configs.</li>
+<li>Built-in configs for Xbox 360 / One pads on OS X (requires driver).</li>
+<li>Changed default stereo separation setting to 70%.</li>
+<li>Windows builds are digitally signed again.</li>
+<li>Imported updated translations from crowdin.com.</li>
 </ul>
 <p>Known issues:</p>
 <ul>
-<li>Opening the F12 menu / Using the modifier key causes FS-UAE to blink on Windows due to ungrabbing input (might have to disable this feature on Windows).</li>
+<li>When entering the GUI using modifier+F12, the modifier key(s) sticks in the emulated Amiga when you return to the emulation.</li>
+<li>Graphical flickering in Workbench with non-cycle-exact emulation.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.38dev:</p>
+<ul>
+<li>Updated joystick configuration dialog.</li>
+<li>Save SDL 2.0 GUIDs (and more info) in the controller configurations.</li>
+<li>Configuration dialog: load builtin config if no user config exists.</li>
+<li>Imported updated translations from crowdin.com.</li>
 </ul>
 					</div><!-- .entry-content -->
 		
@@ -635,209 +391,39 @@ body.custom-background { background-color: #ffffff; }
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3496 -->
+	</article><!-- #post-3430 -->
 
 				
 					
-	<article id="post-3492" class="post-3492 post type-post status-publish format-standard hentry category-uncategorized">
+	<article id="post-3419" class="post-3419 post type-post status-publish format-standard hentry category-development-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/07/posted-new-fs-uae-builds-for-os-x-10-11/" rel="bookmark">Posted New FS-UAE Builds for OS X 10.11</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/08/fs-uae-2-5-37dev-released/" rel="bookmark">FS-UAE 2.5.37dev Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/07/posted-new-fs-uae-builds-for-os-x-10-11/" title="01:29" rel="bookmark"><time class="entry-date" datetime="2015-10-07T01:29:45+02:00">2015-10-07</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/08/fs-uae-2-5-37dev-released/" title="19:09" rel="bookmark"><time class="entry-date" datetime="2015-08-08T19:09:06+02:00">2015-08-08</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>Previous builds of FS-UAE Launcher for OS X are blocked (for some reason) by the gatekeeper in the newly released OS X 10.11. After upgrading the development system to OS X 10.11 (and updated Xcode tools as well which was probably the significant action), the signed apps work again. So, &#8220;new&#8221; 2.6.1 and 2.7.2dev build have been posted!</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3492 -->
-
-				
-					
-	<article id="post-3490" class="post-3490 post type-post status-publish format-standard hentry category-uncategorized">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/05/fs-uae-2-7-2dev-download-links/" rel="bookmark">FS-UAE 2.7.2dev Download Links</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/05/fs-uae-2-7-2dev-download-links/" title="22:38" rel="bookmark"><time class="entry-date" datetime="2015-10-05T22:38:06+02:00">2015-10-05</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>I forgot to actually update the download links to point to 2.7.2dev. This has been fixed now!</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3490 -->
-
-				
-					
-	<article id="post-3486" class="post-3486 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/10/04/fs-uae-2-7-2dev-released/" rel="bookmark">FS-UAE 2.7.2dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/10/04/fs-uae-2-7-2dev-released/" title="22:49" rel="bookmark"><time class="entry-date" datetime="2015-10-04T22:49:33+02:00">2015-10-04</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.2dev:</p>
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.37dev:</p>
 <ul>
-<li>Enable FPU JIT compilation by default on x86-64.</li>
-<li>Use high-res timer on Windows for fastest-possible mode (perf fix).</li>
-<li>Parallel port (&#8220;printer&#8221;) over TCP/IP, added parallel_port option.</li>
-<li>Fixed crash (abort) with A1200 Blizzard CPU board models.</li>
-<li>Added Lallafa&#8217;s vpar virtual parallel port (not tested).</li>
-<li>Serial port over TCP/IP.</li>
-<li>More efficient uae_vm_commit for Linux and OS X.</li>
-<li>Updated emulation core from WinUAE 3200b15.</li>
+<li>Fixed a joystick issue where SDL_JoystickID was not used properly (*).</li>
+<li>Added new option log_input (replaces environment variable FS_DEBUG_INPUT).</li>
+<li>Also log joystick button and hat events when log_input is enabled.</li>
+<li>Imported updated translations from crowdin.com.</li>
 </ul>
-<p>Changes in FS-UAE Launcher 2.7.2dev:</p>
-<ul>
-<li>Fixed /hostgame netplay command (server was started on wrong port).</li>
-</ul>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3486 -->
-
-				
-					
-	<article id="post-3481" class="post-3481 post type-post status-publish format-standard hentry category-external category-tutorials">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/28/amigaos-4-1-fe-classic-on-fs-uae-2-5-29/" rel="bookmark">AmigaOS 4.1 FE Classic on FS-UAE 2.5.29</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/28/amigaos-4-1-fe-classic-on-fs-uae-2-5-29/" title="18:53" rel="bookmark"><time class="entry-date" datetime="2015-09-28T18:53:23+02:00">2015-09-28</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>Epsilon has created a new AmigaOS 4.1 installation tutorial. It is written for OS X and is from March 2015, but is still relevant (and includes many screenshots):<br />
-<a href="http://amigax1000.blogspot.no/2015/03/amigaos-41-fe-classic-on-fs-uae-2529.html">http://amigax1000.blogspot.no/2015/03/amigaos-41-fe-classic-on-fs-uae-2529.html</a></p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/external/" rel="category tag">External</a>, <a href="https://fs-uae.net/category/tutorials/" rel="category tag">Tutorials</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3481 -->
-
-				
-					
-	<article id="post-3466" class="post-3466 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/26/fs-uae-2-7-1dev-released/" rel="bookmark">FS-UAE 2.7.1dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/26/fs-uae-2-7-1dev-released/" title="13:43" rel="bookmark"><time class="entry-date" datetime="2015-09-26T13:43:45+02:00">2015-09-26</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.1dev:</p>
-<ul>
-<li>Several FPU JIT fixes for x86-64 (fixes crashes and misbehavior).</li>
-<li>Access fault handler supports x86-64 extended registers (REX prefix).</li>
-<li>Fixed crash when 1 GB Zorro III RAM was used without other Z3 expansions.</li>
-<li>Fixed non-blocking socket I/O support in bsdsocket_posix [Jens Maus].</li>
-<li>Added more gamepad controller configurations.</li>
-<li>New option rtg_viewport for optional cropping of the RTG display.</li>
-<li>Updated emulation core from WinUAE 3200b13.</li>
-</ul>
-<p>This is the first release where I have published 64-bit (x86-64) binaries for Windows, OS X and SteamOS. These have been tested fairly little compared to their 32-bit counterparts. So please report any issues specific to these versions if you find any. Note: 64-bit QEMU-UAE plugins for Windows, OS X and Steam OS are not publised, but <a href="http://fs-uae.net/plugins">CAPSImg (IPF support)</a> is available.</p>
-<p>The new x86-64 JIT compiler is available and enabled in the 64-bit versions. There is a dedicated support thread for this at http://eab.abime.net/showthread.php?t=79762. The JIT compiler is enabled with <code>jit_compiler = 1</code> (use for example with the A4000/040 model). If you want full speed for floating point operating, you also need to enable the option <code>uae_compfpu = 1</code> for now.</p>
+<p>This fixes problems when both XInput and DirectInput devices are present. Thanks to Anata for patiently testing several builds 🙂</p>
 <p>Known issues:</p>
 <ul>
-<li>For full (FPU) JIT speed you need to manually enable uae_compfpu = 1.</li>
-<li>Windows (x86-64) portable version uses 32-bit &#8220;shortcut executables&#8221;.</li>
-<li>Portable x86-64 versions should be able to co-locate with x86-versions.</li>
+<li>When entering the GUI using modifier+F12, the modifier key(s) sticks in the emulated Amiga when you return to the emulation.</li>
+<li>Graphical flickering in Workbench with non-cycle-exact emulation.</li>
 </ul>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3466 -->
-
-				
-					
-	<article id="post-3461" class="post-3461 post type-post status-publish format-standard hentry category-uncategorized">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/24/linux-builds-of-ipf-support-plugin/" rel="bookmark">Linux Builds of IPF Support Plugin</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/24/linux-builds-of-ipf-support-plugin/" title="23:09" rel="bookmark"><time class="entry-date" datetime="2015-09-24T23:09:22+02:00">2015-09-24</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>Linux builds (x86 and x86-64) of the capsimg IPF support plugin are now available on the <a href="http://fs-uae.net/plugins">plugin download page</a>. My apologies for the delay!</p>
-					</div><!-- .entry-content -->
-		
-		<footer class="entry-meta">
-			
-										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
-							
-										
-			
-					</footer><!-- .entry-meta -->
-	</article><!-- #post-3461 -->
-
-				
-					
-	<article id="post-3455" class="post-3455 post type-post status-publish format-standard hentry category-development-releases">
-		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/21/fs-uae-2-7-0dev-released/" rel="bookmark">FS-UAE 2.7.0dev Released</a></h1>
-			
-						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/21/fs-uae-2-7-0dev-released/" title="00:03" rel="bookmark"><time class="entry-date" datetime="2015-09-21T00:03:32+02:00">2015-09-21</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
-			
-					</header><!-- .entry-header -->
-
-				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.7.0dev:</p>
+<p>Changes in FS-UAE Launcher 2.5.37dev:</p>
 <ul>
-<li>Merged JIT compiler updates from the ARAnyM project.</li>
-<li>Support for JIT compilation on x86-64 (Linux/Windows/OS X). It may contain bugs yet. FPU JIT is currently disabled by default for x86-64.</li>
-<li>JIT 64-bit direct memory exception handlers for Linux/Windows/OS X.</li>
-<li>Compile FS-UAE / Windows as large address aware for more virtual memory.</li>
-<li>Updated emulation core from WinUAE 3200b12.</li>
+<li>Fixed bug in login window, added close buttons to login/logout.</li>
+<li>Fixed OAGD.net locker uploader (really, this time).</li>
+<li>Added new logging options panel to settings dialog.</li>
+<li>Imported updated translations from crowdin.com.</li>
 </ul>
 					</div><!-- .entry-content -->
 		
@@ -849,22 +435,23 @@ body.custom-background { background-color: #ffffff; }
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3455 -->
+	</article><!-- #post-3419 -->
 
 				
 					
-	<article id="post-3452" class="post-3452 post type-post status-publish format-standard hentry category-stable-releases">
+	<article id="post-3404" class="post-3404 post type-post status-publish format-standard hentry category-beta-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/20/fs-uae-2-6-1-released/" rel="bookmark">FS-UAE 2.6.1 Released</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/07/fs-uae-2-6-0beta1-released/" rel="bookmark">FS-UAE 2.6.0beta1 Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/20/fs-uae-2-6-1-released/" title="22:49" rel="bookmark"><time class="entry-date" datetime="2015-09-20T22:49:19+02:00">2015-09-20</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/07/fs-uae-2-6-0beta1-released/" title="19:38" rel="bookmark"><time class="entry-date" datetime="2015-08-07T19:38:54+02:00">2015-08-07</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>I am pleased to announce the release of FS-UAE 2.6.1 🙂</p>
-<p>Improvements over version 2.4.x include:</p>
+			<p>I am pleased to announce the release of FS-UAE 2.6.0beta1 🙂</p>
+<p>The current stable version is quite old, and recent FS-UAE versions provide many advantages over the older 2.4.x versions. I am releasing this as a semi-stable version. This means that new users are directed to <a href="/download">download</a> this version, but users of 2.4.1 / 2.4.3 will not get in-app update until after the beta phase.</p>
+<p>Improvements over version 2.4.3 include:</p>
 <ul>
 <li>Updated emulation code from WinUAE 3.1.0.</li>
 <li>Support for PPC emulation (can run AmigaOS 4.x) via QEMU-UAE plugin.</li>
@@ -878,9 +465,8 @@ body.custom-background { background-color: #ffffff; }
 <li>Dual joystick/mouse mode for joystick port 0.</li>
 <li>Official builds for SteamOS (Linux + Steam runtime).</li>
 <li>OS X apps are now digitally signed (Apple Developer ID).</li>
-<li>Support for JIT direct memory access (much faster JIT).</li>
 <li>Many bug fixes.</li>
-<li>&#8230; and a lot of other improvements. See the changelog entries for all the details.</li>
+<li>&#8230; and a lot of other improvements. See the ChangeLog entries for full details.</li>
 </ul>
 <p>Support for IPF disk images is now provided by a <a href="/plugins">plugin</a> which you need to download separately.</p>
 					</div><!-- .entry-content -->
@@ -888,40 +474,326 @@ body.custom-background { background-color: #ffffff; }
 		<footer class="entry-meta">
 			
 										<span class="cat-links">
-					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/stable-releases/" rel="category tag">Stable Releases</a>			</span>
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/beta-releases/" rel="category tag">Beta Releases</a>			</span>
 							
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3452 -->
+	</article><!-- #post-3404 -->
 
 				
 					
-	<article id="post-3450" class="post-3450 post type-post status-publish format-standard hentry category-development-releases">
+	<article id="post-3411" class="post-3411 post type-post status-publish format-standard hentry category-development-releases">
 		<header class="entry-header">
-						<h1 class="entry-title"><a href="https://fs-uae.net/2015/09/19/fs-uae-2-5-41dev-released/" rel="bookmark">FS-UAE 2.5.41dev Released</a></h1>
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/07/fs-uae-2-5-36dev-released/" rel="bookmark">FS-UAE 2.5.36dev Released</a></h1>
 			
 						<div class="entry-meta">
-				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/09/19/fs-uae-2-5-41dev-released/" title="13:43" rel="bookmark"><time class="entry-date" datetime="2015-09-19T13:43:04+02:00">2015-09-19</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/07/fs-uae-2-5-36dev-released/" title="19:37" rel="bookmark"><time class="entry-date" datetime="2015-08-07T19:37:27+02:00">2015-08-07</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
 			
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.41dev:</p>
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.36dev:</p>
 <ul>
-<li>Implement action_pause to make action key configurable.</li>
-<li>Separate auto-fire button (based on patch from S. Jordan).</li>
-<li>Dedicated auto-fire button mapped to &#8220;right trigger&#8221; by default.</li>
-<li>New boolean option jit_compiler (to enable/disable JIT compilation).</li>
-<li>New option jit_memory (=direct/indirect).</li>
-<li>JIT compiler defaults to direct memory access on all platforms now.</li>
-<li>JIT direct memory exception handler for OS X (32-bit).</li>
-<li>Imported updated translations from crowdin.com.</li>
+<li>Fixed a crash (floating point exception) if audio device cannot be opened.</li>
 </ul>
-<p>Changes in FS-UAE Launcher 2.5.41dev:</p>
+<p>Known issues: </p>
 <ul>
-<li>Support FS-UAE environment variables in advanced settings.</li>
-<li>Fix appearance settings when theme is set to standard.</li>
+<li>When entering the GUI using modifier+F12, the modifier key(s) sticks in the emulated Amiga when you return to the emulation.</li>
+<li>Graphical flickering in Workbench with non-cycle-exact emulation.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3411 -->
+
+				
+					
+	<article id="post-3402" class="post-3402 post type-post status-publish format-standard hentry category-linux">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/07/debian-7-0-support-dropped/" rel="bookmark">Debian 7.0 Support Dropped</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/07/debian-7-0-support-dropped/" title="17:16" rel="bookmark"><time class="entry-date" datetime="2015-08-07T17:16:02+02:00">2015-08-07</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Due to several reasons, official support for Debian 7.0 is dropped. The reasons include no official PyQt5 packages, and an old Python 3 version. New versions of FS-UAE will continue to be supported on Debian 8.0.</p>
+<p>If you are still on Debian 7.0, you might be able to use the SteamOS version of FS-UAE instead, or you can compile FS-UAE and dependencies from scratch, if able to (you may have to patch FS-UAE Launcher a bit to run on Python 3.2).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/linux/" rel="category tag">Linux</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3402 -->
+
+				
+					
+	<article id="post-3399" class="post-3399 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/06/fs-uae-2-5-35dev-released/" rel="bookmark">FS-UAE 2.5.35dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/06/fs-uae-2-5-35dev-released/" title="19:38" rel="bookmark"><time class="entry-date" datetime="2015-08-06T19:38:19+02:00">2015-08-06</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.35dev:</p>
+<ul>
+<li>Fixed bug (lockup) when quitting FS-UAE from Amiga side on some platforms.</li>
+<li>Fixed a potential key repeat issue (could not reproduce original problem).</li>
+<li>Load kickstart replacement from data files instead of embedding in executable.</li>
+<li>Re-enabled serial port (was disabled in 2.5.31dev), fixed AROS Kickstart replacement.</li>
+<li>Share serial port emulation code with WinUAE.</li>
+</ul>
+<p>Known issues:</p>
+<ul>
+<li>When entering the GUI using modifier+F12, the modifier key(s) sticks in the emulated Amiga when you return to the emulation.</li>
+<li>Graphical flickering in Workbench with non-cycle-exact emulation.</li>
+<li>When starting FS-UAE from FS-UAE Launcher, accelerator flashs ROM writes are not persistent because the launcher uses a new copy every time.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.35dev:</p>
+<ul>
+<li>Added All Games / All Configurations to drop-down.</li>
+<li>Nicer behavior when kickstart ROM for chosen model is missing.</li>
+<li>Moved more warnings and information to status bar.</li>
+<li>Fixed handling of downloadable games.</li>
+<li>Use Fusion QT style on all platforms by default.</li>
+<li>Default to Fusion Adwaita style variant when running under GNOME 3.</li>
+<li>Show warning icon in settings if option is overriden by configuration.</li>
+<li>Fixed OAGD.net locker uploader.</li>
+<li>New additional configuration page.</li>
+<li>Moved custom configuration (button) to additional config page.</li>
+<li>Removed some &#8220;noise&#8221; from custom configuration and advanced settings.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3399 -->
+
+				
+					
+	<article id="post-3397" class="post-3397 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/04/fs-uae-2-5-34dev-released/" rel="bookmark">FS-UAE 2.5.34dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/04/fs-uae-2-5-34dev-released/" title="22:22" rel="bookmark"><time class="entry-date" datetime="2015-08-04T22:22:32+02:00">2015-08-04</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.34dev:</p>
+<ul>
+<li>New option floppy_drive_volume_empty.</li>
+<li>Switched default key mapping for host backslash and insert keys.</li>
+<li>Use GLEW instead of GLee for OpenGL extensions.</li>
+<li>When not using FS-UAE Launcher, model A1200 defaulted to kickstart 3.0.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.34dev:</p>
+<ul>
+<li>Changed tab panel appearance on OS X to match other platforms.</li>
+<li>Renamed language prefs to appearance prefs, added launcher theme option.</li>
+<li>Close login dialog before opening database refresh dialog.</li>
+<li>Settings UI for specifying empty floppy drive volume (or disabling it).</li>
+<li>Added keyboard settings to configure equals/insert/backslash/less mapping.</li>
+<li>Added support for WHDLoad 18.1, set as default version.</li>
+<li>Replaced some icons, added new rom/ram icon.</li>
+<li>Fixed an issue with the new CPU selection.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3397 -->
+
+				
+					
+	<article id="post-3393" class="post-3393 post type-post status-publish format-standard hentry category-linux">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/04/packages-for-ubuntu-15-10-added/" rel="bookmark">Packages for Ubuntu 15.10 Added</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/04/packages-for-ubuntu-15-10-added/" title="00:36" rel="bookmark"><time class="entry-date" datetime="2015-08-04T00:36:05+02:00">2015-08-04</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Packages for Ubuntu 15.10 should be available in a few hours. Support for Ubuntu 14.10 is removed.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/linux/" rel="category tag">Linux</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3393 -->
+
+				
+					
+	<article id="post-3390" class="post-3390 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/08/03/fs-uae-2-5-33dev-released/" rel="bookmark">FS-UAE 2.5.33dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/08/03/fs-uae-2-5-33dev-released/" title="23:19" rel="bookmark"><time class="entry-date" datetime="2015-08-03T23:19:09+02:00">2015-08-03</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.33dev:</p>
+<ul>
+<li>Blizzard SCSI Kit ROM wasn&#8217;t found by (full) path.</li>
+<li>Several new amiga quickstart models for A1200.</li>
+<li>Added several Blizzard boards to accelerator option.</li>
+<li>Added new options motherboard_ram, blizzard_scsi_kit.</li>
+<li>New boolean option window_border to disable window decorations.</li>
+<li>If STEAM_RUNTIME is set, look for &#8220;steamos&#8221; plugins, not &#8220;linux&#8221; plugins.</li>
+<li>Plugin search path updated (also changed plugin format slightly).</li>
+</ul>
+<p class="warning">Important:</strong> You also need to download updated plugins from <a href="/plugins">fs-uae.net/plugins</a> (if you use them). <strong>Delete the old plugins</strong> before extracting the new ones!</p>
+<p>Changes in FS-UAE Launcher 2.5.33dev:</p>
+<ul>
+<li>FS-UAE Launcher / Arcade defaults to require PyQt5 now.</li>
+<li>Minimum OS X version (for official builds) is now 10.7 due to QT 5.5.</li>
+<li>Updated GUI layout.</li>
+<li>More expansion config controls (cpu, accelerator, graphics card, ++).</li>
+<li>Fixed issue with get_real_case usage on case sensitive systems (Linux).</li>
+<li>Login / logout entries in main menu did not update correctly.</li>
+<li>Redesigned model selection GUI (more room for additional models / presets).</li>
+<li>More Amiga model presets added.</li>
+<li>Do not write empty FS-UAE config values (less noise in the logs).</li>
+<li>Do not write known launcher-only settings to temp FS-UAE config file.</li>
+<li>Do not use a temporary kickstart dir, so FS-UAE will find accelerator ROMs.</li>
+<li>hard_drive_x_label and hard_drive_x_priority did not show in custom config.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3390 -->
+
+				
+					
+	<article id="post-3378" class="post-3378 post type-post status-publish format-standard hentry category-development-releases category-linux category-stable-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/06/14/fedora-22-and-debian-8-0-support/" rel="bookmark">Fedora 22 and Debian 8.0 Support</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/06/14/fedora-22-and-debian-8-0-support/" title="00:55" rel="bookmark"><time class="entry-date" datetime="2015-06-14T00:55:56+02:00">2015-06-14</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I have added official builds for Fedora 22 and Debian 8.0. The <a href="http://fs-uae.net/download">download page</a> has been updated accordingly 🙂 The packages are scheduled to be built by openSUSE build service, and it may take a few hours before they are available in the repositories.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>, <a href="https://fs-uae.net/category/linux/" rel="category tag">Linux</a>, <a href="https://fs-uae.net/category/stable-releases/" rel="category tag">Stable Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3378 -->
+
+				
+					
+	<article id="post-3376" class="post-3376 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/06/13/fs-uae-2-5-32dev-released/" rel="bookmark">FS-UAE 2.5.32dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/06/13/fs-uae-2-5-32dev-released/" title="23:54" rel="bookmark"><time class="entry-date" datetime="2015-06-13T23:54:30+02:00">2015-06-13</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.32dev:</p>
+<ul>
+<li>Choose which monitor FS-UAE appears on in full-screen mode.</li>
+<li>Added mime type application/x-adf for Linux desktops.</li>
+<li>Updated emulation core from WinUAE 3100.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.32dev:</p>
+<ul>
+<li>Added settings GUI control to select full-screen monitor.</li>
+</ul>
+<p>Changes in FS-UAE Arcade 2.5.32dev:</p>
+<ul>
+<li>Choose which monitor FS-UAE-Arcade appears on in full-screen mode.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3376 -->
+
+				
+					
+	<article id="post-3373" class="post-3373 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/06/05/fs-uae-2-5-31dev-released/" rel="bookmark">FS-UAE 2.5.31dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/06/05/fs-uae-2-5-31dev-released/" title="22:43" rel="bookmark"><time class="entry-date" datetime="2015-06-05T22:43:16+02:00">2015-06-05</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.31dev:</p>
+<ul>
+<li>Fixed a time offset bug in my_utime used by action_set_date.</li>
+<li>Temporarily disabled serial port emulation (need code update).</li>
+<li>Fixed handling of configurations_dir and cache_dir options.</li>
+<li>Imported updated translations from crowdin.com.</li>
+<li>Updated emulation core from WinUAE 3100b23.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.31dev:</p>
+<ul>
 <li>Imported updated translations from crowdin.com.</li>
 </ul>
 					</div><!-- .entry-content -->
@@ -934,7 +806,453 @@ body.custom-background { background-color: #ffffff; }
 										
 			
 					</footer><!-- .entry-meta -->
-	</article><!-- #post-3450 -->
+	</article><!-- #post-3373 -->
+
+				
+					
+	<article id="post-3366" class="post-3366 post type-post status-publish format-standard hentry category-linux">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/04/01/packages-for-ubuntu-vivid/" rel="bookmark">Packages for Ubuntu Vivid</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/04/01/packages-for-ubuntu-vivid/" title="22:39" rel="bookmark"><time class="entry-date" datetime="2015-04-01T22:39:17+02:00">2015-04-01</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Packages for Ubuntu Vivid (the upcoming Ubuntu 15.04) should appear in the stable and devel PPAs shortly.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/linux/" rel="category tag">Linux</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3366 -->
+
+				
+					
+	<article id="post-3364" class="post-3364 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/04/01/fs-uae-2-5-30dev-released/" rel="bookmark">FS-UAE 2.5.30dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/04/01/fs-uae-2-5-30dev-released/" title="22:21" rel="bookmark"><time class="entry-date" datetime="2015-04-01T22:21:44+02:00">2015-04-01</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.30dev:</p>
+<ul>
+<li>Fixed ROM initialization of Cyberstorm PPC.</li>
+<li>Lowered default volume of floppy drive sounds.</li>
+<li>Updated emulation core from WinUAE 3100b14.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.30dev:</p>
+<ul>
+<li>Fixed loading with variant UUID on command line.</li>
+<li>Added a basic WHDLoad settings page (tweak splash delay, show directory for WHDLoad.key file).</li>
+<li>Fixed loading of .fs-uae config files containg % character in values.</li>
+<li>Fixed on-demand download of floppy images from HTTP.</li>
+<li>Remove some inefficiences when selecting database games in config list.</li>
+<li>Fixed look of variant choice control under OS X.</li>
+</ul>
+<p>Changes in FS-UAE Arcade 2.5.30dev:</p>
+<ul>
+<li>Fixed support for using GNOME 3 hide top bar extension + hiding task bar.</li>
+</ul>
+<p>After having been unsigned for a while, the Windows development version is now again digitally signed by Frode Solheim. New for this release is that the OS X development version is also digitally signed.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3364 -->
+
+				
+					
+	<article id="post-3359" class="post-3359 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/03/01/fs-uae-2-5-29dev-released/" rel="bookmark">FS-UAE 2.5.29dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/03/01/fs-uae-2-5-29dev-released/" title="22:36" rel="bookmark"><time class="entry-date" datetime="2015-03-01T22:36:24+01:00">2015-03-01</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.29dev:</p>
+<ul>
+<li>Updated emulation core from WinUAE 3100b11.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3359 -->
+
+				
+					
+	<article id="post-3356" class="post-3356 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/02/28/fs-uae-2-5-28dev-released/" rel="bookmark">FS-UAE 2.5.28dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/02/28/fs-uae-2-5-28dev-released/" title="12:04" rel="bookmark"><time class="entry-date" datetime="2015-02-28T12:04:14+01:00">2015-02-28</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.28dev:</p>
+<ul>
+<li>Detect portable dir without help from FS-UAE Launcher.</li>
+<li>Updated emulation core from WinUAE 3100b8.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.28dev:</p>
+<ul>
+<li>Fixed Windows console appearing when using portable launchers.</li>
+<li>Automatically maximize when desktop height <= 768.</li>
+<li>Support for multiple game databases.</li>
+<li>Remove window border when running under GNOME 3 with desktop height <= 768.</li>
+</ul>
+<p>Changes in FS-UAE Arcade 2.5.28dev:</p>
+<ul>
+<li>Improved behavior when running in a default GNOME 3 desktop.</li>
+<li>Fixed problem preventing JPEG covers to load on Windows.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3356 -->
+
+				
+					
+	<article id="post-3349" class="post-3349 post type-post status-publish format-standard hentry category-stable-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/01/27/fs-uae-2-4-3-released/" rel="bookmark">FS-UAE 2.4.3 Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/01/27/fs-uae-2-4-3-released/" title="21:57" rel="bookmark"><time class="entry-date" datetime="2015-01-27T21:57:05+01:00">2015-01-27</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A bugfix release (2.4.3) has been issued for the stable series of FS-UAE. This version fixes a bug which causes a crash in FS-UAE on Linux with recent official NVIDIA drivers. Windows and OS X users do not need to update (and I will not provide updated builds for those platforms either). Source code is available here: <a href="/stable/2.4.3/" class="broken_link">http://fs-uae.net/stable/2.4.3/</a>.</p>
+<p>Many thanks to NVIDIA which actually tracked down the bug in FS-UAE! The problem was an unused function (mprotected), a legacy from older WinUAE code, which was exported and caused the NVIDIA drivers to load this function instead of the correct one from libc. I&#8217;m quite impressed that they contacted me with information about the bug, and I think this shows how serious they are about their Linux drivers 🙂</p>
+<p>The latest development versions are not affected by this problem (the function has already been removed, and also, symbols are no longer exported by default).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/stable-releases/" rel="category tag">Stable Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3349 -->
+
+				
+					
+	<article id="post-3347" class="post-3347 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/01/24/fs-uae-2-5-27dev-released/" rel="bookmark">FS-UAE 2.5.27dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/01/24/fs-uae-2-5-27dev-released/" title="20:40" rel="bookmark"><time class="entry-date" datetime="2015-01-24T20:40:06+01:00">2015-01-24</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.27dev:</p>
+<ul>
+<li>Implemented prefix expansion for screenshots_output_dir.</li>
+<li>Implemented joystick_port_0_autoswitch = 0 for the relatively new automatic mouse mode switching feature (in order to disable it).</li>
+<li>Updated emulation core from WinUAE 3100b6.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3347 -->
+
+				
+					
+	<article id="post-3345" class="post-3345 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/01/22/fs-uae-2-5-26dev-released/" rel="bookmark">FS-UAE 2.5.26dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/01/22/fs-uae-2-5-26dev-released/" title="21:17" rel="bookmark"><time class="entry-date" datetime="2015-01-22T21:17:22+01:00">2015-01-22</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.26dev:</p>
+<ul>
+<li>Option sound_card = toccata actually implemented now.</li>
+<li>Updated emulation core from WinUAE 3100b2.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3345 -->
+
+				
+					
+	<article id="post-3342" class="post-3342 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/01/21/fs-uae-2-5-25dev-released/" rel="bookmark">FS-UAE 2.5.25dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/01/21/fs-uae-2-5-25dev-released/" title="21:48" rel="bookmark"><time class="entry-date" datetime="2015-01-21T21:48:48+01:00">2015-01-21</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.25dev:</p>
+<ul>
+<li>New option sound_card = toccata.</li>
+<li>Added several joystick configs [johanpalmqvist].</li>
+<li>Updated emulation core from WinUAE 3100b1.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.25dev:</p>
+<ul>
+<li>Fixed problem locating translation files in some cases.</li>
+<li>Reverted to preferring QT4 for now.</li>
+<li>Added several joystick configs [johanpalmqvist].</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3342 -->
+
+				
+					
+	<article id="post-3338" class="post-3338 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2015/01/18/fs-uae-2-5-24dev-released/" rel="bookmark">FS-UAE 2.5.24dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2015/01/18/fs-uae-2-5-24dev-released/" title="21:02" rel="bookmark"><time class="entry-date" datetime="2015-01-18T21:02:35+01:00">2015-01-18</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.24dev:</p>
+<ul>
+<li>None</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.24dev:</p>
+<ul>
+<li>New user interface layout (config list on the left).</li>
+<li>Improved support for lower-resolution displays.</li>
+<li>Preliminary support for new config visualization (config_feature=1).</li>
+<li>Prefer QT5 when running the launcher, QT4 when running the arcade interface.</li>
+<li>Fixed bug preventing Windows version from joining the net play lobby.</li>
+<li>Also look for ../bin/fs-uae on Linux/Unix.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3338 -->
+
+				
+					
+	<article id="post-3331" class="post-3331 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2014/12/30/2-5-23dev-links-updated/" rel="bookmark">2.5.23dev Links Updated</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2014/12/30/2-5-23dev-links-updated/" title="20:37" rel="bookmark"><time class="entry-date" datetime="2014-12-30T20:37:02+01:00">2014-12-30</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The download links were not updated for 2.5.23dev. This is fixed now 🙂</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3331 -->
+
+				
+					
+	<article id="post-3328" class="post-3328 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2014/12/30/fs-uae-2-5-23dev-released/" rel="bookmark">FS-UAE 2.5.23dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2014/12/30/fs-uae-2-5-23dev-released/" title="13:07" rel="bookmark"><time class="entry-date" datetime="2014-12-30T13:07:37+01:00">2014-12-30</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.23dev:</p>
+<ul>
+<li>Fixed loading of Picasso IV ROM when using graphics_card_rom_option.</li>
+<li>Read plugins from [prefix]/lib/fs-uae/plugins too.</li>
+<li>Updated emulation core from WinUAE 3000.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.23dev:</p>
+<ul>
+<li>Fixed joystick configurations, added &#8211;add-dummy-joystick arg for testing.</li>
+<li>Require at least Python 3.2 to start, if not, abort with error.</li>
+<li>Code cleanup, removed Python 2.x compatibility code.</li>
+<li>setup.py: reject installation to default python library dir.</li>
+<li>Makefile: Added separate install, install-program and install-data targets.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3328 -->
+
+				
+					
+	<article id="post-3312" class="post-3312 post type-post status-publish format-standard hentry category-development-releases">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2014/12/15/fs-uae-2-5-22dev-released/" rel="bookmark">FS-UAE 2.5.22dev Released</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2014/12/15/fs-uae-2-5-22dev-released/" title="01:10" rel="bookmark"><time class="entry-date" datetime="2014-12-15T01:10:56+01:00">2014-12-15</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A new <a href="http://fs-uae.net/download-devel">development version</a> has been released. Changes in FS-UAE 2.5.22dev:</p>
+<ul>
+<li>Updated emulation core from WinUAE 3000b28.</li>
+</ul>
+<p>Changes in FS-UAE Launcher 2.5.22dev:</p>
+<ul>
+<li>Add support for WHDLoad 18.0.</li>
+<li>Make WHDLoad 18.0 the default WHDLoad version.</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/development-releases/" rel="category tag">Development Releases</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3312 -->
+
+				
+					
+	<article id="post-3310" class="post-3310 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2014/12/14/linux-steamos-builds-now-available/" rel="bookmark">Linux / SteamOS Builds Now Available</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2014/12/14/linux-steamos-builds-now-available/" title="19:36" rel="bookmark"><time class="entry-date" datetime="2014-12-14T19:36:47+01:00">2014-12-14</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>I have created a new binary distribution for <a href="/download-devel#steamos">Linux / SteamOS</a>. These packages are very new, and should be considered experimental.</p>
+<p>The naming is a bit misleading, the requirement isn&#8217;t really SteamOS, but rather the Steam Runtime! This means that this version should run on any Linux distribution where Steam (or Steam Runtime) is installed. Please report if the packages are not working on your Linux distro 🙂</p>
+<p>This package can be particular useful if FS-UAE packages are not available for your Linux distro (or if only older versions are available). The SteamOS version will also probably be used as the base for a new Linux portable distribution (similar to the Windows and OS X portable versions).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3310 -->
+
+				
+					
+	<article id="post-3307" class="post-3307 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="https://fs-uae.net/2014/12/14/build-environment-updates/" rel="bookmark">Build Environment Updates</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="https://fs-uae.net/2014/12/14/build-environment-updates/" title="16:39" rel="bookmark"><time class="entry-date" datetime="2014-12-14T16:39:58+01:00">2014-12-14</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://fs-uae.net/author/frodesolheim/" title="View all posts by FrodeSolheim" rel="author">FrodeSolheim</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The Windows version is now built using the excellent <a href="http://sourceforge.net/projects/msys2/">MSYS2</a> distribution. This distributions contains updated version of all requirements for FS-UAE and (almost) all requirements for FS-UAE Launcher &#038; Arcade, including a Python version compiled with mingw. The end result is a build environment which is much easier to set up and use. I even made an easy-to-follow <a href="/compiling-on-windows">step by step tutorial</a> for installing this environment and compiling the git version of FS-UAE on Windows. But, there is always a chance that the changes have introduced bugs in FS-UAE or FS-UAE Launcher, so please let me know if something which worked in 2.5.20dev is broken in 2.5.21dev.</p>
+<p>The OS X build environment has also been updated with newer library versions &#8211; so same here, please report any new issues in 2.5.21.dev, if any.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://fs-uae.net/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-3307 -->
 
 				
 							<nav id="nav-below">
