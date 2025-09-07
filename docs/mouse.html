@@ -1,0 +1,281 @@
+---
+layout: scraped
+title: Mouse
+permalink: docs/mouse/
+---
+
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Mouse</h1>
+<h2>Middle mouse button</h2>
+<h2>Mouse wheel</h2>
+<h2>Multiple mice</h2>
+<p>FS-UAE supports multiple mice on many platforms through the ManyMouse library
+by Ryan C. Gordon.</p>
+<p><strong>Note: FS-UAE 4 does not support multiple mice yet.</strong> The rest of the this
+section applies to FS-UAE 3 only, for now.</p>
+<p>The old <code>Mouse</code> host device is still present and works like before - this is
+basically the system cursor, and most likely, all connected mice will affect
+this host device in FS-UAE.</p>
+<p>If the support for multiple mice works on your system, you will have one
+<em>additional</em> specific host device for each mouse connected. So with two
+Microsoft Intellimouse devices connected, you might see these devices:</p>
+<ul>
+<li><code>Mouse</code> - This is controllable by both the physical mice</li>
+<li><code>Microsoft Microsoft 5-Button Mouse with IntelliEye(TM)</code></li>
+<li><code>Microsoft Microsoft 5-Button Mouse with IntelliEye(TM)</code></li>
+</ul>
+<p>There might be some specific things you should be aware of, depending on your
+operating system. Read on for more information!</p>
+<h2>Mouse speed and acceleration</h2>
+<p>The old <code>Mouse</code> device is subject to acceleration settings, while direct
+hardware access to specific mouse devices is not. You may therefore want to use
+the new <em>specific mouse devices</em> for more pleasant mouse emulation regardless
+of the number of mice you have. You may even find that there is less input lag
+with the new mouse devices.</p>
+<h2>Windows</h2>
+<p>Support for multiple mice seems to work just fine on Windows out of the box.
+Note that with FS-UAE on modern Windows version, all devices seem to be named
+"HID-compliant mouse" instead of the actual device name, which makes a bit
+awkward to select the desired mouse device.</p>
+<h2>macOS</h2>
+<p><strong>Note: Multiple mice are currently disabled on macOS</strong>. This is due to
+annoying security warnings that I need to find a workaround for.</p>
+<p>Support for multiple mice seems to work just fine on macOS out of the box on
+older macOS versions.</p>
+<p>In macOS 10.15, in order to see individual mouse devices, you may have to go to
+Preferences -&gt; Security &amp; Privacy -&gt; Input Monitoring, and allow access for
+FS-UAE, FS-UAE Launcher and FS-UAE Arcade.</p>
+<h3>Mouse buttons on macOS</h3>
+<h2>Linux</h2>
+<p>You may have to change permissions on some device nodes before starting FS-UAE
+(depending on your Linux distribution). If FS-UAE does not have permission to
+read from the devices, you will only get access to the old/single <code>Mouse</code> host
+device.</p>
+<p>You can run this simple command to easily enable FS-UAE to open the mouse
+devices (<em>after</em> the mice are connected), though remember that this can have
+security implications if other people have remote access to the computer:</p>
+<pre><code>sudo chmod a+r /dev/input/*
+</code></pre>
+<p>A much better method is to tell the system to specifically make mouse event
+devices readable when they are plugged in:</p>
+<h3>Creating udev rules for readable mice</h3>
+<p>Note that the following works perfectly for me on Ubuntu, and it is possible
+you must do it slightly differently depending on your Linux distribution.
+Hopefully the instructions apply to you regardless of your Linux distribution
+:)</p>
+<p>We need to create a config file with a udev rule to set read permissions for
+all mice which are connected. From a terminal, type:</p>
+<pre><code>sudo nano -w /etc/udev/rules.d/99-readable-mice.rules
+</code></pre>
+<p>Paste the following (on one line) in this file, and save it:</p>
+<pre><code>ENV{ID_INPUT_MOUSE}=="?*", MODE="644"
+</code></pre>
+<p>On my system, this was all that was needed - just unplug the mouse/mice and
+reconnect them for the changes to work.</p>
+<p>To verify that it works, reconnect your mouse/mice if you haven't already and
+type:</p>
+<pre><code>ls -l /dev/input/event*
+</code></pre>
+<p>All files listed should now have read permissions for all users, something like
+this:</p>
+<pre><code>crw-rw-r-- 1 root input 13, 64 aug.  20 17:30 /dev/input/event0
+crw-rw-r-- 1 root input 13, 65 aug.  20 17:30 /dev/input/event1
+</code></pre>
+<p>If it did not work, you have to do additional steps to activate the rules.
+Perhaps a command to reinitialize udev, such as as <code>sudo udevstart</code>,
+<code>sudo /etc/init.d/udev restart</code>, <code>sudo udevcontrol reload_rules</code> or
+<code>sudo &lt;em&gt;udevadm trigger --subsystem-match=input</code> and/or just reboot.</p>
+<p>Try to google information about udev rules on your distribution if you have
+problems.</p>
+<h3>Evdev vs XInput2</h3>
+<p>The ManyMouse library really supports two drivers for Linux: XInput2 and Linux
+evdev interface. Normally, ManyMouse tries XInput2 first, and if that works, it
+will not use Linux evdev. In FS-UAE, I have reversed this order, so it will
+always try evdev first (and thus probably never use XInput2).</p>
+<p>The reason for this is that when XInput2 is used and mouse input is grabbed by
+FS-UAE, no mouse events at all reach the ManyMouse library. It works fine when
+input grab is released. With the evdev driver, it always works fine.</p>
+<h2>FreeBSD / OpenBSD</h2>
+<p>Presumably, XInput2 should work well, with the caveat that input from specific
+mice probably only works when FS-UAE does not have input grabbed (See the Linux
+section for more information). You can use the option
+<a href="options/automatic_input_grab">automatic_input_grab</a> to prevent FS-UAE from
+grabbing the input.</p>
+<p>If you are using FreeBSD / OpenBSD and have tested this feature, please leave
+feedback on fs-uae.net!</p>
+<h2>Running FS-UAE over VNC (or similar)</h2>
+<p>When FS-UAE is running over a remote desktop connection such as VNC, the mouse
+might not work correctly. This is due to FS-UAE trapping the mouse pointer and
+trying to read relative motion from it. This might be incompatible with for
+example VNC.</p>
+<p>A workaround is to disable the automatic grabbing of the pointer
+(<code>automatic_input_grab</code>). If you're running Workbench and system-friendly
+programs, you can also enable <code>mouse_integration</code>. With this enabled, the
+emulated mouse pointer will follow the host mouse cursor.</p></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+

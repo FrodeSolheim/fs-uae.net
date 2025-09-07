@@ -1,0 +1,316 @@
+---
+layout: scraped
+title: uae_rtc
+permalink: docs/options/uae-rtc/
+---
+
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main>
+<h1>Option: uae_rtc</h1>
+<pre>
+Summary: Enable a real time clock (RTC) module.
+Type: Choice
+Default: auto
+Example: MSM6242B
+Tags: hardware
+Enabling a real time clock (RTC) module allows the emulated Amiga to read
+the current time (automatically retrieved from the host system). When you
+want to override this option, you may also have to set
+[uae_chipset_compatible][] to `-`.
+Value: auto (&quot;Auto&quot;) - Automatically enable RTC module for some Amiga models.
+Value: none (&quot;None&quot;) - Real time clock is explicitly disabled.
+Value: MSM6242B (Oki MSM6242B) - RTC module in A500/500+/600/1200/2000 models.
+Value: RP5C01A (Ricoh RP5C01A) - RTC module in big-box Amigas (A3000, A4000).
+Value: MSM6242B_A2000 (A2000 MSM6242B) - Only used in very early A2000
+       revisions, not even WB 1.3 supports it.
+A real time clock is enabled automatically (`auto`) for the following Amiga
+models:
+* A500+, A2000 and CDTV defaults to `MSM6242B`.
+* A500 defaults to `MSM6242B` only when a memory expansion is enabled.
+* A1200 defaults to `MSM6242B` only when fast memory is added.
+* A3000 and A4000 models default to `RP5C01A`.
+# FIXME: A1200 Blizzard expansions!
+Enabling warp mode can cause Workbench to not detect the RTC module
+because the read time does not progress as expected (FIXME).
+In versions prior to FS-UAE 2.5.19dev, A600 erroneously defaulted to having 
+`MSM6242B`, while the correct default is `none` (A stock A600 does not
+have any RTC module).
+Code:
+    # FIXME: Blizzard expansions!
+    if c.uae_chipset_compatible == &quot;-&quot;:
+        if c.uae_rtc.explicit:
+            value = c.uae_rtc.explicit
+            if f.matches(value, &quot;none&quot;):
+                value = &quot;none&quot;
+            elif f.matches(value, &quot;auto&quot;):
+                value = &quot;none&quot;
+            elif f.matches(value, &quot;MSM6242B&quot;):
+                value = &quot;MSM6242B&quot;
+            elif f.matches(value, &quot;MSM6242B_A2000&quot;):
+                value = &quot;MSM6242B_A2000&quot;
+            elif f.matches(value, &quot;RP5C01A&quot;):
+                value = &quot;RP5C01A&quot;
+            else:
+                f.warning(value + &quot;: invalid value&quot;)
+                value = &quot;none&quot;
+        else:
+            value = &quot;none&quot;
+    else:
+        if c.uae_rtc.explicit and c.uae_rtc.explicit != &quot;auto&quot;:
+            f.warning(&quot;uae_rtc is ignored (compatible chipset enabled)&quot;)
+        if c.uae_chipset_compatible == &quot;Generic&quot;:
+            value = &quot;RP5C01A&quot;
+        elif c.uae_chipset_compatible == &quot;CDTV&quot;:
+            value = &quot;MSM6242B&quot;
+        elif c.uae_chipset_compatible == &quot;CD32&quot;:
+            value = &quot;none&quot;
+        elif c.uae_chipset_compatible == &quot;A500&quot;:
+            if int(c.int_bogomem_size):
+                value = &quot;MSM6242B&quot;
+            elif int(c.int_chipmem_size) &gt; 0x80000:
+                value = &quot;MSM6242B&quot;
+            elif int(c.int_fastmem_size):
+                value = &quot;MSM6242B&quot;
+            else:
+                value = &quot;none&quot;
+        elif c.uae_chipset_compatible == &quot;A500+&quot;:
+            value = &quot;MSM6242B&quot;
+        elif c.uae_chipset_compatible == &quot;A600&quot;:
+            value = &quot;none&quot;
+        elif c.uae_chipset_compatible == &quot;A1000&quot;:
+            value = &quot;none&quot;
+        elif c.uae_chipset_compatible == &quot;A1200&quot;:
+            if int(c.int_fastmem_size) or int(c.int_z3fastmem_size):
+                value = &quot;MSM6242B&quot;
+            else:
+                value = &quot;none&quot;
+        elif c.uae_chipset_compatible == &quot;A2000&quot;:
+            value = &quot;MSM6242B&quot;
+        elif c.uae_chipset_compatible == &quot;A3000&quot;:
+            value = &quot;RP5C01A&quot;
+        elif c.uae_chipset_compatible == &quot;A3000T&quot;:
+            value = &quot;RP5C01A&quot;
+        elif c.uae_chipset_compatible == &quot;A4000&quot;:
+            value = &quot;RP5C01A&quot;
+        elif c.uae_chipset_compatible == &quot;A4000T&quot;:
+            value = &quot;RP5C01A&quot;
+        else:
+            f.fail(&quot;unknown uae_chipset_compatible&quot;)
+Test A500:
+    &gt; amiga_model = A500
+    uae_rtc = MSM6242B
+Test A500/512K:
+    &gt; amiga_model = A500/512K
+    uae_rtc = none
+Test A500+:
+    &gt; amiga_model = A500+
+    uae_rtc = MSM6242B
+Test A600:
+    &gt; amiga_model = A600
+    uae_rtc = none
+Test A1000:
+    &gt; amiga_model = A1000
+    uae_rtc = none
+Test A1200:
+    &gt; amiga_model = A1200
+    uae_rtc = none
+Test A1200 + 8MB:
+    &gt; amiga_model = A1200
+    &gt; fast_memory = 8M
+    uae_rtc = MSM6242B
+Test A1200 + 8MB Z3:
+    &gt; amiga_model = A1200
+    &gt; zorro_iii_memory = 8M
+    uae_rtc = MSM6242B
+Test A3000:
+    &gt; amiga_model = A3000
+    uae_rtc = RP5C01A
+Test A4000:
+    &gt; amiga_model = A4000
+    uae_rtc = RP5C01A
+Test explicit RP5C01A:
+    &gt; amiga_model = A500+
+    &gt; uae_rtc = RP5C01A
+    uae_rtc = RP5C01A
+Test explicit RP5C01A with wrong case:
+    &gt; uae_rtc = rp5c01a
+    uae_rtc = RP5C01A
+Test explicit MSM6242B:
+    &gt; amiga_model = A1200
+    &gt; uae_rtc = MSM6242B
+    uae_rtc = MSM6242B
+Test explicit MSM6242B with wrong case:
+    &gt; uae_rtc = msm6242b
+    uae_rtc = MSM6242B
+Test invalid value:
+    &gt; uae_rtc = msm5200b
+    uae_rtc = none
+</pre>
+</main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+

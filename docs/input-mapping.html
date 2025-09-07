@@ -1,0 +1,364 @@
+---
+layout: scraped
+title: Input mapping
+permalink: docs/input-mapping/
+---
+
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Input mapping</h1>
+<p>All keyboard and joystick events can be mapped to any Amiga keyboard and
+joystick action, overriding default settings and (and the setup resulting from
+using the joystick_port_n options). A few examples of what you can do:</p>
+<ul>
+<li>Do you want the key ‘S’ on your keyboard to press the ‘R’ key on the Amiga
+  keyboard? You can do this with custom input mapping.</li>
+<li>Do you want to create a setup where you can play Pinball Dreams with a
+  gamepad? You can map game pad buttons to the Amiga keyboard F1, F2, F3, F4,
+  cursor down, left shift and right shift keys.</li>
+</ul>
+<h2>General configuration</h2>
+<p>To map an action, you add a line like this to your configuration file:</p>
+<pre><code>devicename_eventname = actionname
+</code></pre>
+<p>Here is a specific example, mapping the keyboard key q to the fire button on
+the primary Amiga joystick (joy_1 is the joystick in joystick port 1):</p>
+<pre><code>keyboard_key_q = action_joy_1_fire_button
+</code></pre>
+<h2>Input actions</h2>
+<p>Examples of input actions are:</p>
+<pre><code>action_joy_1_fire_button          (fire button on joystick in port 1)
+action_key_z                      (press amiga keyboard key Z)
+action_drive_0_insert_floppy_0    (insert disk from floppy image list)
+</code></pre>
+<p>I have put the list of <a href="input-actions">available actions</a> on its own page
+due to the large number of actions.</p>
+<h2>Mapping joystick events</h2>
+<p>Here are the different types of event names you can use. joystick_0 is the
+first joystick connected, joystick_1 is the second, etc. Similarly, you can use
+button_0 (first button), button_1 (second button) and so on:</p>
+<ul>
+<li><code>joystick_0_button_0</code></li>
+<li><code>joystick_0_axis_0_neg</code></li>
+<li><code>joystick_0_axis_0_pos</code></li>
+<li><code>joystick_0_hat_0_up</code></li>
+<li><code>joystick_0_hat_0_down</code></li>
+<li><code>joystick_0_hat_0_left</code></li>
+<li><code>joystick_0_hat_0_right</code></li>
+</ul>
+<p>For most game pads you can use universal event names instead and make the
+configuration work identically even with different types of game pads
+connected. The above configuration is not suited for this, because button
+numbers have generally no relation to the physical placement of the game pad
+buttons. If you swap out your device with another model, the mapping will
+probably not make any sense. With universal events, this is no longer a
+problem.</p>
+<h2>Universal event names</h2>
+<p>With universal event names, you can map these events instead (matching inputs
+on the first connected joystick FS-UAE sees):</p>
+<ul>
+<li><code>joystick_0_dpad_left</code></li>
+<li><code>joystick_0_dpad_right</code></li>
+<li><code>joystick_0_dpad_up</code></li>
+<li><code>joystick_0_dpad_down</code></li>
+<li><code>joystick_0_lstick_left</code></li>
+<li><code>joystick_0_lstick_right</code></li>
+<li><code>joystick_0_lstick_up</code></li>
+<li><code>joystick_0_lstick_down</code></li>
+<li><code>joystick_0_lstick_button</code></li>
+<li><code>joystick_0_rstick_left</code></li>
+<li><code>joystick_0_rstick_right</code></li>
+<li><code>joystick_0_rstick_up</code></li>
+<li><code>joystick_0_rstick_down</code></li>
+<li><code>joystick_0_rstick_button</code></li>
+<li><code>joystick_0_south_button</code></li>
+<li><code>joystick_0_west_button</code></li>
+<li><code>joystick_0_north_button</code></li>
+<li><code>joystick_0_east_button</code></li>
+<li><code>joystick_0_start_button</code></li>
+<li><code>joystick_0_select_button</code></li>
+<li><code>joystick_0_left_shoulder</code></li>
+<li><code>joystick_0_right_shoulder</code></li>
+<li><code>joystick_0_left_trigger</code></li>
+<li><code>joystick_0_right_trigger</code></li>
+</ul>
+<p>In FS-UAE 3.1.59 and higher, you can match any/all controllers like this:</p>
+<ul>
+<li><code>controller_dpad_left</code></li>
+<li><code>controller_dpad_right</code></li>
+<li><code>controller_dpad_up</code></li>
+<li><code>controller_dpad_down</code></li>
+<li><code>controller_lstick_left</code></li>
+<li><code>controller_lstick_right</code></li>
+<li><code>controller_lstick_up</code></li>
+<li><code>controller_lstick_down</code></li>
+<li><code>controller_lstick_button</code></li>
+<li><code>controller_rstick_left</code></li>
+<li><code>controller_rstick_right</code></li>
+<li><code>controller_rstick_up</code></li>
+<li><code>controller_rstick_down</code></li>
+<li><code>controller_rstick_button</code></li>
+<li><code>controller_south_button</code></li>
+<li><code>controller_west_button</code></li>
+<li><code>controller_north_button</code></li>
+<li><code>controller_east_button</code></li>
+<li><code>controller_start_button</code></li>
+<li><code>controller_select_button</code></li>
+<li><code>controller_left_shoulder</code></li>
+<li><code>controller_right_shoulder</code></li>
+<li><code>controller_left_trigger</code></li>
+<li><code>controller_right_trigger</code></li>
+</ul>
+<p>In FS-UAE 3.1.59 and higher, you can also do input mapping and match by the
+device inserted in a specific port. This is especially useful for adding
+player-based keyboard shortcuts to controllers:</p>
+<ul>
+<li><code>joystick_port_1_controller_dpad_left</code></li>
+<li><code>joystick_port_1_controller_dpad_right</code></li>
+<li><code>joystick_port_1_controller_dpad_up</code></li>
+<li><code>joystick_port_1_controller_dpad_down</code></li>
+<li><code>joystick_port_1_controller_lstick_left</code></li>
+<li><code>joystick_port_1_controller_lstick_right</code></li>
+<li><code>joystick_port_1_controller_lstick_up</code></li>
+<li><code>joystick_port_1_controller_lstick_down</code></li>
+<li><code>joystick_port_1_controller_lstick_button</code></li>
+<li><code>joystick_port_1_controller_rstick_left</code></li>
+<li><code>joystick_port_1_controller_rstick_right</code></li>
+<li><code>joystick_port_1_controller_rstick_up</code></li>
+<li><code>joystick_port_1_controller_rstick_down</code></li>
+<li><code>joystick_port_1_controller_rstick_button</code></li>
+<li><code>joystick_port_1_controller_south_button</code></li>
+<li><code>joystick_port_1_controller_west_button</code></li>
+<li><code>joystick_port_1_controller_north_button</code></li>
+<li><code>joystick_port_1_controller_east_button</code></li>
+<li><code>joystick_port_1_controller_start_button</code></li>
+<li><code>joystick_port_1_controller_select_button</code></li>
+<li><code>joystick_port_1_controller_left_shoulder</code></li>
+<li><code>joystick_port_1_controller_right_shoulder</code></li>
+<li><code>joystick_port_1_controller_left_trigger</code></li>
+<li><code>joystick_port_1_controller_right_trigger</code></li>
+</ul>
+<p>This example was for joystick_port_1, but you can do the same for all ports
+(joystick_port_1, joystick_port_0, joystick_port_2 and joystick_port_3).</p>
+<h2>Matching a joystick device</h2>
+<p>To match a specific joystick device, you can either (as in the above examples)
+match joystick by number:</p>
+<pre><code>joystick_0
+joystick_1
+joystick_2
+etc...
+</code></pre>
+<p>Or you can match devices by name:</p>
+<pre><code>logitech_dual_action_usb
+</code></pre>
+<p>The device name is the name of the device as it appears in your operating
+system, converted to lower case and all characters other than letters and
+numbers converted to underscores. Adjacent underscores are merged into one, and
+trailing underscores are stripped.</p>
+<p>For instance, a device named:</p>
+<pre><code>Controller (Xbox 360 Wireless Receiver)
+</code></pre>
+<p>will be matched by:</p>
+<pre><code>controller_xbox_360_wireless_receiver
+</code></pre>
+<p>If you have more than game pad of the same model connected, you can match the
+other ones with:</p>
+<pre><code>logitech_dual_action_usb_2   (the second connected of this model)
+logitech_dual_action_usb_3   (the third connected of this model)
+etc...
+</code></pre>
+<p>From FS-UAE 3.1.59 an onwards, it is recommended to move away from
+configurations based on joystick name, and instead use universal event names
+(see the "Universal event names" section).</p>
+<h3>More examples</h3>
+<p>If you want to play Pinball Dreams with the first connected game pad, instead
+of using keyboard controls, you might want to map something like this:</p>
+<pre><code>joystick_0_left_shoulder = action_key_shift_left
+joystick_0_right_shoulder = action_key_shift_right
+joystick_0_north_button = action_key_f1
+joystick_0_dpad_down = action_key_cursor_down
+</code></pre>
+<p>If you want to do the same, but with the controller inserted to Amiga joystick
+port 1, do:</p>
+<pre><code>joystick_port_1_controller_left_shoulder = action_key_shift_left
+joystick_port_1_controller_right_shoulder = action_key_shift_right
+joystick_port_1_controller_north_button = action_key_f1
+joystick_port_1_controller_dpad_down = action_key_cursor_down
+</code></pre>
+<p>Or for this game, maybe you want all connected controllers to controller the
+game, and just do:</p>
+<pre><code>controller_left_shoulder = action_key_shift_left
+controller_right_shoulder = action_key_shift_right
+controller_north_button = action_key_f1
+controller_dpad_down = action_key_cursor_down
+</code></pre>
+<p>Keep in mind that this was just an example; For Pinball Dreams, you probably
+want to map more actions - for example amiga keys F2, F3, F4 and Space.</p>
+<h2>Mapping keyboard keys</h2>
+<p>See <a href="keyboard-mapping">keyboard mapping</a>.</p></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+

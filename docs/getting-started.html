@@ -1,0 +1,293 @@
+---
+layout: scraped
+title: Getting started
+permalink: docs/getting-started/
+---
+
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Getting started</h1>
+<p>TODO: Split into:</p>
+<ul>
+<li>Getting started with FS-UAE (only)</li>
+<li>Getting started with FS-UAE Launcher</li>
+</ul>
+<p>This page will help you get started using FS-UAE. It is quite easy to get
+FS-UAE up and running with your favorite games, as long as you have access to
+<a href="kickstarts">Kickstart ROM images</a> and floppy image files for your games.</p>
+<p>First, you need to download and install FS-UAE! I recommend you download the
+suite containing both FS-UAE and FS-UAE Launcher. FS-UAE Launcher is an
+easy-to-use configuration frontend which makes it much easier to get started.
+The alternative is to manually write config files yourself.</p>
+<p>The next step is to install Kickstart ROMs for the Amiga models you wish to
+emulate. FS-UAE Launcher has a kickstart import helper you can use to copy
+kickstart ROMs to the correct directory. Information about how to acquire Amiga
+Kickstart ROMs is <a href="kickstarts">available here</a>.</p>
+<p>Finally, you should have some software you want to run, for instance games.
+Amiga Forever comes with a selection of software and games, and there are
+several web sites with legal Amiga downloads:</p>
+<ul>
+<li>Full versions of many games:
+  <a href="https://www.amigafuture.de/app.php/dlext/index?cat=6">https://www.amigafuture.de/app.php/dlext/index?cat=6</a></li>
+<li><a href="https://dream17.abime.net/downloads.php?cat=1">Team 17 games</a></li>
+<li><a href="http://gremlinworld.emuunlim.com/amiga.htm">Gremlin games</a></li>
+<li><a href="http://www.factor5.de/downloads.shtml">Some Factor 5 games</a></li>
+<li><a href="https://openretro.org/reports/downloadable-games">List of downloadable games</a>
+  on OpenRetro.org</li>
+</ul>
+<p>When you start FS-UAE Launcher, it should be quite straight-forward how to
+select the floppy disk images and start the emulation :)</p>
+<p>While you are running the emulation, press <kbd>F12</kbd> to open the menu.
+From this menu, you can quit, change floppies, restart the emulation, save
+states, and more. Depending on your keyboard and operating systems, you may
+need to press more than just <kbd>F12</kbd> alone, for example
+<kbd>Fn+F12</kbd> on some laptops, or even <kbd>Fn+Cmd+F12</kbd> on Mac
+laptops.</p>
+<h2>Starting FS-UAE for the first time</h2>
+<p>The following information is useful if you want to run FS-UAE manually without
+FS-UAE Launcher. If you are using FS-UAE Launcher, you do not need the rest of
+these instructions.</p>
+<p>When you start FS-UAE for the first time, an on-screen message "No
+configuration file was found" will be shown. This is normal.</p>
+<p>You can now enter the menu by pressing <kbd>F12</kbd> (or <kbd>Cmd+F12</kbd>,
+or <kbd>Fn+12</kbd> or <kbd>Cmd+Fn+12</kbd> depending on your system setup),
+navigate to the X button in the top right corner with the cursor keys, and
+press Return to quit FS-UAE.</p>
+<p>FS-UAE will now have created a directory FS-UAE under your <code>(My) Documents</code>
+folders. The FS-UAE folder contains the following folders (among others):
+<code>Kickstarts</code>, <code>Floppies</code>, and <code>Configurations</code>.</p>
+<p>You should now copy your kickstart files into the Kickstarts folder. If you
+have a Cloanto Amiga Forever CD-ROM, these files will be called
+amiga-os-130.rom and similar. Copy all .rom files (and the rom.key file!!) to
+the Kickstarts folder.</p>
+<p>If you want to play a game from a floppy disk image (ADF), copy the file (or
+files if a multi-disk game) to the Floppies folder.</p>
+<blockquote>
+<p><strong>Note:</strong> It is not a requirement to copy the ADF files here, read the
+detailed documentation if you want to learn how to have the disk files stored
+wherever you like.</p>
+</blockquote>
+<h2>Creating a configuration file</h2>
+<p>The last thing you need to do is to create a configuration file for FS-UAE.
+Download <a href="/files/Default.fs-uae">Default.fs-uae</a> and save
+this file in the Configurations folder (right-click the link and choose "Save
+link as", or similar option in your browser).</p>
+<p>If you now start FS-UAE, it should no longer complain that the configuration
+file was not found. The Default configuration file you downloaded specified
+Amiga 500 as the model, and if you copied the necessary kickstart file(s) to
+the Kickstarts directory, you should now see the standard Kickstart 1.3 boot
+screen when you start FS-UAE.</p>
+<p>Please quit FS-UAE again and I’ll show you how to boot your game. Open the file
+Default.fs-uae which you saved to the Configurations folder in a text editor,
+for instance Notepad on Windows, or gEdit on Linux.</p>
+<p>The line</p>
+<pre><code>floppy_drive_0 = Disk1.adf
+</code></pre>
+<p>should be changed to reflect the name of the floppy you want to boot. If, for
+instance, your ADF file is named
+<code>Lotus Turbo Challenge 2 (1991)(Gremlin)[cr CPY].adf</code>, then you should change
+the line to read:</p>
+<pre><code>floppy_drive_0 = Lotus Turbo Challenge 2 (1991)(Gremlin)[cr CPY].adf
+</code></pre>
+<h2>Booting the game</h2>
+<p>When you now start FS-UAE, Lotus 2 (or the game you configured) should boot :)</p>
+<p>If you had a recognized and supported gamepad or joystick controller connected
+when you started FS-UAE, this will be used as the primary Amiga joystick. The
+mouse will be connected to the second Amiga joystick port by default. You can
+change the inserted controllers from the F12 menu.</p>
+<p>If you do not have a joystick or gamepad connected, the cursor keys and right
+ctrl/alt key on your keyboard will be used to emulate the primary Amiga
+joystick.</p>
+<h2>Configuring a multi-disk game</h2>
+<p>When a game has multiple floppy disks, there are two ways to set this up in
+FS-UAE. One way is to use multiple floppy drives, and put one disk in each
+drive like you would on a real Amiga with multiple drives:</p>
+<pre><code>floppy_drive_0 = Pinball Dreams (Disk 1 of 2)[cr FLT].adf
+floppy_drive_1 = Pinball Dreams (Disk 2 of 2)[cr FLT].adf
+</code></pre>
+<p>You can emulate up to four floppy drives this way
+(floppy_drive_0...floppy_drive_3).</p>
+<p>When a game has more than 4 floppies, or the game supports just one floppy
+drive and requires floppy-swapping, you can do this instead:</p>
+<pre><code>floppy_drive_0 = Pinball Dreams (Disk 1 of 2)[cr FLT].adf
+floppy_image_0 = Pinball Dreams (Disk 1 of 2)[cr FLT].ad
+floppy_image_1 = Pinball Dreams (Disk 2 of 2)[cr FLT].adf
+</code></pre>
+<p>You are then able to swap floppies using the FS-UAE (F12) menu. In the above
+example, Disk 1 is inserted in drive 0, and both Disk 1 and Disk 2 is added to
+the floppy image list. You can add up to 20 floppies to the floppy image list
+using the floppy<em>image</em>... options.</p>
+<h2>Troubleshooting</h2>
+<p>If you encounter any issue, please see if your problem is listed in the FAQ. If
+not, you are welcome to post a question in the support forum. I monitor this
+forum myself, and everyone else there is nice and will help you if they can :)</p>
+<h2>More information and configuration options</h2>
+<p>Head over to the Documentation section on
+<a href="/docs">/docs</a> if you want to explore the
+options and features FS-UAE can offer!</p></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+

@@ -249,11 +249,15 @@ def process(path: str, out_path: str) -> None:
         f.write(text)
         f.write("{% endblock %}\n")
 
-    if os.path.exists("jekyll-test") and out_path != "_templates/scraped/index.html":
-        jekyll_page = out_path.replace("_templates/scraped", "jekyll-test")
-        jekyll_page = jekyll_page.replace("/index.html", ".html")
+    if os.path.exists("jekyll-test"):
+        if out_path == "_templates/scraped/index.html":
+            jekyll_page = "jekyll-test/index.html"
+            permalink = None
+        else:
+            jekyll_page = out_path.replace("_templates/scraped", "jekyll-test")
+            jekyll_page = jekyll_page.replace("/index.html", ".html")
+            permalink = jekyll_page.replace("jekyll-test/", "").replace(".html", "/")
         print(jekyll_page)
-        permalink = jekyll_page.replace("jekyll-test/", "").replace(".html", "/")
         # jekyll_page = os.path.join("jekyll-test", out_dir, out_name + ".html")
         if not os.path.exists(os.path.dirname(jekyll_page)):
             os.makedirs(os.path.dirname(jekyll_page))
@@ -261,7 +265,8 @@ def process(path: str, out_path: str) -> None:
             f.write("---\n")
             f.write("layout: scraped\n")
             f.write(f"title: {page_title}\n")
-            f.write(f"permalink: {permalink}\n")
+            if permalink:
+                f.write(f"permalink: {permalink}\n")
             f.write("---\n")
             f.write("\n")
             f.write(text)
