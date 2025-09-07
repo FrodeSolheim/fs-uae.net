@@ -201,6 +201,18 @@ footer = """<footer class="fs-site-footer">
 </body>
 </html>"""
 
+blog_post_pattern = re.compile(
+    r"""^
+        /?                                   # optional leading slash
+        (?P<year>\d{4})/                     # 4-digit year
+        (?P<month>0[1-9]|1[0-2])/            # 01-12
+        (?P<day>0[1-9]|[12]\d|3[01])/        # 01-31
+        (?P<slug>[^/]+?)
+        (?:\.html)?
+        $""",
+    re.VERBOSE | re.IGNORECASE,
+)
+
 
 def process(path: str, out_path: str) -> None:
     print(path, out_path)
@@ -260,18 +272,7 @@ def process(path: str, out_path: str) -> None:
 
     print(jekyll_page)
 
-    pattern = re.compile(
-        r"""^
-            /?                                   # optional leading slash
-            (?P<year>\d{4})/                     # 4-digit year
-            (?P<month>0[1-9]|1[0-2])/            # 01-12
-            (?P<day>0[1-9]|[12]\d|3[01])/        # 01-31
-            (?P<slug>[^/]+?)
-            (?:\.html)?
-            $""",
-        re.VERBOSE | re.IGNORECASE,
-    )
-    m = pattern.fullmatch(jekyll_page)
+    m = blog_post_pattern.fullmatch(jekyll_page)
     if m is not None:
         p = m.groupdict()
         print(p)
@@ -279,8 +280,11 @@ def process(path: str, out_path: str) -> None:
         # sys.exit(1)
 
         jekyll_page = f"_posts/{p["year"]}-{p["month"]}-{p["day"]}-{p["slug"]}.html"
-        layout = "post"
+        layout = "scraped"
 
+    if re.match(r"^\d{4}/[0-9][0-9]\.html", jekyll_page):
+        print("Skipping", jekyll_page)
+        return
 
     if os.path.dirname(jekyll_page) and not os.path.exists(os.path.dirname(jekyll_page)):
         os.makedirs(os.path.dirname(jekyll_page))
