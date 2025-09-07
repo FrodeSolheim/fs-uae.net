@@ -1,0 +1,659 @@
+/*
+Theme Name: Fengestad
+Description: Child theme for the twentyeleven theme 
+Author: Frode Solheim
+Templeate: twentyeleven
+*/
+
+/* @import url("../twentyeleven/style.css"); */
+
+a {
+/*
+    color: #c72fff;
+*/
+/*
+    color: #9c19cd;
+*/
+}
+
+body.custom-background {
+    /* override wordpress background settings */
+    background-color: white !important;
+}
+
+#fengestad-menu {
+    background-color: #dbdbdb;
+    background-image: url(/images/fengestad_bg_bottom.png);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 32px;
+    width: 100%;
+    font: 13px "Trebuchet MS", Serif;
+}
+
+#fengestad-menu ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+#fengestad-menu ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+#fengestad-menu ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    line-height: 32px;
+    text-decoration: none;
+    color: #888888;
+}
+
+#fengestad-menu ul li.fengestad-menu-item-selected a {
+    color: #000000;
+}
+
+body, #page {
+    padding: 0px;
+    max-width: none;
+    font-family: Trebuchet MS, Serif;
+}
+
+#page {
+    background: none;
+}
+
+#page {
+    /*
+    background-image: url(/images/below_header_bg_top.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    */
+}
+
+.header-container {
+    /*
+    background-color: #f2f2f2;
+    background-image: url(/images/header_bg_top.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    height: 64px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    */
+}
+
+#branding {
+    border-top: 0px;
+    margin: 0px 16px;
+}
+
+header hgroup {
+    float: left;
+}
+
+#branding hgroup {
+    margin: 0px;
+}
+
+h1#site-title {
+
+}
+
+#site-title, #site-title a {
+
+}
+
+#access {
+    clear: none;
+    float: right;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    margin: 0px;
+}
+
+#access div {
+    margin: 0px;
+}
+
+#access a {
+    display: inline;
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*color: #000000;*/
+    /*padding: 6px 0px 6px 0px;*/
+    /*margin-bottom: 0;*/
+    /*margin-right: 0;*/
+    /*margin-left: 30px;*/
+    /*margin-top: -13px;*/
+    /*line-height: 14px;*/
+}
+
+#access div ul li {
+    /*display: block;*/
+    /*font-size: 12pt;*/
+    /*height: 64px;*/
+}
+
+/*
+#access div ul li:hover {
+    background: none;
+}
+*/
+
+#access ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#access ul li {
+    display: inline;
+}
+
+#access ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    line-height: 72px;
+}
+
+#access ul li a:hover {
+    color: white;
+    background-color: #808080;
+}
+
+
+input.search-field {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#access .current-menu-item > a, #access .current-menu-ancestor > a, #access .current_page_item > a, #access .current_page_ancestor > a {
+    font-weight: normal;
+    /*border-bottom: 4px solid #9c19cd;*/
+}
+
+#access li:hover > a,
+#access a:focus {
+    background: none;
+    color: #000000;
+}
+
+#access a:hover {
+    font-weight: normal;
+    /*border-bottom: 4px solid #c72fff;*/
+    background: none;
+}
+
+#page {
+    margin: 0px;
+    float: none;
+}
+
+#main {
+/*
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+*/
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0px;
+}
+
+.page-template-page-without-title-php h1.entry-title {
+    display: none;
+}
+
+#primary {
+    float: left;
+/*
+    margin-top: -10px;
+    margin-top: 30px;
+*/
+}
+
+#secondary {
+    float: none;
+
+/*
+    margin-top: -10px;
+*/
+    margin-right: 0px;
+    width: 320px;
+    position: relative;
+    z-index: 10;
+/*    margin-left: 40px;*/
+/*
+    background-color: #ececec;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: 180px;
+*/
+}
+
+#secondary a {
+/*
+    color: #000000;
+*/
+}
+
+.singular #content, #content {
+    margin: 0px 0px 0px 0px;
+/*
+    margin-right: 250px;
+*/
+/*
+    width: 680px;
+*/
+    width: auto;
+}
+
+.page-template-page-without-title-php #content,
+.page-template-full-width-page-php #content {
+/*
+    width: 940px;
+*/
+    width: auto;
+}
+
+#content nav {
+    padding: 0px;
+}
+
+.commentlist {
+    margin-left: 0px;
+    margin-right: 0px;
+/*    width: 680px;'/
+}
+
+.page-template-page-without-title-php .commentlist,
+.page-template-full-width-page-php .commentlist {
+    margin-left: 0px;
+    margin-right: 0px;
+/*
+    width: 940px;
+*/
+    width: auto;
+}
+
+h1, h2, h3 {
+    clear: none;
+}
+
+.entry-title, .title {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /*margin-top: 30px !important;*/
+    margin-bottom: 30px !important;
+    clear: none;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.entry-meta {
+    clear: none;
+}
+
+div.entry-meta {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+article.hentry {
+/*    clear: both;*/
+    margin-bottom: 10px;
+}
+
+h2#comments-title {
+    /*margin-top: 10px;
+    margin-bottom: 10px;*/
+    display: none;
+}
+
+.hentry, .no-results {
+    border-bottom: 0px solid black
+}
+
+footer.entry-meta {
+/*    clear: both;*/
+    margin-top: 10px;
+}
+
+#respond {
+    width: auto;
+    background: #eeeeee;
+}
+
+.entry-content {
+    padding-top: 0px;
+}
+
+h2, h1, .entry-content h2 {
+    margin-top: 32px;
+/*
+    margin-bottom: 16px;
+    font-size: 17px;
+    color: #000000;
+*/
+    color: #000000;
+    font-size: 20px;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 16px;
+    margin-left: 0;
+    text-transform: none;
+}
+
+li.menu-item-has-children > a:hover,
+li.menu-item-has-children > a:focus,
+li.menu-item-has-children > a:active {
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.entry-title {
+    margin-top: 0px;
+}
+
+.entry-content h3 {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: none;
+    margin-bottom: 10px;
+    letter-spacing: inherit;
+/*
+    color: #671187;
+*/
+    color: #888888;
+}
+
+.widget-title, .widget ul.menu > li.menu-item-has-children > a {
+
+/* .widget-title, .widget ul.menu li a { */
+    margin-left: 0px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #000000;
+    font-weight:inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    text-transform: none;
+}
+
+.widget ul.menu li a {
+    display: block;
+}
+
+p {
+    margin-bottom: 1.4em;
+}
+
+body, input, textarea {
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.widget ul li {
+    list-style: none;   
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding-top: 4px;   
+    padding-bottom: 4px;
+} 
+
+.widget ul.menu li {
+    border-bottom: 0px solid #eeeeee;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 26px;
+}
+/*
+.widget ul.menu li:first-child {
+    margin-top: 0px;
+}
+*/
+/*
+.widget ul.menu li a {
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: 2.6em;
+    text-transform: uppercase;
+}
+*/
+.widget ul.sub-menu {
+    margin-left: 0px;
+}
+
+.widget ul.sub-menu li {
+    border-bottom: 1px solid #eeeeee;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-transform: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.widget ul.sub-menu li a {
+/*    color: rgb(25, 130, 209);*/
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.0em;
+    line-height: 1.5em;
+    text-transform: None;
+    display: inline;
+}
+
+img.alignleft, img.alignright, img.aligncenter {
+    margin-bottom: 10px;
+}
+
+.alignleft, .alignright, .aligncenter {
+    margin-bottom: 10px;
+}
+
+.wp-caption {
+    margin-top: 4px;
+    padding: 0px;
+    background-color: inherit;
+}
+
+.wp-caption img {
+    padding: 0px;
+}
+
+.wp-caption .wp-caption-text {
+    padding: 4px 5px 0px 5px;
+}
+
+.wp-caption .wp-caption-text::before {
+    content: '';
+}
+
+.wp-caption.alignright {
+    clear: right;
+}
+
+img[class*="align"],
+img[class*="wp-image-"],
+#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+    border: 0px solid #ffffff;
+    padding: 0px;
+}
+
+.entry-content img, .comment-content img, .widget img {
+    max-width: 100%;
+}
+
+footer #supplementary {
+    border: 0px;
+    padding: 0px;
+}
+
+footer #site-generator {
+    display: none;
+}
+
+.footer-container {
+    clear: both;
+    background-color: #333333;
+    color: #888888;
+    border-top: 6px solid #666666;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.footer-container footer {
+/*
+    width: 940px;
+*/
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+footer .widget ul li {
+    list-style: none;
+    border-bottom: 0px;
+}
+
+footer .widget ul li a {
+    color: #888888;
+}
+
+.entry-header .comments-link a {
+    top: 0px;
+}
+
+.download_tab_bar {
+    margin-top: 10px;
+    float: right;
+}
+
+.download_tab {
+    cursor: pointer;
+    float: left;
+    margin-top: -3px;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin-left: 16px;
+    font-weight: bold;
+    border-bottom: 4px solid white;
+    line-height: 1em;
+    color: #888888;
+}
+
+.download_tab:hover {
+    border-bottom: 4px solid #c72fff;
+    color: #444444;
+}
+.selected_download_tab {
+    border-bottom: 4px solid rgb(156, 25, 205);
+    color: #000000;
+}
+
+.download_content {
+    display: none;
+}
+
+.selected_download_content {
+    display: block;
+}
+
+.download_box {
+/*
+    padding: 10px;
+    border: 1px solid #dddddd;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+*/
+
+    margin-top: 0px;
+    margin-bottom: 32px;
+/* padding-bottom: 15px; */
+/*    border-bottom: 1px solid #dddddd;*/
+}
+
+.download_box img {
+    float: left;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+p.info {
+    padding: 10px;
+    border: 1px solid #bbbb88;
+    background-color: #ffffee;
+}
+
+p.warning {
+    display: block;
+/*
+    display: inline-block;
+    clear: none;
+    width: 100%;
+*/
+    padding: 10px;
+    border: 1px solid #bb8888;
+    background-color: #ffeeee;
+}
+
+pre {
+/*
+    color: #111111;
+    padding: 10px;
+*/
+/*
+    border: 1px solid #cccccc;
+    background-color: #f4f4f4;
+*/
+/*
+    border: 1px solid #dddddd;
+    background-color: #f4f4f4;
+*/
+/*
+    background-color: #ffffff;
+*/
+}
+
+.type-page header.entry-header, body.single-post header.entry-header {
+    display: none;
+}
+
+footer .widget-title {
+    display: none;
+}
+
+footer .widget ul li {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+footer .widget {
+    margin-bottom: 0px;
+}
+
+footer p:last-child {
+    margin-bottom: 0px;
+}
+
+.widget-area {
+    font-size: 13px;
+}
+
+/* @import url("/fengestad/fengestad.css"); */

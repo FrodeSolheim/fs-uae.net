@@ -1,0 +1,773 @@
+/* Layout ------------------------------------------------------------------ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  min-height: 100vh;
+}
+
+.fs-header-and-main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+  /*padding: 0px;*/
+}
+
+.fs-main-and-sidebar {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: row;
+}
+
+main,
+.fs-main {
+  flex: 1 auto;
+  min-width: 0px;
+}
+
+.fs-sidebar {
+  min-width: 320px;
+  max-width: 320px;
+}
+
+/* Banner ------------------------------------------------------------------ */
+/*
+.fs-site-banner {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 16px 32px;
+}
+*/
+/* Debug ------------------------------------------------------------------- */
+
+/*
+  .fs-header-and-main {
+      background-color: #ff0000;
+  }
+*/
+
+.fs-site-header {
+  background-color: #66ff66;
+}
+
+.fs-page-header {
+  background-color: #ffff66;
+}
+
+.fs-page-header {
+  background-color: #ffff66;
+}
+
+/*
+.fs-sidebar {
+  background-color: #ff6666;
+}
+
+.fs-main {
+    background-color: #cccccc;
+}
+*/
+
+.fs-page-footer {
+  background-color: #99aa44;
+}
+
+.fs-site-footer {
+  background-color: #9944aa;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.fs-site-header {
+  background: #441144;
+  height: 64px;
+  line-height: 64px;
+  margin: 0px;
+  padding: 0px 32px;
+  /* margin-bottom: 32px; */
+}
+
+.fs-site-header h1 {
+  float: left;
+  margin: 0px;
+}
+
+.fs-site-header h1, .fs-site-header h1 a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+img.fs-site-icon {
+  float: left;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 8px;
+  display: block;
+}
+
+/*
+  h1.fs-site-title {
+      color: #ffffff;
+      font-size: 18px;
+  }
+*/
+.fs-site-title-weaker {
+  color: #ffffff80;
+}
+
+.fs-site-header ul li a {
+  font-size: 15px;
+}
+
+h1.fs-site-title,
+.fs-site-header ul {
+  line-height: 64px;
+  margin: 0px;
+}
+
+h1.fs-site-title {
+  font-size: 18px;
+  line-height: 64px;
+  margin: 0px;
+}
+
+.fs-site-header nav {
+  float: right;
+}
+
+.fs-site-header ul {
+  /* position: absolute; */
+  /* top: 0px; */
+  /*
+  right: 32px;
+  display: inline;
+  padding-left: 0px;
+  */
+  /* line-height: 64px; */
+  /* margin: 0px; */
+}
+
+.fs-site-header ul {
+  /* float: right;*/
+
+  /* position: absolute; */
+  /* top: 0px; */
+  /*right: 32px;*/
+
+  display: inline;
+  /*
+  padding-left: 0px;
+  line-height: 60px;
+  margin: 0px;
+  */
+}
+
+.fs-site-header li {
+  display: inline;
+  line-height: 1;
+  padding-left: 16px;
+}
+
+.fs-site-header nav a, .fs-site-header h1 a {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #f0f0f0;
+  /*font-size: 30px;*/
+  text-decoration: none;
+  background-color: transparent !important;
+}
+
+.fs-site-header nav a:active, .fs-site-header h1 a:active {
+  background-color: #2f0c47 !important;
+}
+
+.fs-site-header nav a:focus, .fs-site-header h1 a:focus {
+  background-color: #66497b !important;
+}
+
+.fs-site-header nav a.selected, .fs-site-header h1 a:selected {
+  background-color: #66497b !important;
+  color: white;
+}
+
+.fs-site-header nav a:hover,
+.fs-site-header nav a.selected:hover,
+.fs-site-header h1 a:hover
+{
+  background-color: #917aa3 !important;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.fs-section-title {
+  padding: 0px 32px;
+  background-color: #dddddd;
+  line-height: 64px;
+}
+
+.fs-section-title h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/*
+.fs-header-and-content {
+    min-height: 100%;
+}
+
+.fs-content,
+#fs-content {
+    margin: 0px;
+    margin-top: -32px;
+    padding-top: 32px;
+}
+
+.fs-content-with-sidebar {
+    margin-right: 384px;
+}
+*/
+
+/* ------------------------------------------------------------------------- */
+
+h1 {
+  font-size: 24px;
+}
+
+h1.fs-page-title {
+  background-color: #dddddd;
+  /* padding: 16px 32px; */
+  padding: 0px 32px;
+  margin-left: -32px;
+  margin-right: -32px;
+  margin-top: -32px;
+  margin-bottom: 32px;
+  line-height: 64px;
+}
+
+body.fs-body-with-right-sidebar h1.fs-page-title {
+  margin-right: -416px;
+  /* 384 + 32 */
+}
+
+h2 {
+}
+
+h3 {
+  font-size: 17px;
+  /* font-weight: bold; */
+}
+
+/* ------------------------------------------------------------------------- */
+
+body {
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  /* line-height: 1.5; */
+}
+
+main,
+.fs-main {
+  padding: 32px;
+}
+
+main > h1 {
+  margin-top: 0px;
+}
+
+main > :first-child {
+  margin-top: 0px;
+}
+
+/*
+p, body {
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+*/
+
+p,
+li {
+  line-height: 1.5;
+}
+
+p {
+  /*
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  */
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+/* Links ------------------------------------------------------------------- */
+
+a {
+  color: #6d2d9a;
+  text-decoration: underline;
+  text-decoration-color: #6d2d9a80;
+  text-underline-offset: 3px;
+}
+
+a:focus,
+a:active,
+a:hover {
+  background-color: #6d2d9a20;
+  text-decoration-color: #000000;
+}
+
+/* Preformatted text ------------------------------------------------------- */
+
+a.fs-filename {
+  font-size: 13px;
+  font-family: "Roboto Mono", monospace;
+}
+
+a.filename {
+  font-size: 13px;
+  font-family: "Roboto Mono", monospace;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+samp {
+  background-color: #eeeeee;
+  color: #000000;
+  padding: 1px 4px;
+}
+
+/* Downloads --------------------------------------------------------------- */
+
+.download_content h2 {
+  margin-top: 0px;
+}
+
+div.fs-file-downloads {
+  background-color: #eeeeee;
+  line-height: 1.5;
+  padding: 16px;
+}
+
+div.fs-file-downloads-arch {
+  color: #cccccc;
+  font-size: 32px;
+  font-weight: 900;
+  float: right;
+  height: 100%;
+  padding-right: 16px;
+  top: auto;
+  bottom: auto;
+}
+
+div.fs-file-download {
+  /* FIXME: icons */
+  background-image: url(/s/images/22/zip.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+}
+
+div.fs-file-download a {
+  font-weight: 500;
+}
+
+.fs-file-download-size {
+  display: inline-box;
+  font-size: 13px;
+  padding-left: 16px;
+}
+
+.download_tab_bar {
+    margin-top: 10px;
+    float: right;
+}
+
+.download_tab {
+    cursor: pointer;
+    float: left;
+    margin-top: -3px;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin-left: 16px;
+    font-weight: bold;
+    border-bottom: 4px solid white;
+    line-height: 1em;
+    color: #888888;
+}
+
+.download_tab:hover {
+    border-bottom: 4px solid #c72fff;
+    color: #444444;
+}
+.selected_download_tab {
+    border-bottom: 4px solid rgb(156, 25, 205);
+    color: #000000;
+}
+
+.download_content {
+    display: none;
+}
+
+.selected_download_content {
+    display: block;
+}
+
+/* FIXME: used */
+.download_box {
+/*
+    padding: 10px;
+    border: 1px solid #dddddd;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+*/
+
+    margin-top: 0px;
+    margin-bottom: 32px;
+/* padding-bottom: 15px; */
+/*    border-bottom: 1px solid #dddddd;*/
+}
+
+/* FIXME: used */
+.download_box img {
+    float: left;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+/* Sidebar ----------------------------------------------------------------- */
+
+.fs-sidebar {
+  /* FIXME: Make sure this is replaced with static-named version */
+  background-image: url(/s/images/sidebar-background.png);
+  padding: 32px;
+}
+
+.fs-sidebar h2 {
+  font-size: 20px;
+  font-weight: 400;
+    margin-top: 0px;    
+}
+
+/* Comments ---------------------------------------------------------------- */
+
+.fs-page-comments {
+  background-color: #cccccc;
+  padding: 32px;
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.fs-site-footer {
+  background-color: #333333;
+  /* border-top: 4px solid #666666; */
+  color: #999999;
+  font-size: 14px;
+  /* line-height: 1.5; */
+  /* margin-left: -32px;
+          margin-right: -32px; */
+  padding: 32px;
+}
+
+.fs-site-footer-columns {
+  display: flex;
+  margin: 0px -32px;
+}
+
+.fs-site-footer-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 0px 32px;
+}
+
+.fs-site-footer h4 {
+  font-size: 17px;
+  font-weight: medium;
+}
+
+.fs-site-footer a {
+  color: #cccccc;
+  text-decoration-color: #cccccc30;
+}
+
+.fs-site-footer a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration-color: #cccccc30;
+}
+
+.fs-site-footer p {
+  color: #999999;
+}
+
+.fs-site-footer ul {
+  color: #999999;
+  padding: 0px;
+}
+
+.fs-site-footer ul li {
+  /* line-height: 2; */
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/*
+      #fs-site-header,
+      #site-header {
+          background-color: #2f0c47;
+      }
+
+      #fs-page-header,
+      #page-header {
+          border: 0px;
+          background-color: #2f0c47;
+      }
+
+      #fs-page-header a:active {
+          background-color: #2f0c47 !important;
+      }
+
+      #fs-page-header a:focus {
+          background-color: #66497b !important;
+      }
+
+      #fs-page-header a.selected {
+          background-color: #66497b !important;
+          color: white;
+      }
+
+      #fs-page-header a:hover,
+      #fs-page-header a.selected:hover {
+          background-color: #917aa3 !important;
+      }
+      */
+
+/* Fonts ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOiCnqEu92Fr1Mu51QrIzc.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOjCnqEu92Fr1Mu51TjARc9.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOkCnqEu92Fr1Mu52xP.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOjCnqEu92Fr1Mu51S7ABc9.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOjCnqEu92Fr1Mu51TzBhc9.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOjCnqEu92Fr1Mu51TLBBc9.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOkCnqEu92Fr1MmgWxP.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOlCnqEu92Fr1MmSU5vAw.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOmCnqEu92Fr1Me5Q.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOlCnqEu92Fr1MmEU9vAw.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOlCnqEu92Fr1MmWUlvAw.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/s/fonts/roboto/v29/KFOlCnqEu92Fr1MmYUtvAw.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAeW9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrnnAOW9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrk5AOW9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAOW9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlVAOW9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrm5B-W9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xoDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrmAB-W9.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_XvqPQw.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_gPqPQw.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_7PqPQw.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_AP2PQw.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/s/fonts/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Of2PQw.ttf)
+    format("truetype");
+}
