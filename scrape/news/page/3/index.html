@@ -110,9 +110,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </style>
 <link rel="https://api.w.org/" href="https://fs-uae.net/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fs-uae.net/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.7.2" />
-<style type="text/css">.broken_link, a.broken_link {
-	text-decoration: line-through;
-}</style><style type="text/css" id="custom-background-css">
+<style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #ffffff; }
 </style>
 	
@@ -949,7 +947,7 @@ body.custom-background { background-color: #ffffff; }
 					</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p>A bugfix release (2.4.3) has been issued for the stable series of FS-UAE. This version fixes a bug which causes a crash in FS-UAE on Linux with recent official NVIDIA drivers. Windows and OS X users do not need to update (and I will not provide updated builds for those platforms either). Source code is available here: <a href="/stable/2.4.3/" class="broken_link">http://fs-uae.net/stable/2.4.3/</a>.</p>
+			<p>A bugfix release (2.4.3) has been issued for the stable series of FS-UAE. This version fixes a bug which causes a crash in FS-UAE on Linux with recent official NVIDIA drivers. Windows and OS X users do not need to update (and I will not provide updated builds for those platforms either). Source code is available here: <a href="/stable/2.4.3/">http://fs-uae.net/stable/2.4.3/</a>.</p>
 <p>Many thanks to NVIDIA which actually tracked down the bug in FS-UAE! The problem was an unused function (mprotected), a legacy from older WinUAE code, which was exported and caused the NVIDIA drivers to load this function instead of the correct one from libc. I&#8217;m quite impressed that they contacted me with information about the bug, and I think this shows how serious they are about their Linux drivers 🙂</p>
 <p>The latest development versions are not affected by this problem (the function has already been removed, and also, symbols are no longer exported by default).</p>
 					</div><!-- .entry-content -->
