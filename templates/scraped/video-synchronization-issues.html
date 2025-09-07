@@ -1,0 +1,164 @@
+{% set page_title = "Video Synchronization Issues" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-main-and-sidebar">
+    <main>
+<div id="primary">
+<div id="content" role="main">
+<article id="post-3004" class="post-3004 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Video Synchronization Issues</h1>
+	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<p>Configuring FS-UAE to run the emulation in sync with the display is required to enable perfect scrolling in games. However, in some cases, your desktop environment may interfere with FS-UAE&#8217;s ability to do this, and you may end up with worse performance instead of better.</p>
+<h2>Desktop Compositor</h2>
+<p>When you have a desktop environment with a compositor running, you may run into one or more of the following issues:</p>
+<ul>
+<li>Video frame rate is not completely smooth even when full emulation-display synchronization is enabled.</li>
+<li>In some cases (observed with Unity on nVIDIA), the frame rate is about halved.</li>
+</ul>
+<p>If you have one of these problems, you can try one of the following workarounds:</p>
+<ul>
+<li>Running FS-UAE in fullscreen may help or completely fix the problem.</li>
+<li>Temporarily disable compositing (for example in KDE).</li>
+<li>Temporarily use another window manager / desktop environment.</li>
+<li>Don&#8217;t use video synchronization (but then you won&#8217;t get perfect scrolling in games either).</li>
+</ul>
+<h2>Ubuntu With 3D Acceleration</h2>
+<p>Video synchronization @50Hz does not seem to work properly in Window mode with Compiz/Unity and compositing / 3D acceleration enabled, at least not with the proprietary nVIDIA drivers. Run FS-UAE in fullscreen to get smooth scrolling with 50Hz modes.</p>
+<p>You may also need to do the following: Install <em>CompizConfig Settings Manager</em>, open it, click on <em>General/Composite</em>, and make sure <em>Unredirect Fullscreen Windows</em> is ticked.</p>
+<h2>Display Synchronization Options</h2>
+<p>You may get more stable video synchronization by trying out the different values for the <a title="Video Options" href="/video-options"><em>video_sync_method</em></a> option.</p>
+			</div><!-- .entry-content -->
+	<footer class="entry-meta">
+			</footer><!-- .entry-meta -->
+</article><!-- #post-3004 -->
+</div><!-- #content -->
+</div><!-- #primary -->
+    </main>
+<div id="sidebar">
+<div id="secondary" class="widget-area" role="complementary">
+<aside id="nav_menu-6" class="widget widget_nav_menu"><div class="menu-documentation-container"><ul id="menu-documentation" class="menu"><li id="menu-item-1801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1801"><a href="/docs/getting-started/">Getting started</a>
+<ul class="sub-menu">
+	<li id="menu-item-1802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1802"><a href="/docs/getting-started/">Getting started</a></li>
+	<li id="menu-item-1950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1950"><a href="/docs/kickstarts/">Kickstart ROMs</a></li>
+	<li id="menu-item-1803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1803"><a href="/docs/faq/">FAQ and troubleshooting</a></li>
+</ul>
+</li>
+<li id="menu-item-6716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6716"><a href="/docs/">Platform-specific notes</a>
+<ul class="sub-menu">
+	<li id="menu-item-2568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2568"><a href="/docs/windows/">Windows</a></li>
+	<li id="menu-item-5766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5766"><a href="/docs/macos/">macOS</a></li>
+	<li id="menu-item-5767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5767"><a href="/docs/linux/">Linux</a></li>
+</ul>
+</li>
+<li id="menu-item-2660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2660"><a href="/docs/">Input options</a>
+<ul class="sub-menu">
+	<li id="menu-item-2906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2906"><a href="/docs/keyboard/">Keyboard</a></li>
+	<li id="menu-item-6713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713"><a href="/docs/keyboard-mapping/">keyboard-mapping</a></li>
+	<li id="menu-item-1976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1976"><a href="/docs/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+	<li id="menu-item-6690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6690"><a href="/docs/keyboard-joystick-emulation/">Keyboard joystick emulation</a></li>
+	<li id="menu-item-376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="/docs/joysticks/">Joysticks</a></li>
+	<li id="menu-item-5778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5778"><a href="/docs/mouse/">Mouse</a></li>
+	<li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-440"><a href="/docs/input-mapping/">Input mapping</a></li>
+	<li id="menu-item-6698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6698"><a href="/docs/input-actions/">Input actions</a></li>
+</ul>
+</li>
+<li id="menu-item-1774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1774"><a href="/docs/">More Information</a>
+<ul class="sub-menu">
+	<li id="menu-item-5769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5769"><a href="/docs/amiga-forever/">Amiga Forever</a></li>
+	<li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1808"><a href="/docs/floppy-images/">Floppy images</a></li>
+	<li id="menu-item-6689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6689"><a href="/docs/g-sync/">G-Sync</a></li>
+	<li id="menu-item-2534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2534"><a href="/docs/hard-drives/">Hard drives</a></li>
+	<li id="menu-item-5774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5774"><a href="/docs/jit-compiler/">JIT compiler</a></li>
+	<li id="menu-item-1798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1798"><a href="/docs/performance/">Performance notes</a></li>
+	<li id="menu-item-5781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5781"><a href="/docs/portable/">Portable version</a></li>
+</ul>
+</li>
+<li id="menu-item-1809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1809"><a href="/docs/">In-Depth documentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-5773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5773"><a href="/docs/cyberstorm-ppc/">CyberStorm PPC</a></li>
+	<li id="menu-item-5780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5780"><a href="/docs/options/">Configuration options</a></li>
+	<li id="menu-item-6691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6691"><a href="/docs/midi/">MIDI support</a></li>
+	<li id="menu-item-5783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5783"><a href="/docs/x-arcade/">X-Arcade controllers</a></li>
+</ul>
+</li>
+<li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2072"><a href="/docs/">Advanced topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-5768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5768"><a href="/docs/action-replay/">Action Replay</a></li>
+	<li id="menu-item-6688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6688"><a href="/docs/bridgeboard/">Bridgeboard emulation</a></li>
+	<li id="menu-item-2014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2014"><a href="/docs/compiling/">Compiling FS-UAE</a></li>
+	<li id="menu-item-2071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2071"><a href="/docs/debugging/">Debugging FS-UAE</a></li>
+	<li id="menu-item-5782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5782"><a href="/docs/serial-port-2/">Serial port</a></li>
+	<li id="menu-item-6708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6708"><a href="/docs/vpar/">Virtual parallel port</a></li>
+</ul>
+</li>
+<li id="menu-item-3872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3872"><a href="/docs/new/">New documentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-5770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5770"><a href="/docs/amikit/">AmiKit</a></li>
+	<li id="menu-item-5779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5779"><a href="/docs/old-files/">Old Files</a></li>
+	<li id="menu-item-6710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6710"><a href="/docs/shaders/">shaders</a></li>
+	<li id="menu-item-6711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6711"><a href="/docs/to-do/">to-do</a></li>
+	<li id="menu-item-6707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6707"><a href="/docs/variable-refresh-rate/">variable-refresh-rate</a></li>
+	<li id="menu-item-6709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6709"><a href="/docs/vsync/">vsync</a></li>
+</ul>
+</li>
+<li id="menu-item-5764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5764"><a href="/docs/">Documentation needing update</a>
+<ul class="sub-menu">
+	<li id="menu-item-2268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2268"><a href="/known-issues/">Known Issues</a></li>
+	<li id="menu-item-2042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2042"><a href="/docs/directories/">Paths and Directories</a></li>
+	<li id="menu-item-1883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1883"><a href="/launcher/">FS-UAE Launcher</a></li>
+	<li id="menu-item-1777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1777"><a href="/localization/">Translating FS-UAE</a></li>
+	<li id="menu-item-2005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2005"><a href="/configuration-files/">Configuration Files</a></li>
+	<li id="menu-item-2013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2013"><a href="/command-line/">Command Line Usage</a></li>
+	<li id="menu-item-3295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3295"><a href="/compiling-on-windows/">Compiling FS-UAE on Windows</a></li>
+	<li id="menu-item-1775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1775"><a href="/whdload-support/">WHDLoad Support</a></li>
+	<li id="menu-item-1811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1811"><a href="/online-play/">FS-UAE Online Play</a></li>
+	<li id="menu-item-1812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1812"><a href="/launcher-net-play/">Launcher Net Play</a></li>
+	<li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1813"><a href="/online-play/">FS-UAE Online Play</a></li>
+	<li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1814"><a href="/net-play/">FS-UAE Net Play</a></li>
+	<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="/audio/">Audio Configuration</a></li>
+	<li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/video-options/">Video Options</a></li>
+	<li id="menu-item-869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-869"><a href="/theme-options/">Theme Options</a></li>
+	<li id="menu-item-3844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3844"><a href="/tutorials/">Tutorials</a></li>
+	<li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="/resources-and-links/">Resources and Links</a></li>
+	<li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="/custom-controller-configuration/">Custom Controller Configuration</a></li>
+	<li id="menu-item-5772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5772"><a href="/installing-classicwb-in-fs-uae/">Installing ClassicWB in FS-UAE</a></li>
+</ul>
+</li>
+</ul></div></aside></div><!-- #secondary .widget-area -->
+</div><!-- #sidebar -->
+</div>
+
+{% endblock %}

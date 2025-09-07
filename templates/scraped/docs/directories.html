@@ -1,0 +1,284 @@
+{% set page_title = "Paths and Directories" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Paths and directories</h1>
+<p>By default, FS-UAE creates a number of directories in <code>Documents/FS-UAE</code> to
+store the files used by FS-UAE: CD-ROMs, Configurations, Controllers, Flash
+Memory, Floppies, Floppy Overlays, Hard Drives, Kickstarts, Logs, Save States.</p>
+<p>In addition, if you use FS-UAE Launcher, it will create some directories of its
+own. The following directories can be used by FS-UAE and/or the Launcher if
+found in Documents/FS-UAE: <code>Covers</code>, <code>Screenshots</code>, <code>Titles</code>, <code>Themes</code>.</p>
+<p>See "Specifying Paths in Configuration Files" in Configuration Files instead if
+you are looking for information about the different ways of referring to
+directories and files in FS-UAE.</p>
+<h2>Base directory</h2>
+<p>By default, FS-UAE creates its directories under <code>Documents/FS-UAE</code>. For Linux
+users: If your Documents directory is not configured according to the XDG user
+dir spec, <code>$HOME/FS-UAE</code> will be used as a fallback.</p>
+<p>From FS-UAE 3.1.57 and onwards, <code>$HOME/FS-UAE</code> will automatically be used if it
+exists.</p>
+<p>You can override this by putting the path to the desired base directory in a
+special config file. The config file will be read by both FS-UAE and FS-UAE
+Launcher if it exists:</p>
+<pre><code>Windows: &lt;LOCALAPPDATA&gt;/FS-UAE/base-dir
+OS X: ~/Library/Preferences/fs-uae/base-dir
+Linux/other: ~/.config/fs-uae/base-dir
+</code></pre>
+<p>This file must be a simple text file with (only) the full path to the desired
+base directory.</p>
+<blockquote>
+<p><strong>Note:</strong> For windows users, the most common location of this config file
+<code>C:\Users\[username]\AppData\Local\FS-UAE\base-dir</code>. Also make sure that when
+you create this file, that it isn't created as base-dir.txt (which won't)
+work - a common problem if you use Notepad or similar. It is a good idea to,
+temporarily or permanently, change Explorer settings to show file extension
+for all files.</p>
+</blockquote>
+<p>Alternatively, you can starting FS-UAE and/or FS-UAE Launcher with
+<code>--base-dir=/path/to/desired/dir</code>.</p>
+<p>A final option to avoid all this is to simply use the
+<a href="portable">portable version</a> of FS-UAE. With a portable setup, both the
+application and data files are placed together in the same directory, and you
+can move this directory around at will, even between computers.</p>
+<h2>Media directories</h2>
+<p>The following directories are created as default locations to hold your Amiga
+media:</p>
+<ul>
+<li>CD-ROMs</li>
+<li>Floppies</li>
+<li>Hard Drives</li>
+</ul>
+<p>The location and names of these directories can be overridden with the
+following options in config files: cdroms_dir, floppies_dir, hard_drives_dir.</p>
+<p>You do not have to store your Amiga files here, but when media are located in
+one of these directories (or a sub-directory), you can refer to contained files
+without using full paths. For example a floppy image file called Lotus2.adf
+stored in the Floppies directory can be inserted into the first floppy drive
+with this option:</p>
+<pre><code>floppy_drive_0 = Lotus2.adf
+</code></pre>
+<p>If the file is located outside the Floppies directory, you must instead use an
+absolute path or one of the other ways to specify paths.</p>
+<h2>Referring to directories</h2>
+<p>Paths in configuration files can be specified as either:</p>
+<ul>
+<li>Relative paths</li>
+<li>Absolute paths</li>
+<li>Paths beginning with special variables</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> On Windows, you must either use forward slashes in paths in
+configuration files, or you must use double backslashes. Example:
+<code>C:/Amiga/Files</code> and <code>C:\\Amiga\\Files</code> are both correct, but
+<code>C:\Amiga\Files</code> is not!</p>
+</blockquote>
+<p>Relative paths will be looked up relative to either the current directory, or
+(more often) relative to a relevant default directory. For example, relative
+floppy image paths will be looked up relative to the Floppies directory.</p>
+<p>Absolute paths are paths beginning with a drive letter (Windows), or a slash
+(Linux, Mac OS X, FreeBSD).</p>
+<p>To avoid having to use absolute paths, and to make configuration files more
+portable, you can prefix paths with some special variables (Note: these are not
+environment variables, though $HOME looks like one):</p>
+<ul>
+<li><code>$CONFIG</code> – The directory containing the loaded configuration file.</li>
+<li><code>$APP</code> – On Mac OS X, the directory containing the currently running
+  FS-UAE.app, on other platforms, it is he same as $EXE. This means that $APP
+  should normally be preferred over EXE for portability.</li>
+<li><code>$EXE</code> – The directory containing the currently running FS-UAE executable.</li>
+<li><code>$HOME</code> – The user's home directory.</li>
+<li><code>$DOCUMENTS</code> – The user’s documents directory.</li>
+<li><code>$BASE</code> – The FS-UAE base directory, usually Documents/FS-UAE, or the root of
+  the portable directory if using the portable version.</li>
+</ul>
+<blockquote>
+<p><strong>FIXME</strong>: CONFIG, APP, EXE should perhaps be renamed to CONFIGDIR, APPDIR,
+EXEDIR instead. Also, is EXE/EXEDIR really needed? Path to the exe inside the
+app bundle isn't often useful (only in same cases with bundled configs)
+inside the app, so maybe make a special name for that instead.</p>
+</blockquote>
+<p>Take note that if you are specifying these prefixes as command line arguments,
+you must take care to avoid the shell replacing them with environment
+variables. Either escape the <code>$</code> with <code>\$</code> or use single quotes around the path
+to prevent environment variable expansion.</p>
+<h2>Covers, screenshots and titles for FS-UAE Launcher</h2>
+<p>See the FS-UAE Launcher page for information about the structure of the
+following directories:</p>
+<ul>
+<li>Covers (front covers of game boxes)</li>
+<li>Screenshots</li>
+<li>Titles (Screenshot of the game title screen)</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Paths for covers (etc) are subject to change for FS-UAE Launcher
+4.0.</p>
+</blockquote></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+
+{% endblock %}

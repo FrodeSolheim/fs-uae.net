@@ -1,0 +1,77 @@
+{% set page_title = "FS-UAE Arcade on GNOME 3" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div id="sidebar">
+<div id="secondary" class="widget-area" role="complementary">
+<aside id="nav_menu-8" class="widget widget_nav_menu"><div class="menu-arcade-container"><ul id="menu-arcade" class="menu"><li id="menu-item-3098" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3098"><a href="/arcade/">FS-UAE Arcade</a>
+<ul class="sub-menu">
+	<li id="menu-item-3096" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-3096"><a href="/arcade/">FS-UAE Arcade</a></li>
+	<li id="menu-item-3097" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3084 current_page_item menu-item-3097"><a href="/arcade/gnome-3/" aria-current="page">FS-UAE Arcade on GNOME 3</a></li>
+</ul>
+</li>
+</ul></div></aside></div><!-- #secondary .widget-area -->
+</div><!-- #sidebar -->
+<section id="fs-content">
+<div id="primary">
+<div id="content" role="main">
+<article id="post-3084" class="post-3084 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">FS-UAE Arcade on GNOME 3</h1>
+	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<p class="info">This information applies to FS-UAE Launcher <strong>2.5.3dev3 or newer</strong> with a recent version of GNOME 3 / GNOME Shell.</p>
+<p>When full-screen FS-UAE is launched from full-screen FS-UAE Arcade, the Arcade window is automatically minimized by GNOME 3 and does not get restored when FS-UAE exits (<em>is this a bug or feature?</em>). Manually trying to restore the window &#8220;fails&#8221; &#8211; the window is just flagged as requiring attention, a notification about the window being ready appears.</p>
+<p>Because of this, the default behavior under GNOME 3 is to use a maximized window without decorations, so it fills most of the screen without being obscured by the top system bar.</p>
+<p><strong>If you have any information to add, or know how to make it work even better, please leave a comment 🙂</strong></p>
+<h2>Status</h2>
+<p>It seems to work quite well (tested with GNOME 3.12):</p>
+<ul>
+<li>There is a bit flickering when starting FS-UAE.</li>
+<li>Flickering along the top can be reduced by having a black desktop background, or a desktop background image with black color under the top bar area.</li>
+<li>Some flicker can be reduced if FS-UAE is patched to use 0, 0, screen_w, screen_h as initial window size when opening the fullscreen window (not currently done, since this seems to mess up window/fullscreen toggling a bit, but it could for example be done only when launching FS-UAE from the Arcade interface).</li>
+<li>The screen flickers when FS-UAE exits and returns to FS-UAE Arcade. No workaround discovered yet.</li>
+</ul>
+<h2>Detecting GNOME 3</h2>
+<p>GNOME 3 is detected by the environment variable <code>XDG_CURRENT_DESKTOP=GNOME</code>. If this variable is not set, or is set to another value, the workarounds will not be applied automatically.</p>
+<p>You can, if necessary, run FS-UAE Arcade manually like this to activate the workarounds:</p>
+<pre>XDG_CURRENT_DESKTOP=GNOME fs-uae-arcade</pre>
+			</div><!-- .entry-content -->
+	<footer class="entry-meta">
+			</footer><!-- .entry-meta -->
+</article><!-- #post-3084 -->
+</div><!-- #content -->
+</div><!-- #primary -->
+</section><!-- #fs-content-->
+
+{% endblock %}

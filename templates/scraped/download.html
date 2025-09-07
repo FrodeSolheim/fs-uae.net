@@ -1,0 +1,988 @@
+{% set page_title = "Download" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Download</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main>
+    <div class="download_content" id="windows_content">
+        <h2>FS-UAE & Launcher for Windows</h2>
+        <p>Download the two
+            <samp class="fileext">.zip</samp>
+            archives and extract the contained
+            <samp class="dirname">FS-UAE</samp>
+            and <samp class="dirname">FS-UAE-Launcher</samp>
+            folders to wherever you like.
+            <strong>
+                You must keep these two folders stored alongside each other.
+            </strong>
+            A Windows installer is currently not available.
+        </p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_Windows_x86-64.zip">FS-UAE_3.1.66_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(8.6 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_Windows_x86-64.zip">FS-UAE-Launcher_3.1.68_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(50 MB)
+    </span>-->
+</div>
+        </div>
+        <p>
+            The <samp class="filename">fs-uae-launcher.exe</samp>
+            executable is found within
+            <samp class="dirname">FS-UAE-Launcher/Windows/x86-64</samp>.
+            You can of course make a shortcut to this to make starting it
+            more convenient.
+        </p>
+<h2>Plugins</h2>
+<p>
+    The following plugins can be used to extend the functionality of FS-UAE.
+    CAPSImg provides support for <samp class="fileext">.ipf</samp> floppy
+    images
+    while QEMU-UAE provides PPC emulation support.
+</p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_Windows_x86-64.zip">CAPSImg_5.1.3_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_Windows_x86-64.zip">QEMU-UAE_3.8.9_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(2.9 MB)
+    </span>-->
+</div>
+        </div>
+<p>
+The plugins must be installed into
+<samp class="dirname">Documents/FS-UAE/System</samp>. For example, the
+<samp class="dirname">CAPSImg</samp>
+directory should be extracted as
+<samp class="dirname">Documents/FS-UAE/System/CAPSImg</samp>.
+</p>
+<h2>Portable version</h2>
+<p>If you want to convert <samp class="dirname">Documents/FS-UAE</samp> to a
+    <a href="/docs/portable">portable directory</a> which you can move wherever
+    you want, just follow these
+    two simple steps:
+</p>
+<ol>
+    <li>Make sure <samp class="dirname">FS-UAE</samp> and
+        <samp class="dirname">FS-UAE-Launcher</samp> are stored inside
+        <samp class="dirname">Documents/FS-UAE</samp>.
+        I recommend storing them as
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE-Launcher</samp>
+        and
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE</samp>.
+    </li>
+    <li>
+        Download the file
+        <!-- FIXME: Don't use samp, but a filename class on a instead ? -->
+        <a class="filename" href="/s/misc/Portable.ini.v/2jmj7l5rSw0yVb_vlWAYkK_YBwk/Portable.ini">
+            Portable.ini
+        </a> and save it in <samp class="dirname">Documents/FS-UAE</samp>.
+    </li>
+</ol>
+<p>
+    You can now move Documents/FS-UAE to any location.
+    Go to the <a href="/docs/portable">documentation</a> to read more about
+    this
+    feature.
+</p>
+<h2>FS-UAE Arcade</h2>
+<p>FS-UAE Arcade builds are not done for version 3.1 yet. However, arcade mode
+    is included with FS-UAE Launcher. So you can generally run
+    <code>fs-uae-launcher --arcade</code> to launch the arcade interface if you
+    know how to run the executable directly with additional arguments.
+</p>
+    </div><!-- #windows_content -->
+    <div class="download_content" id="macosx_content">
+        <h2>FS-UAE & Launcher for macOS</h2>
+        <p>Download the <samp class="fileext">.dmg</samp> images for both
+            FS-UAE
+            Launcher and FS-UAE, and copy the apps within to
+            <samp class="dirname">/Applications</samp>
+            or wherever you like.
+            <strong>
+                You must keep these two apps stored alongside each other.
+            </strong>
+            You also need to choose the correct version for your machine;
+            The ARM64 version is for Apple Silicon (M1 Macs), and x86-64 is for
+            Intel hardware.
+        </p>
+        <p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_macOS_x86-64.dmg">FS-UAE_3.1.66_macOS_x86-64.dmg</a>
+    <!--<span class="fs-file-download-size">(6.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_macOS_x86-64.dmg">FS-UAE-Launcher_3.1.68_macOS_x86-64.dmg</a>
+    <!--<span class="fs-file-download-size">(41 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+        <p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">ARM64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_macOS_ARM64.dmg">FS-UAE_3.1.66_macOS_ARM64.dmg</a>
+    <!--<span class="fs-file-download-size">(5.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_macOS_ARM64.dmg">FS-UAE-Launcher_3.1.68_macOS_ARM64.dmg</a>
+    <!--<span class="fs-file-download-size">(36 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+        <p>
+            If you are unsure about which version to choose,
+            just go with x86-64 which should work on all recent macOS systems
+            (<strong>10.13 or newer</strong>).
+        </p>
+        <p>
+            The ARM64 version will run faster on M1 Macs, but does not support
+            JIT compilation. You should be able to run the x86-64 on M1 Macs
+            (with JIT) though of course performance will be affected somewhat
+            by emulating both 68K and x86-64 on ARM64 hardware.
+        </p>
+        <p>If you have an older macOS version which is not supported by the
+            main FS-UAE Launcher download, you can download a version for
+            <!-- <a href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_macOS10.9_x86-64.dmg">-->
+            <a style="text-decoration: line-through"
+                href="https://github.com/FrodeSolheim/fs-uae-launcher/issues/137">macOS
+                10.9 or newer</a>
+            instead. It is built with older versions of Python and PyQt5.
+        </p>
+<h2>Plugins</h2>
+<p>
+    The following plugins can be used to extend the functionality of FS-UAE.
+    CAPSImg provides support for <samp class="fileext">.ipf</samp> floppy
+    images
+    while QEMU-UAE provides PPC emulation support.
+</p>
+        <p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_macOS_x86-64.tar.xz">CAPSImg_5.1.3_macOS_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_macOS_x86-64.tar.xz">QEMU-UAE_3.8.9_macOS_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(3.9 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+        <p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">ARM64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_macOS_ARM64.tar.xz">CAPSImg_5.1.3_macOS_ARM64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_macOS_ARM64.tar.xz">QEMU-UAE_3.8.9_macOS_ARM64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(1.8 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+<p>
+The plugins must be installed into
+<samp class="dirname">Documents/FS-UAE/System</samp>. For example, the
+<samp class="dirname">CAPSImg</samp>
+directory should be extracted as
+<samp class="dirname">Documents/FS-UAE/System/CAPSImg</samp>.
+</p>
+<h2>Portable version</h2>
+<p>If you want to convert <samp class="dirname">Documents/FS-UAE</samp> to a
+    <a href="/docs/portable">portable directory</a> which you can move wherever
+    you want, just follow these
+    two simple steps:
+</p>
+<ol>
+    <li>Make sure <samp class="dirname">FS-UAE</samp> and
+        <samp class="dirname">FS-UAE-Launcher</samp> are stored inside
+        <samp class="dirname">Documents/FS-UAE</samp>.
+        I recommend storing them as
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE-Launcher</samp>
+        and
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE</samp>.
+    </li>
+    <li>
+        Download the file
+        <!-- FIXME: Don't use samp, but a filename class on a instead ? -->
+        <a class="filename" href="/s/misc/Portable.ini.v/2jmj7l5rSw0yVb_vlWAYkK_YBwk/Portable.ini">
+            Portable.ini
+        </a> and save it in <samp class="dirname">Documents/FS-UAE</samp>.
+    </li>
+</ol>
+<p>
+    You can now move Documents/FS-UAE to any location.
+    Go to the <a href="/docs/portable">documentation</a> to read more about
+    this
+    feature.
+</p>
+<h2>FS-UAE Arcade</h2>
+<p>FS-UAE Arcade builds are not done for version 3.1 yet. However, arcade mode
+    is included with FS-UAE Launcher. So you can generally run
+    <code>fs-uae-launcher --arcade</code> to launch the arcade interface if you
+    know how to run the executable directly with additional arguments.
+</p>
+        <!--
+    <h2>Archives</h2>
+    <p><a class="filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_macOS_x86-64.tar.xz">FS-UAE_3.1.66_macOS_x86-64.tar.xz</a>
+    </p>
+    <p><a class="filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_macOS_x86-64.tar.xz">FS-UAE-Launcher_3.1.68_macOS_x86-64.tar.xz</a>
+    </p>
+    <p><a class="filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_macOS_ARM64.tar.xz">FS-UAE_3.1.66_macOS_ARM64.tar.xz</a>
+    </p>
+    <p><a class="filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_macOS_ARM64.tar.xz">FS-UAE-Launcher_3.1.68_macOS_ARM64.tar.xz</a>
+    </p>
+    -->
+    </div><!-- macosx_content -->
+    <div class="download_content" id="linux_content">
+        <h2>FS-UAE & Launcher for Linux</h2>
+        <p>Download the <samp class="fileext">.tar.xz</samp> archives for your
+            operating system and extract the contained <samp
+                class="dirname">FS-UAE</samp> and <samp
+                class="dirname">FS-UAE-Launcher</samp> directories to wherever
+            you
+            like.
+            <strong>You must keep these directories stored alongside each
+                other.</strong>
+        </p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE/Stable/3.1.66/FS-UAE_3.1.66_Linux_x86-64.tar.xz">FS-UAE_3.1.66_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(5.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/FS-UAE-Launcher_3.1.68_Linux_x86-64.tar.xz">FS-UAE-Launcher_3.1.68_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(48 MB)
+    </span>-->
+</div>
+        </div>
+        <p>The <samp class="filename">fs-uae-launcher</samp> executable is
+            found
+            within <samp class="dirname">FS-UAE-Launcher/Linux/x86-64</samp>.
+            You can of course make a shortcut or symlink to this to make
+            starting it
+            more convenient.
+        </p>
+<h2>Plugins</h2>
+<p>
+    The following plugins can be used to extend the functionality of FS-UAE.
+    CAPSImg provides support for <samp class="fileext">.ipf</samp> floppy
+    images
+    while QEMU-UAE provides PPC emulation support.
+</p>
+        <p>
+        <div class="fs-file-downloads">
+            <div class="fs-file-downloads-arch">x86-64</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_Linux_x86-64.tar.xz">CAPSImg_5.1.3_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.0 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_Linux_x86-64.tar.xz">QEMU-UAE_3.8.9_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(1.9 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+<p>
+The plugins must be installed into
+<samp class="dirname">Documents/FS-UAE/System</samp>. For example, the
+<samp class="dirname">CAPSImg</samp>
+directory should be extracted as
+<samp class="dirname">Documents/FS-UAE/System/CAPSImg</samp>.
+</p>
+<h2>Portable version</h2>
+<p>If you want to convert <samp class="dirname">Documents/FS-UAE</samp> to a
+    <a href="/docs/portable">portable directory</a> which you can move wherever
+    you want, just follow these
+    two simple steps:
+</p>
+<ol>
+    <li>Make sure <samp class="dirname">FS-UAE</samp> and
+        <samp class="dirname">FS-UAE-Launcher</samp> are stored inside
+        <samp class="dirname">Documents/FS-UAE</samp>.
+        I recommend storing them as
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE-Launcher</samp>
+        and
+        <samp class="dirname">Documents/FS-UAE/System/FS-UAE</samp>.
+    </li>
+    <li>
+        Download the file
+        <!-- FIXME: Don't use samp, but a filename class on a instead ? -->
+        <a class="filename" href="/s/misc/Portable.ini.v/2jmj7l5rSw0yVb_vlWAYkK_YBwk/Portable.ini">
+            Portable.ini
+        </a> and save it in <samp class="dirname">Documents/FS-UAE</samp>.
+    </li>
+</ol>
+<p>
+    You can now move Documents/FS-UAE to any location.
+    Go to the <a href="/docs/portable">documentation</a> to read more about
+    this
+    feature.
+</p>
+<h2>FS-UAE Arcade</h2>
+<p>FS-UAE Arcade builds are not done for version 3.1 yet. However, arcade mode
+    is included with FS-UAE Launcher. So you can generally run
+    <code>fs-uae-launcher --arcade</code> to launch the arcade interface if you
+    know how to run the executable directly with additional arguments.
+</p>
+    </div><!-- #linux_content -->
+    <div class="download_content" id="plugins_content">
+        <h2>Plugins</h2>
+        <p>
+            A few plugins are available to extend the functionality of FS-UAE
+            and/or
+            FS-UAE Launcher.
+The plugins must be installed into
+<samp class="dirname">Documents/FS-UAE/System</samp>. For example, the
+<samp class="dirname">CAPSImg</samp>
+directory should be extracted as
+<samp class="dirname">Documents/FS-UAE/System/CAPSImg</samp>.
+        </p>
+        <h2>CAPSImg plugin</h2>
+        <p>The CAPSImg plugin provides support for loading <samp
+                class="fileext">.ipf</samp> floppy images.
+        </p>
+        <p>
+        <div class="fs-file-downloads">
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_Windows_x86-64.zip">CAPSImg_5.1.3_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_macOS_x86-64.tar.xz">CAPSImg_5.1.3_macOS_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_macOS_ARM64.tar.xz">CAPSImg_5.1.3_macOS_ARM64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.1 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_Linux_x86-64.tar.xz">CAPSImg_5.1.3_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.0 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/CAPSImg/Stable/5.1.3/CAPSImg_5.1.3_Linux_ARMv8.tar.xz">CAPSImg_5.1.3_Linux_ARMv8.tar.xz</a>
+    <!--<span class="fs-file-download-size">(0.0 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+        <h2>QEMU-UAE plugin</h2>
+        <p>The QEMU-UAE plugin provides support for emulating the PPC processor
+            included on accelerator board such as the Cyberstorm PPC.
+        </p>
+        <p>
+        <div class="fs-file-downloads">
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_Windows_x86-64.zip">QEMU-UAE_3.8.9_Windows_x86-64.zip</a>
+    <!--<span class="fs-file-download-size">(2.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_macOS_x86-64.tar.xz">QEMU-UAE_3.8.9_macOS_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(3.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_macOS_ARM64.tar.xz">QEMU-UAE_3.8.9_macOS_ARM64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(1.8 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_Linux_x86-64.tar.xz">QEMU-UAE_3.8.9_Linux_x86-64.tar.xz</a>
+    <!--<span class="fs-file-download-size">(1.9 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/QEMU-UAE/Stable/3.8.9/QEMU-UAE_3.8.9_Linux_ARMv8.tar.xz">QEMU-UAE_3.8.9_Linux_ARMv8.tar.xz</a>
+    <!--<span class="fs-file-download-size">(1.6 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+    </div><!-- #plugins_content -->
+    <div class="download_content" id="ubuntu_content">
+        <h2>FS-UAE & Launcher for Ubuntu</h2>
+<p>Run the commands given for your distribution release in order to register
+    the
+    repository on your system and install FS-UAE & Launcher. You'll then get
+    updates via your system package
+    manager. Please note that when you upgrade to a new release of your
+    distribution, you should come back here and register a new repository.
+</p>
+<p>Alternatively, you can download the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux builds</a>. This will also allow you to set up a portable
+    version.</p>
+        <h3>Ubuntu 25.04</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/xUbuntu_25.04/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/xUbuntu_25.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Ubuntu 24.10</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/xUbuntu_24.10/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/xUbuntu_24.10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Ubuntu 24.04</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/xUbuntu_24.04/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/xUbuntu_24.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Ubuntu 22.04</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Ubuntu 20.04</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+<h2>Plugins</h2>
+<p>
+    If you need plugins to extend the functionality of FS-UAE, such as
+    CAPSImg for <samp class="fileext">.ipf</samp> floppy image support or
+    QEMU-UAE for PPC emulation, then you download and install the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux plugins</a>. These are not
+    included in the package repositories, but should work on most Linux
+    distributions.
+</p>
+    </div><!-- #ubuntu_content -->
+    <div class="download_content" id="debian_content">
+        <h2>FS-UAE & Launcher for Debian</h2>
+<p>Run the commands given for your distribution release in order to register
+    the
+    repository on your system and install FS-UAE & Launcher. You'll then get
+    updates via your system package
+    manager. Please note that when you upgrade to a new release of your
+    distribution, you should come back here and register a new repository.
+</p>
+<p>Alternatively, you can download the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux builds</a>. This will also allow you to set up a portable
+    version.</p>
+        <h3>Debian Testing</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_Testing/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Debian_Testing/Release.key | gpg --dearmor | sudo tee
+/etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Debian 12</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Debian_12/Release.key | gpg --dearmor | sudo tee
+/etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>Debian 11</h3>
+        <pre>
+echo 'deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_11/ /' | sudo tee /etc/apt/sources.list.d/home:FrodeSolheim:stable.list
+curl -fsSL https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Debian_11/Release.key | gpg --dearmor | sudo tee
+/etc/apt/trusted.gpg.d/home_FrodeSolheim_stable.gpg > /dev/null
+sudo apt update
+sudo apt install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+<h2>Plugins</h2>
+<p>
+    If you need plugins to extend the functionality of FS-UAE, such as
+    CAPSImg for <samp class="fileext">.ipf</samp> floppy image support or
+    QEMU-UAE for PPC emulation, then you download and install the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux plugins</a>. These are not
+    included in the package repositories, but should work on most Linux
+    distributions.
+</p>
+    </div><!-- #debian_content -->
+    <div class="download_content" id="fedora_content">
+        <h2>FS-UAE & Launcher for Fedora</h2>
+<p>Run the commands given for your distribution release in order to register
+    the
+    repository on your system and install FS-UAE & Launcher. You'll then get
+    updates via your system package
+    manager. Please note that when you upgrade to a new release of your
+    distribution, you should come back here and register a new repository.
+</p>
+<p>Alternatively, you can download the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux builds</a>. This will also allow you to set up a portable
+    version.</p>
+        <h3>Fedora 42</h3>
+        <!-- FIXME: Not sure if kernel-modules-extra must be manually installed anymore -->
+        <pre>
+sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Fedora_42/home:FrodeSolheim:stable.repo
+sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra
+</pre>
+        <h3>Fedora 41</h3>
+        <!-- FIXME: Not sure if kernel-modules-extra must be manually installed anymore -->
+        <pre>
+sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Fedora_41/home:FrodeSolheim:stable.repo
+sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra
+</pre>
+        <h3>Fedora 40</h3>
+        <pre>
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Fedora_40/home:FrodeSolheim:stable.repo
+sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra
+</pre>
+        <h3>Fedora 39</h3>
+        <pre>
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Fedora_39/home:FrodeSolheim:stable.repo
+sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra
+</pre>
+        <h3>Fedora 38</h3>
+        <pre>
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/Fedora_38/home:FrodeSolheim:stable.repo
+sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra
+</pre>
+<h2>Plugins</h2>
+<p>
+    If you need plugins to extend the functionality of FS-UAE, such as
+    CAPSImg for <samp class="fileext">.ipf</samp> floppy image support or
+    QEMU-UAE for PPC emulation, then you download and install the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux plugins</a>. These are not
+    included in the package repositories, but should work on most Linux
+    distributions.
+</p>
+    </div><!-- #fedora_content -->
+    <div class="download_content" id="opensuse_content">
+        <h2>FS-UAE & Launcher for openSUSE</h2>
+<p>Run the commands given for your distribution release in order to register
+    the
+    repository on your system and install FS-UAE & Launcher. You'll then get
+    updates via your system package
+    manager. Please note that when you upgrade to a new release of your
+    distribution, you should come back here and register a new repository.
+</p>
+<p>Alternatively, you can download the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux builds</a>. This will also allow you to set up a portable
+    version.</p>
+        <h3>openSUSE Tumbleweed</h3>
+        <pre>
+sudo zypper addrepo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/openSUSE_Tumbleweed/home:FrodeSolheim:stable.repo
+sudo zypper refresh
+sudo zypper install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>openSUSE Leap 16.0</h3>
+        <pre>
+sudo zypper addrepo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/16.0/home:FrodeSolheim:stable.repo
+sudo zypper refresh
+sudo zypper install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+        <h3>openSUSE Leap 15.6</h3>
+        <pre>
+sudo zypper addrepo https://download.opensuse.org/repositories/home:FrodeSolheim:stable/15.6/home:FrodeSolheim:stable.repo
+sudo zypper refresh
+sudo zypper install fs-uae fs-uae-launcher fs-uae-arcade
+</pre>
+<h2>Plugins</h2>
+<p>
+    If you need plugins to extend the functionality of FS-UAE, such as
+    CAPSImg for <samp class="fileext">.ipf</samp> floppy image support or
+    QEMU-UAE for PPC emulation, then you download and install the <a
+        onclick="select_download_tab('linux')" href="/download#linux">generic
+        Linux plugins</a>. These are not
+    included in the package repositories, but should work on most Linux
+    distributions.
+</p>
+    </div><!-- #opensuse_content -->
+    <div class="download_content" id="freebsd_content">
+        <h2>FS-UAE & Launcher for FreeBSD</h2>
+        <p>Please note that FreeBSD is not officially supported by FS-UAE, and
+            these
+            instructions might be outdated.</p>
+        <p>The source code should compile and FS-UAE should run on FreeBSD, but
+            note
+            that FS-UAE will run poorly without hardware-accelerated OpenGL
+            drivers.
+        </p>
+        <p> FS-UAE is also available in the ports tree. To install, run the
+            following as root:</p>
+        <pre>pkg install fs-uae fs-uae-launcher</pre>
+        <p>Or compile the ports yourself:</p>
+        <pre>cd /usr/ports/emulators/fs-uae
+make install clean
+cd /usr/ports/emulators/fs-uae-launcher
+make install clean</pre>
+    </div><!-- #freebsd_content -->
+    <div class="download_content" id="openbsd_content">
+        <h2>FS-UAE & Launcher for OpenBSD</h2>
+        <p>Please note that OpenBSD is not officially supported by FS-UAE, and
+            these
+            instructions might be outdated.</p>
+        <p>The source code should compile and FS-UAE should run on FreeBSD, but
+            note
+            that FS-UAE will run poorly without hardware-accelerated OpenGL
+            drivers.
+        </p>
+        <p>
+            FS-UAE is also available in the ports tree as
+            <samp>emulators/fs-uae</samp> and
+            <samp>emulators/fs-uae-launcher</samp>.
+        </p>
+    </div><!-- #openbsd_content -->
+    <div class="download_content" id="source_content">
+        <h2>Source code</h2>
+        <p>
+        <div class="fs-file-downloads">
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE/Stable/3.1.66/fs-uae-3.1.66.tar.xz">fs-uae-3.1.66.tar.xz</a>
+    <!--<span class="fs-file-download-size">(3.5 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Launcher/Stable/3.1.68/fs-uae-launcher-3.1.68.tar.xz">fs-uae-launcher-3.1.68.tar.xz</a>
+    <!--<span class="fs-file-download-size">(7.4 MB)
+    </span>-->
+</div>
+<div class="fs-file-download">
+    <a class="fs-filename" href="/files/FS-UAE-Arcade/Stable/3.1.63/fs-uae-arcade-3.1.63.tar.xz">fs-uae-arcade-3.1.63.tar.xz</a>
+    <!--<span class="fs-file-download-size">(7.2 MB)
+    </span>-->
+</div>
+        </div>
+        </p>
+        <h2>Related GitHub projects</h2>
+        <p><a
+                href="https://github.com/FrodeSolheim/fs-uae">https://github.com/FrodeSolheim/fs-uae</a>
+            <br /><a
+                href="https://github.com/FrodeSolheim/fs-uae-launcher">https://github.com/FrodeSolheim/fs-uae-launcher</a>
+            <br /><a
+                href="https://github.com/FrodeSolheim/capsimg">https://github.com/FrodeSolheim/capsimg</a>
+            <br /><a
+                href="https://github.com/FrodeSolheim/qemu-uae">https://github.com/FrodeSolheim/qemu-uae</a>
+        </p>
+    </div><!-- #source_content -->
+    <!--
+<h2>Recent FS-UAE changes</h2>
+<p>Check out the change log entries in <a title="Stable Releases"
+        href="/category/stable-releases">stable release announcements</a>.
+</p>
+-->
+    <!--
+<p>Please read the <a href="/fs-uae-2-4-release-notes">release
+notes</a> for FS-UAE 2.4 if you are upgrading from FS-UAE 2.2.</p>
+-->
+    <h2>License</h2>
+    <p>FS-UAE is licensed under the terms of the
+        <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a> license.
+        <!--
+libcapsimage (bundled) is licensed under a non-commercial-only license.
+-->
+        FS-UAE Launcher and FS-UAE Arcade are also licensed under the terms of
+        the
+        <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a> license.
+        Other
+        libraries are licensed under various open source licenses (See license
+        files in the distributions for details).
+    </p>
+    <!--
+<h2>Development series</h2>
+<p>If you want a more recent version (and don't mind the risk), or you
+    want to follow the development more closely, you can alternatively
+    install the latest <a href="download-devel">development versions</a>
+    instead.</p>
+-->
+    <p>
+        <!-- begin hack to get a bit spacing -->
+        <br />
+        <!-- end hack to get a bit spacing -->
+        <small>
+            <em>
+                The following user agent was used to auto-detect and select
+                your
+                platform (If your platform wasn't detected properly, and the
+                user
+                agent
+                string
+                contains enough information to identify it, please send the
+                user
+                agent string to
+                <a href="mailto:frode@fs-uae.net">frode@fs-uae.net</a>):<br />
+                <samp>
+                    <small>
+                        <script>
+                            document.write(navigator.userAgent);
+                        </script>
+                    </small>
+                </samp>
+                <br />
+            </em>
+        </small>
+    </p>
+</main>
+    <div id="sidebar" class="fs-sidebar">
+    <!--
+    <h2>Series</h2>
+    <ul class="fs-sidebar-menu">
+        <li class="selected"><a class="fs-uae-22" href="/download">Stable
+                (3.0.5)</a></li>
+        <li class="unselected"><a class="fs-uae-22"
+                href="/download-devel">Development (2.9.12dev)</a></li>
+    </ul>
+-->
+    <h2>Packages</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="windows_tab"><a class="windows-22"
+                href="javascript:select_download_tab('windows');">Windows</a>
+        </li>
+        <li id="macosx_tab"><a class="macosx-22"
+                href="javascript:select_download_tab('macosx');">macOS</a>
+        </li>
+        <li id="linux_tab"><a class="linux-22"
+                href="javascript:select_download_tab('linux');">Linux</a>
+        </li>
+        <li id="plugins_tab"><a class="zip-22"
+                href="javascript:select_download_tab('plugins');">Plugins</a>
+        </li>
+    </ul>
+    <h2>Repositories</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="ubuntu_tab"><a class="ubuntu-22"
+                href="javascript:select_download_tab('ubuntu');">Ubuntu</a>
+        </li>
+        <li id="fedora_tab"><a class="fedora-22"
+                href="javascript:select_download_tab('fedora');">Fedora</a>
+        </li>
+        <li id="opensuse_tab"><a class="opensuse-22"
+                href="javascript:select_download_tab('opensuse');">openSUSE</a>
+        </li>
+        <li id="debian_tab"><a class="debian-22"
+                href="javascript:select_download_tab('debian');">Debian</a>
+        </li>
+    </ul>
+    <h2>Source code</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="source_tab"><a class="zip-22"
+                href="javascript:select_download_tab('source');">Source
+                code</a>
+        </li>
+    </ul>
+    <h2>Unofficial versions</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="freebsd_tab"><a class="freebsd-22"
+                href="javascript:select_download_tab('freebsd');">FreeBSD</a>
+        </li>
+        <li id="openbsd_tab"><a class="openbsd-22"
+                href="javascript:select_download_tab('openbsd');">OpenBSD</a>
+        </li>
+    </ul>
+    <!--
+    <h2>Other downloads</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="source_tab"><a class="zip-22"
+                href="javascript:select_download_tab('source');">Source</a>
+        </li>
+    </ul>
+-->
+    <h2>Automated builds</h2>
+    <ul class="fs-sidebar-menu">
+        <li id="source_tab"><a class="zip-22" href="/builds/master">Master
+                branch</a>
+        </li>
+        <li id="source_tab"><a class="zip-22" href="/builds/stable">Stable
+                branch</a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var platforms = ["windows", "macosx", "ubuntu", "debian",
+        "linux", "freebsd", "openbsd", "source",
+        "fedora", "opensuse", "plugins"];
+    var titles = [
+        "Download FS-UAE for Windows",
+        "Download FS-UAE for macOS",
+        "Download FS-UAE for Ubuntu",
+        "Download FS-UAE for Debian",
+        "Download FS-UAE for Linux",
+        "Download FS-UAE for FreeBSD",
+        "Download FS-UAE for OpenBSD",
+        "Download FS-UAE Source Code",
+        "Download FS-UAE for Fedora",
+        "Download FS-UAE for openUSE",
+        "Download FS-UAE Plugins",
+    ];
+    function show_download_tab(platform, show) {
+        var tab_div = document.getElementById(platform + "_tab");
+        var content_div = document.getElementById(platform + "_content");
+        if (show) {
+            tab_div.className = "selected";
+            content_div.className = "download_content selected_download_content";
+        }
+        else {
+            tab_div.className = "unselected";
+            content_div.className = "download_content";
+        }
+    }
+    function select_download_tab(platform) {
+        for (var i = 0; i < platforms.length; i++) {
+            show_download_tab(platforms[i], platform == platforms[i])
+        }
+        var title = titles[platforms.indexOf(platform)];
+        // document.getElementById("fs-title").innerHTML = title;
+        document.location.hash = platform;
+    }
+    if (document.location.href.indexOf("#windows") > -1) {
+        select_download_tab("windows");
+    }
+    else if (document.location.href.indexOf("macosx") > -1) {
+        select_download_tab("macosx");
+    }
+    else if (document.location.href.indexOf("ubuntu") > -1) {
+        select_download_tab("ubuntu");
+    }
+    else if (document.location.href.indexOf("debian") > -1) {
+        select_download_tab("debian");
+    }
+    else if (document.location.href.indexOf("linux") > -1) {
+        select_download_tab("linux");
+    }
+    else if (document.location.href.indexOf("freebsd") > -1) {
+        select_download_tab("freebsd");
+    }
+    else if (document.location.href.indexOf("openbsd") > -1) {
+        select_download_tab("openbsd");
+    }
+    else if (document.location.href.indexOf("source") > -1) {
+        select_download_tab("source");
+    }
+    else if (document.location.href.indexOf("fedora") > -1) {
+        select_download_tab("fedora");
+    }
+    else if (document.location.href.indexOf("opensuse") > -1) {
+        select_download_tab("opensuse");
+    }
+    else if (document.location.href.indexOf("#plugins") > -1) {
+        select_download_tab("plugins");
+    }
+    else if (navigator.userAgent.indexOf("Windows") > -1) {
+        select_download_tab("windows");
+    }
+    else if (navigator.userAgent.indexOf("Mac OS X") > -1) {
+        select_download_tab("macosx");
+    }
+    else if (navigator.userAgent.indexOf("Ubuntu") > -1) {
+        select_download_tab("ubuntu");
+    }
+    else if (navigator.userAgent.indexOf("Debian") > -1) {
+        select_download_tab("debian");
+    }
+    else if (navigator.userAgent.indexOf("Iceweasel") > -1) {
+        select_download_tab("debian");
+    }
+    else if (navigator.userAgent.indexOf("FreeBSD") > -1) {
+        select_download_tab("freebsd");
+    }
+    else if (navigator.userAgent.indexOf("OpenBSD") > -1) {
+        select_download_tab("openbsd");
+    }
+    else if (navigator.userAgent.indexOf("Fedora") > -1) {
+        select_download_tab("fedora");
+    }
+    else if (navigator.userAgent.indexOf("openSUSE") > -1) {
+        select_download_tab("opensuse");
+    }
+    else {
+        select_download_tab("linux");
+    }
+</script>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+
+{% endblock %}

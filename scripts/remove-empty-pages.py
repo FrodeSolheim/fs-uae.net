@@ -28,6 +28,7 @@ border-top: 6px solid #2f0c47;
 <footer class="fs-site-footer">
 """
 
+
 def main():
     for dir_path, _dir_names, file_names in os.walk("scrape"):
         for file_name in file_names:

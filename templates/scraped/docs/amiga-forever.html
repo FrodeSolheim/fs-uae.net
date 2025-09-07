@@ -1,0 +1,278 @@
+{% set page_title = "Amiga Forever" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Amiga Forever</h1>
+<p>TODO: Write about Amiga Forever 8 no longer using rom.key, and that it decrypts
+the ROMs on first startup!</p>
+<p>TODO: Also check when this change happened (Amiga Forever 8+?). Verified, the
+rom.key file is still used in Amiga Forever 7.</p>
+<p>You can purchase <a href="https://www.amigaforever.com/">Amiga Forever</a> Plus or Premium
+edition in order to get licensed versions of Kickstart ROMs for all supported
+Amiga models.</p>
+<p>There are two versions which contains all Kickstart ROMs:</p>
+<ul>
+<li><a href="https://www.amigaforever.com/plus/">Plus</a>: Gives you access to a
+  downloadable .msi installer.</li>
+<li><a href="https://www.amigaforever.com/premium/">Premium</a>: Physical media, plus access
+  to the plus edition .msi installer.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> There is also a
+<a href="https://www.amigaforever.com/value/">value edition</a>, but this only provides
+kickstart ROM for Amiga 500 (and possibly a few other models depending on the
+Amiga Forever version). This is sufficient for most classic games though!</p>
+</blockquote>
+<p>Please note that FS-UAE / Frode Solheim is not affiliated with Amiga Forever,
+and I get no provisions from the sale of Amiga Forever. I provide this
+information as a convenience to the users of FS-UAE.</p>
+<h2>Using the Amiga Forever .msi installer (Plus edition)</h2>
+<p>If you are using Windows, you can simply install Amiga Forever. FS-UAE should
+automatically find the ROM files.</p>
+<blockquote>
+<p><strong>Note:</strong> You may have to run the Amiga Forever Player at least once in order
+to create the (required) rom.key file.</p>
+</blockquote>
+<p>On other systems (Linux, macOS), you need to get a copy of the ROM files
+installed on your system in a location FS-UAE expects to find them. Read on for
+alternative installation methods.</p>
+<blockquote>
+<p><strong>Note:</strong> FS-UAE may be able to find the ROM files automatically if you have
+installed Amiga Forever via Wine.</p>
+</blockquote>
+<h2>A note about Documents/FS-UAE</h2>
+<p>Whenever you see a reference to <code>Documents/FS-UAE</code>, this means the location of
+the FS-UAE directory where user data is stored. If you are using the portable
+version, you need to use the portable directory instead of Documents/FS-UAE.
+Also, on some Linux distributions, the directory may be <code>~/FS-UAE</code> instead of
+<code>~/Documents/FS-UAE</code>, depending on your setup.</p>
+<h2>Installing using an Amiga Forever .iso</h2>
+<p>If you have an .iso image of the Amiga Forever Plus edition, you can either:</p>
+<ul>
+<li>Mount this as a virtual DVD (depends on your system), or</li>
+<li>Burn the .iso image to a physical DVD.</li>
+</ul>
+<p>Then proceed with the instructions in the next section.</p>
+<h2>Installing using Amiga Forever on a DVD</h2>
+<p>Once you can access the files on the physical or virtual DVD, you need to:</p>
+<ol>
+<li>Create <code>Documents/FS-UAE/AmigaForever</code></li>
+<li>Copy the entire contents of the DVD into <code>Documents/FS-UAE/AmigaForever</code>.</li>
+</ol>
+<p>FS-UAE should automatically find the ROM files from this directory.</p>
+<h3>Installing Amiga Forever using Wine</h3>
+<p>Amiga Forever 2016 Plus edition has been tested to install just fine using Wine
+in Linux (Ubuntu 15.10). Install using the following command (or something
+similar):</p>
+<pre><code>wine msiexec /i ~/Downloads/AmigaForever2016Plus.msi
+</code></pre>
+<p>After installation, you need to copy the Amiga Forever into place. These
+instructions assume that the FS-UAE base dir is Documents/FS-UAE, and that you
+have performed the Amiga Forever installation using the default Wine prefix:</p>
+<pre><code>cd ~/Documents/FS-UAE
+mkdir AmigaForever
+cd AmigaForever
+cp -a ~/.wine/drive_c/users/Public/Documents/"Amiga Files" .
+</code></pre>
+<h3>Installing Amiga Forever on another computer</h3>
+<p>If you are using a non-Windows computer, and the above solutions does not work
+for you, you can also install Amiga Forever in a virtual machine with Windows
+installed, or borrow a Windows computer and perform the installation there.</p>
+<p>When you have installed Amiga Forever on a Windows computer, you have several
+options:</p>
+<ul>
+<li>Start Amiga Forever and create a DVD .iso image (Tools -&gt; Build Image...),
+  and then follow the instructions for installing from a DVD.</li>
+<li>Start Amiga Forever and export to a directory (Tools -&gt; Build Image...),
+  exporting to an USB hard drive, for example.</li>
+<li>Copy the installed files to your computer using any appropriate method.</li>
+</ul>
+<p>If you want to manually copy files, you will find the Amiga Forever files in
+the "Shared Documents" directory. The exact location of this directory may vary
+depending on Windows version, often one of:</p>
+<ul>
+<li><code>C:\Documents and Settings\All Users\Documents</code></li>
+<li><code>C:\Users\Public\Documents</code></li>
+</ul>
+<p>Just transfer the entire <code>Amiga Files</code> directory to
+<code>Documents/FS-UAE/Amiga Forever</code>, so you end up with
+<code>Documents/FS-UAE/Amiga Forever/Amiga Files</code> after you are done copying.</p>
+<h2>Value edition</h2>
+<p>The value edition does not contains Kickstart ROMs except for version 1.3.
+That's still sufficient for emulating a lot of the classic Amiga games though!</p>
+<h2>Final notes</h2>
+<p>The most important use of Amiga Forever with FS-UAE is to provide the Kickstart
+ROMs needed for accurate emulation.</p>
+<p>If the above instructions do not work for you, it's useful to know that you
+don't need to copy all the Amiga Forever files. You simply need to find all the
+.rom files (<code>amiga-os-130.rom</code>, etc) - as well as <code>rom.key</code> - from the Amiga
+Forever installation or install media, and copy these to
+<code>Documents/FS-UAE/Kickstarts</code>.</p></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+
+{% endblock %}

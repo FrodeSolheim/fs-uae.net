@@ -1,0 +1,284 @@
+{% set page_title = "Kickstart ROMs" %}
+{% extends "scraped.html" %}
+{% block content %}
+<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="fs-section-title">
+    <h1>Documentation</h1>
+</div>
+<div class="fs-main-and-sidebar">
+<main><h1>Kickstart ROMs</h1>
+<p>For the best emulation experience, you should have copies of the original
+Kickstart ROMs for each of the Amiga model you want to use. Using the built-in
+kickstart replacement (from the <a href="https://aros.sourceforge.io/">AROS project</a>)
+is possible, but it is less compatible with Amiga software.</p>
+<h2>Getting Kickstart ROMs via Amiga Forever</h2>
+<p>You can purchase Amiga Forever Plus or Premium edition in order to get licensed
+versions of Kickstart ROMs for all supported Amiga models.</p>
+<p>There are two versions which contains all Kickstart ROMs:</p>
+<ul>
+<li>Plus: Gives you access to a downloadable .msi installer.</li>
+<li>Premium: Physical media, plus access to the plus edition .msi installer.</li>
+</ul>
+<p>There is also a value edition, but this only provides kickstart ROM for Amiga
+500 (and possibly a few other models depending on the Amiga Forever version).
+This is sufficient for most classic games though!</p>
+<p>Please note that FS-UAE / Frode Solheim is not affiliated with Amiga Forever,
+and this project gets no provisions from the sale of Amiga Forever. This
+information is only provided as a convenience to the users of FS-UAE.</p>
+<h2>Extracting Kickstart ROMs from real Amiga computers</h2>
+<p>By using a tool such as Transrom or Grabkick, you can extract the ROM from your
+own Amiga and copy it over to your computer. Here are some guides:</p>
+<ul>
+<li>http://www.pcguru.plus.com/uae_transfer.html (web.archive.org)</li>
+<li>http://ale.emuunlim.com/guides/get-kick-rom.shtml</li>
+<li>https://help.ubuntu.com/community/EUAEAmigaEmulator</li>
+</ul>
+<p>Please note that I don’t provide support for extracting / transferring Amiga
+ROM files, but you can probably get help on the
+<a href="http://eab.abime.net/">English Amiga Board</a> if you are stuck.</p>
+<h2>Using the replacement ROM</h2>
+<p>FS-UAE will automatically use the replacement AROS ROM when:</p>
+<ul>
+<li>The preferred kickstart rom for the Amiga model in use was not found, and no
+  kickstart file was explicitly specified, or</li>
+<li>When kickstart_file is specified as “internal”</li>
+</ul>
+<p>FS-UAE Launcher behaves a bit differently and will refuse to start the
+emulation if the preferred kickstart ROM is not found. You must change the
+Kickstart option to "Internal" in order to use the replacement ROM.</p>
+<h2>Preferred Kickstart ROMs</h2>
+<p>This sections lists the Kickstart ROM used by default by FS-UAE and FS-UAE
+Launcher. When checksums are listed for Amiga Forever ROMs, it refers to the
+checksum of the decrypted content, not the scrambled file. The name of the ROMs
+do not matter, only the content. Amiga Forever and TOSEC names are used for
+reference.</p>
+<h3>Amiga 500</h3>
+<pre><code>Kickstart v1.3 r34.5 (1987)(Commodore)(A500-A1000-A2000-CDTV)[!].rom
+SHA-1: 891e9a547772fe0c6c19b610baf8bc4ea7fcb785
+</code></pre>
+<p>Amiga Forever does not come with the actual A500 rom, but the following
+kickstart will be patched so it is identical to the one above (it’s only a 3
+byte difference):</p>
+<pre><code>amiga-os-130.rom
+SHA-1: c39bd9094d4e5f4e28c1411f3086950406062e87
+</code></pre>
+<p>The following ROM is an overdumped version of the preferred ROM, but FS-UAE
+will recognize this and use it like it were the preferred one:</p>
+<pre><code>Kickstart v1.3 r34.5 (1987)(Commodore)(A500-A1000-A2000-CDTV)[o].rom
+SHA-1: 90933936cce43ca9bc6bf375662c076b27e3c458
+</code></pre>
+<h3>Amiga 500+</h3>
+<pre><code>amiga-os-204.rom
+Kickstart v2.04 r37.175 (1991)(Commodore)(A500+)[!].rom
+SHA-1: c5839f5cb98a7a8947065c3ed2f14f5f42e334a1
+</code></pre>
+<h3>Amiga 600</h3>
+<pre><code>amiga-os-205.rom
+Kickstart v2.05 r37.350 (1992)(Commodore)(A600HD)[!].rom
+SHA-1: 02843c4253bbd29aba535b0aa3bd9a85034ecde4
+</code></pre>
+<h3>Amiga 1200</h3>
+<pre><code>amiga-os-310-a1200.rom
+Kickstart v3.1 r40.68 (1993)(Commodore)(A1200)[!].rom
+SHA-1: e21545723fe8374e91342617604f1b3d703094f1
+</code></pre>
+<h3>Amiga 3000</h3>
+<pre><code>amiga-os-310-a3000.rom
+Kickstart v3.1 r40.68 (1993)(Commodore)(A3000).rom
+SHA-1: f8e210d72b4c4853e0c9b85d223ba20e3d1b36ee
+</code></pre>
+<h3>Amiga 4000</h3>
+<pre><code>Kickstart v3.1 r40.68 (1993)(Commodore)(A4000).rom
+SHA-1: 5fe04842d04a489720f0f4bb0e46948199406f49
+</code></pre>
+<p>The following ROM will be patched to the one above on demand:</p>
+<pre><code>amiga-os-310.rom
+Kickstart v3.1 r40.68 (1993)(Commodore)(A4000)[h Cloanto].rom
+SHA-1: c3c481160866e60d085e436a24db3617ff60b5f9
+</code></pre>
+<h3>Amiga 1000</h3>
+<pre><code>amiga-os-120.rom
+Kickstart v1.2 r33.180 (1986)(Commodore)(A500-A1000-A2000)[!].rom
+SHA-1: 11f9e62cf299f72184835b7b2a70a16333fc0d88
+</code></pre>
+<h3>Amiga CD32</h3>
+<pre><code>amiga-os-310-cd32.rom
+Kickstart v3.1 r40.60 (1993)(Commodore)(CD32).rom
+SHA-1: 3525be8887f79b5929e017b42380a79edfee542d
+</code></pre>
+<p>You also need the extended ROM for CD32:</p>
+<pre><code>amiga-ext-310-cd32.rom
+CD32 Extended-ROM r40.60 (1993)(Commodore)(CD32).rom
+SHA-1: 5bef3d628ce59cc02a66e6e4ae0da48f60e78f7f
+</code></pre>
+<h3>Commodore CDTV</h3>
+<p>Commodore uses the same Kickstart ROM as Amiga 500. But in addition, you also
+need the extended ROM for CDTV:</p>
+<pre><code>amiga-ext-130-cdtv.rom
+CDTV Extended-ROM v1.0 (1991)(Commodore)(CDTV)[!].rom
+SHA-1: 7ba40ffa17e500ed9fed041f3424bd81d9c907be
+</code></pre></main>
+    <aside id="sidebar" class="fs-sidebar">
+	<div class="fs-sidebar-menu">
+		<h2>Getting started</h2>
+		<ul>
+			<li><a href="/docs/getting-started">Getting started</a></li>
+			<li><a href="/docs/kickstarts">Kickstart ROMs</a></li>
+			<li><a href="/docs/faq">FAQ and troubleshooting</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Platform-specific notes</h2>
+		<ul>
+			<li><a href="/docs/windows">Windows</a></li>
+			<li><a href="/docs/macos">macOS</a></li>
+			<li><a href="/docs/linux">Linux</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Input options</h2>
+		<ul>
+			<li><a href="/docs/keyboard">Keyboard</a></li>
+			<li><a href="/docs/keyboard-mapping">keyboard-mapping</a></li>
+			<li><a href="/docs/keyboard-shortcuts">Keyboard shortcuts</a></li>
+			<li><a href="/docs/keyboard-joystick-emulation">Keyboard joystick
+					emulation</a></li>
+			<li><a href="/docs/joysticks">Joysticks</a></li>
+			<li><a href="/docs/mouse">Mouse</a></li>
+			<li><a href="/docs/input-mapping">Input mapping</a></li>
+			<li><a href="/docs/input-actions">Input actions</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>More Information</h2>
+		<ul>
+			<li><a href="/docs/amiga-forever">Amiga Forever</a></li>
+			<li><a href="/docs/floppy-images">Floppy images</a></li>
+			<li><a href="/docs/g-sync">G-Sync</a></li>
+			<li><a href="/docs/hard-drives">Hard drives</a></li>
+			<li><a href="/docs/jit-compiler">JIT compiler</a></li>
+			<li><a href="/docs/performance">Performance notes</a></li>
+			<li><a href="/docs/portable">Portable version</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>In-depth documentation</h2>
+		<ul>
+			<li><a href="/docs/cyberstorm-ppc">CyberStorm PPC</a></li>
+			<li><a href="/docs/options">Configuration options</a></li>
+			<li><a href="/docs/midi">MIDI support</a></li>
+			<li><a href="/docs/x-arcade">X-Arcade controllers</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Advanced topics</h2>
+		<ul>
+			<li><a href="/docs/action-replay">Action Replay</a></li>
+			<li><a href="/docs/bridgeboard">Bridgeboard emulation</a></li>
+			<li><a href="/docs/compiling">Compiling FS-UAE</a></li>
+			<li><a href="/docs/debugging">Debugging FS-UAE</a></li>
+			<li><a href="/docs/serial-port">Serial port</a></li>
+			<li><a href="/docs/vpar">Virtual parallel port</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>New documentation</h2>
+		<ul>
+			<li><a href="/docs/amikit">AmiKit</a></li>
+			<li><a href="/docs/old-files">Old files</a></li>
+			<li><a href="/docs/shaders">shaders</a></li>
+			<li><a href="/docs/to-do">to-do</a></li>
+			<li><a href="/docs/variable-refresh-rate">variable-refresh-rate</a>
+			</li>
+			<li><a href="/docs/vsync">vsync</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Documentation needing update</h2>
+		<ul>
+			<li><a href="/known-issues">Known issues</a></li>
+			<li><a href="/docs/directories">Paths and directories</a></li>
+			<li><a href="/launcher">FS-UAE Launcher</a></li>
+			<li><a href="/localization">Translating FS-UAE</a></li>
+			<li><a href="/configuration-files">Configuration files</a></li>
+			<li><a href="/command-line">Command line usage</a></li>
+			<li><a href="/compiling-on-windows">
+					Compiling FS-UAE on Windows</a></li>
+			<li><a href="/whdload-support">WHDLoad support</a></li>
+			<li><a href="/online-play">FS-UAE online play</a></li>
+			<li><a href="/net-play">FS-UAE net play</a></li>
+			<li><a href="/launcher-net-play">Launcher net play</a></li>
+			<li><a href="/audio">Audio configuration</a></li>
+			<li><a href="/video-options">Video options</a></li>
+			<li><a href="/theme-options">Theme options</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/resources-and-links">Resources and kinks</a></li>
+			<li><a href="/custom-controller-configuration">Custom controller
+					configuration</a></li>
+			<li><a href="/installing-classicwb-in-fs-uae">Installing ClassicWB
+					in FS-UAE</a></li>
+		</ul>
+	</div>
+	<div class="fs-sidebar-menu">
+		<h2>Old documentation</h2>
+		<ul>
+			<li><a href="/interface">Interface</a></li>
+			<li><a href="/50hz-display-modes-on-linux-with-nvidia-drivers">50Hz
+					Display Modes on Linux with nVIDIA Drivers</a></li>
+		</ul>
+	</div>
+</aside>
+</div>
+<aside class="fs-page-comments">
+<!--<div style="clear: both"></div>-->
+<!--
+<div style="
+/*margin-top: 32px;*/
+/*
+margin-left: -32px;
+margin-right: -32px;
+padding-top: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+padding-right: 32px;
+background-color: white;
+border-top: 6px solid #2f0c47;
+*/
+">
+-->
+<!--
+</div>
+-->
+</aside>
+
+{% endblock %}
