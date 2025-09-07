@@ -121,6 +121,38 @@ body.custom-background { background-color: #ffffff; }
 </head>
 """
 
+body_start = """<body>
+    <div class="fs-header-and-main">
+<!--
+<div style="background-color: #000000;
+            color: #ffffff;
+            padding: 16px 32px;">
+    This site is being upgraded. There might be temporary layout
+    issues. If you encounter errors, please try again later.
+</div>
+-->
+<header class="fs-site-header">
+    <img class="fs-site-icon" src="/s/images/32x32/fs-uae.png.v/h9XOtkeLbMg-GbMVwGehXJn42ZI/fs-uae.png" width="32"
+        height="32" alt="" />
+    <h1 class="fs-site-title"><a href="/">FS-UAE <span
+                class="fs-site-title-weaker">Amiga
+                Emulator</span></a></h1>
+    <!-- <h1>FS-UAE Amiga Emulator</h1>-->
+    <nav>
+        <ul>
+            <!--<li><a href="/" class="selected">Home</a></li>-->
+            <!--<li><a href="/">Home</a></li>-->
+            <li><a href="/download">Download</a></li>
+            <!--<li><a href="/features">Features</a></li>-->
+            <li><a href="/news">News</a></li>
+            <!--<li><a href="/tutorials">Tutorials</a></li>-->
+            <li><a href="/support">Support</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <!--<li><a href="/faq">FAQ</a></li>-->
+        </ul>
+    </nav>
+</header>"""
+
 footer = """<footer class="fs-site-footer">
     <div class="fs-site-footer-columns">
         <div class="fs-site-footer-column">
@@ -246,6 +278,8 @@ def process(path: str, out_path: str) -> None:
     # text = text.replace(prologue, "PROLOGUE\n")
     # text = text.replace(header, "{% include \"header.html\" %}\n")
     text = text.replace(header, "")
+    
+    text = text.replace(body_start, "")
     text = text.replace(footer, "")
 
     text = text.replace("https://fs-uae.net/", "/")
@@ -288,6 +322,13 @@ def process(path: str, out_path: str) -> None:
 
     if os.path.dirname(jekyll_page) and not os.path.exists(os.path.dirname(jekyll_page)):
         os.makedirs(os.path.dirname(jekyll_page))
+    if os.path.exists(jekyll_page):
+        with open(jekyll_page, "r", encoding="UTF-8") as f:
+            old_text = f.read()
+            if "layout: scraped" not in old_text:
+                print("Layout was changed, skipping", jekyll_page)
+                return
+
     with open(jekyll_page, "w", encoding="UTF-8") as f:
         f.write("---\n")
         if layout:

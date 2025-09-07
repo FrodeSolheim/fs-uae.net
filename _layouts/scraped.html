@@ -115,84 +115,15 @@ body.custom-background { background-color: #ffffff; }
     <link rel="shortcut icon" type="image/x-icon" href="/s/fs-uae.ico.v/8EROq8bAgv5CdHOa0-8TOfAMp0Y/fs-uae.ico" />
 </head>
 
+<body>
+<div class="fs-header-and-main">
+
+{%- include header.html -%}
+
 {{ content }}
 
-<footer class="fs-site-footer">
-    <div class="fs-site-footer-columns">
-        <div class="fs-site-footer-column">
-            <h4>About FS-UAE</h4>
-            <p>
-                FS-UAE is an Amiga emulator based on the
-                excellent emulation code from <a
-                    href="http://www.winuae.net/">WinUAE</a>
-                currently developed and maintained by Toni
-                Wilen, which again builds on the work by the
-                earlier authors of the original UAE and WinUAE.
-            </p>
-            <p><a href="/donate">Donate to FS-UAE
-                    Development</a></p>
-            <p>FS-UAE is copyright © 2011-2022 <a
-                    href="mailto:frode@fs-uae.net">Frode
-                    Solheim</a>, licensed under <a
-                    href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>.
-                FS-UAE
-                also depends on other free software libraries.
-            </p>
-        </div>
-        <div class="fs-site-footer-column">
-            <h4>Links</h4>
-            <ul>
-                <li><a href="http://www.amigaforever.com"
-                        title="Purchase legal kickstarts">Amiga
-                        Forever</a>
-                    - Purchase legal kickstart ROMs</li>
-                <li><a href="https://crowdin.net/project/fs-uae"
-                        title="Translation project for FS-UAE">Crowdin
-                        project page</a>
-                    - Translations for FS-UAE</li>
-                <li><a href="http://eab.abime.net/forumdisplay.php?f=122"
-                        title="Support and Amiga hardware forums">English
-                        Amiga Board</a>
-                    - Support and Amiga hardware forums</li>
-                <li><a href="https://github.com/FrodeSolheim"
-                        title="Source code for FS-UAE and Launcher">Github
-                        account</a>
-                    - Source code for FS-UAE and Launcher</li>
-                <li><a href="https://openretro.org/"
-                        title="Online game database">OpenRetro</a>
-                    - Online game database</li>
-                <!--
-                <li><a href="http://www.winuae.net/"
-                        title="The most feature-packed Amiga emulator">
-                        WinUAE</a> - The most feature-packed Amiga
-                    emulator
-                </li>
-                -->
-            </ul>
-        </div>
-        <div class="fs-site-footer-column">
-            <h4>About this website</h4>
-            <p>
-                This website and most of its content is copyright
-                © 2012-2022 <a href="mailto:frode@fs-uae.net">Frode
-                    Solheim</a> unless otherwise noted.
-                Copyright on visitors' comments is not claimed.
-            </p>
-            <p>
-                This website does not include paid promotions nor
-                adverts.
-                All income is provided by <a href="/donate">donations</a>.
-            </p>
-            <p>
-                This website does not track you.
-                IP addresses are temporarily stored in log files (<a
-                    href="/privacy-policy">privacy policy</a>).
-            </p>
-            <!--<p>Comments are moderated to avoid spam, and may take some time to appear.</p>-->
-            <!--<p>This website is powered by <a href="http://www.wordpress.org/">WordPress</a>.</p> -->
-        </div>
-    </div>
-</footer>
-    </div><!-- fs-header-and-main -->
+{%- include footer.html -%}
+
+</div><!-- fs-header-and-main -->
 </body>
 </html>
