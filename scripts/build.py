@@ -12,7 +12,6 @@ class Vars(TypedDict):
     downloads: Any  # FIXME: For now
 
 
-
 def main():
     global staticMap
     # staticMap = build_static_map()
@@ -189,6 +188,7 @@ def build_static_map():
     with open(os.path.join("public_html", "s", "versioned.json"), "r") as f:
         staticMap = json.load(f)
     return staticMap
+
 
 # def fix_static_in(directory: str) -> None:
 #     for dirPath, _, fileNames in os.walk(directory):

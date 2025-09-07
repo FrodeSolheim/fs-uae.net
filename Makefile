@@ -2,7 +2,7 @@ all: templates public_html
 
 public_html:
 	mkdir -p public_html
-	python3 make.py
+	python3 scripts/build.py
 
 scrape:
 	scripts/scrape.sh

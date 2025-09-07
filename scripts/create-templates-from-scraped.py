@@ -201,6 +201,7 @@ footer = """<footer class="fs-site-footer">
 </body>
 </html>"""
 
+
 def process(path: str, out_path: str) -> None:
     print(path, out_path)
     out_dir = os.path.dirname(out_path)
@@ -244,9 +245,9 @@ def process(path: str, out_path: str) -> None:
         assert '"' not in page_title
         f.write(f'{{% set page_title = "{page_title}" %}}\n')
         f.write('{% extends "scraped.html" %}\n')
-        f.write('{% block content %}\n')
+        f.write("{% block content %}\n")
         f.write(text)
-        f.write('{% endblock %}\n')
+        f.write("{% endblock %}\n")
 
 
 def main():
