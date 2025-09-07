@@ -7,7 +7,7 @@ Later, this repository will evolve with new/improved content, and I expect the s
 Directories:
 
 - `public_html` - Contains some static content and is the target directory for the built site.
-- `scraped` - Contains a scraped copy of the old fs-uae.net wordpress site as of 2025-09-06.
+- `_scraped` - Contains a scraped copy of the old fs-uae.net wordpress site as of 2025-09-06.
 - `templates/scraped` - Contains jinja2 templates based on the scraped pages (header and footer) are extracted to common templates (etc).
 
-You need Python 3 and Jinja 2 in order to build the `public_html` directory. Just run `python3 make.py`.
+You need Python 3 and Jinja 2 in order to build the `public_html` directory. Just run `python3 _scripts/make.py`.

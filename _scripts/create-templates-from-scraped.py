@@ -249,15 +249,32 @@ def process(path: str, out_path: str) -> None:
         f.write(text)
         f.write("{% endblock %}\n")
 
+    if os.path.exists("jekyll-test") and out_path != "_templates/scraped/index.html":
+        jekyll_page = out_path.replace("_templates/scraped", "jekyll-test")
+        jekyll_page = jekyll_page.replace("/index.html", ".html")
+        print(jekyll_page)
+        permalink = jekyll_page.replace("jekyll-test/", "").replace(".html", "/")
+        # jekyll_page = os.path.join("jekyll-test", out_dir, out_name + ".html")
+        if not os.path.exists(os.path.dirname(jekyll_page)):
+            os.makedirs(os.path.dirname(jekyll_page))
+        with open(jekyll_page, "w", encoding="UTF-8") as f:
+            f.write("---\n")
+            f.write("layout: scraped\n")
+            f.write(f"title: {page_title}\n")
+            f.write(f"permalink: {permalink}\n")
+            f.write("---\n")
+            f.write("\n")
+            f.write(text)
+
 
 def main():
-    for dir_path, _dir_names, file_names in os.walk("scraped"):
+    for dir_path, _dir_names, file_names in os.walk("_scraped"):
         for file_name in file_names:
             path = os.path.join(dir_path, file_name)
-            if path.endswith(".html") and not path.endswith("scraped/links.html"):
-                out_path = "templates/scraped" + path[len("scraped") :]
+            if path.endswith(".html") and not path.endswith("_scraped/links.html"):
+                out_path = "_templates/scraped" + path[len("_scraped") :]
                 assert out_path.endswith("/index.html")
-                if out_path == "templates/scraped/index.html":
+                if out_path == "_templates/scraped/index.html":
                     pass
                 else:
                     out_path = out_path.replace("/index.html", ".html")
