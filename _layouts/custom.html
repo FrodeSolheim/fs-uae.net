@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body
+{% if page.body_class %}
+  class="{{ page.body_class }}"
+{% endif %}
+  >
+
+    {%- include header.html -%}
+
+    {{ content }}
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

@@ -1,3 +1,5 @@
+// Text
+
 /* Layout ------------------------------------------------------------------ */
 
 body {
@@ -39,174 +41,9 @@ main,
   padding: 16px 32px;
 }
 */
-/* Debug ------------------------------------------------------------------- */
-
-/*
-  .fs-header-and-main {
-      background-color: #ff0000;
-  }
-*/
-
-.fs-site-header {
-  background-color: #66ff66;
-}
-
-.fs-page-header {
-  background-color: #ffff66;
-}
-
-.fs-page-header {
-  background-color: #ffff66;
-}
-
-/*
-.fs-sidebar {
-  background-color: #ff6666;
-}
-
-.fs-main {
-    background-color: #cccccc;
-}
-*/
-
-.fs-page-footer {
-  background-color: #99aa44;
-}
-
-.fs-site-footer {
-  background-color: #9944aa;
-}
-
-/* Header ------------------------------------------------------------------ */
-
-.fs-site-header {
-  background: #441144;
-  height: 64px;
-  line-height: 64px;
-  margin: 0px;
-  padding: 0px 32px;
-  /* margin-bottom: 32px; */
-}
-
-.fs-site-header h1 {
-  float: left;
-  margin: 0px;
-}
-
-.fs-site-header h1,
-.fs-site-header h1 a {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-img.fs-site-icon {
-  float: left;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-right: 8px;
-  display: block;
-}
-
-/*
-  h1.fs-site-title {
-      color: #ffffff;
-      font-size: 18px;
-  }
-*/
-.fs-site-title-weaker {
-  color: #ffffff80;
-}
-
-h1.fs-site-title,
-.fs-site-header ul {
-  line-height: 64px;
-  margin: 0px;
-}
-
-h1.fs-site-title {
-  font-size: 18px;
-  line-height: 64px;
-  margin: 0px;
-}
-
-.fs-site-header ul li a {
-  font-size: 18px;
-}
-
-.fs-site-header nav {
-  float: right;
-}
-
-.fs-site-header ul {
-  /* position: absolute; */
-  /* top: 0px; */
-  /*
-  right: 32px;
-  display: inline;
-  padding-left: 0px;
-  */
-  /* line-height: 64px; */
-  /* margin: 0px; */
-}
-
-.fs-site-header ul {
-  /* float: right;*/
-
-  /* position: absolute; */
-  /* top: 0px; */
-  /*right: 32px;*/
-
-  display: inline;
-  /*
-  padding-left: 0px;
-  line-height: 60px;
-  margin: 0px;
-  */
-}
-
-.fs-site-header li {
-  display: inline;
-  line-height: 1;
-  padding-left: 16px;
-}
-
-.fs-site-header nav a,
-.fs-site-header h1 a {
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: #f0f0f0;
-  /*font-size: 30px;*/
-  text-decoration: none;
-  background-color: transparent !important;
-}
-
-.fs-site-header nav a:active,
-.fs-site-header h1 a:active {
-  background-color: #2f0c47 !important;
-}
-
-.fs-site-header nav a:focus,
-.fs-site-header h1 a:focus {
-  background-color: #66497b !important;
-}
-
-.fs-site-header nav a.selected,
-.fs-site-header h1 a:selected {
-  background-color: #66497b !important;
-  color: white;
-}
-
-.fs-site-header nav a:hover,
-.fs-site-header nav a.selected:hover,
-.fs-site-header h1 a:hover {
-  background-color: #917aa3 !important;
-}
 
 /* ------------------------------------------------------------------------- */
-
+/*
 .fs-section-title {
   padding: 0px 32px;
   background-color: #dddddd;
@@ -218,6 +55,7 @@ h1.fs-site-title {
   font-weight: 400;
   margin: 0px;
 }
+*/
 
 /* ------------------------------------------------------------------------- */
 
@@ -239,10 +77,6 @@ h1.fs-site-title {
 */
 
 /* ------------------------------------------------------------------------- */
-
-h1 {
-  font-size: 24px;
-}
 
 h1.fs-page-title {
   background-color: #dddddd;
@@ -270,14 +104,7 @@ h3 {
 
 /* ------------------------------------------------------------------------- */
 
-body {
-  color: #333333;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  /* line-height: 1.5; */
-}
-
+/*
 main,
 .fs-main {
   padding: 32px;
@@ -290,6 +117,7 @@ main > h1 {
 main > :first-child {
   margin-top: 0px;
 }
+*/
 
 /*
 p, body {
@@ -299,11 +127,6 @@ p, body {
   font-weight: normal;
 }
 */
-
-p,
-li {
-  line-height: 1.5;
-}
 
 p {
   /*
@@ -316,21 +139,6 @@ p {
   margin-top: 16px;
 }
 
-/* Links ------------------------------------------------------------------- */
-
-a {
-  color: #6d2d9a;
-  text-decoration: underline;
-  text-decoration-color: #6d2d9a80;
-  text-underline-offset: 3px;
-}
-
-a:focus,
-a:active,
-a:hover {
-  background-color: #6d2d9a20;
-  text-decoration-color: #000000;
-}
 
 /* Preformatted text ------------------------------------------------------- */
 
@@ -423,7 +231,7 @@ div.fs-file-download a {
 }
 
 .download_content {
-  display: none;
+  /* display: none; */
 }
 
 .selected_download_content {
@@ -474,62 +282,6 @@ div.fs-file-download a {
 }
 
 /* Footer ------------------------------------------------------------------ */
-
-.fs-site-footer {
-  background-color: #333333;
-  /* border-top: 4px solid #666666; */
-  color: #999999;
-  font-size: 14px;
-  /* line-height: 1.5; */
-  /* margin-left: -32px;
-          margin-right: -32px; */
-  padding: 32px;
-}
-
-.fs-site-footer-columns {
-  display: flex;
-  margin: 0px -32px;
-}
-
-.fs-site-footer-column {
-  flex-basis: 0;
-  flex-grow: 1;
-  margin: 0px 32px;
-}
-
-.fs-site-footer h4 {
-  font-size: 17px;
-  font-weight: medium;
-}
-
-.fs-site-footer a {
-  color: #cccccc;
-  text-decoration-color: #cccccc30;
-}
-
-.fs-site-footer a:hover {
-  background-color: #000000;
-  color: #ffffff;
-  text-decoration-color: #cccccc30;
-}
-
-.fs-site-footer p {
-  color: #999999;
-}
-
-.fs-site-footer ul {
-  color: #999999;
-  padding: 0px;
-  line-height: 1.6;
-  list-style: none;
-  margin: 16px 0px; /* Paragraph (p) margin */
-}
-
-.fs-site-footer ul li {
-  line-height: 1.6;
-  list-style: none;
-  margin-bottom: 10px;
-}
 
 /* ------------------------------------------------------------------------- */
 

@@ -1,0 +1,152 @@
+.fs-site-header {
+  align-items: center;
+  // background: #441144;
+  // background: #773377;
+  background: #913b91;
+  // height: 72px;
+  // line-height: 72px;
+  // margin: 0px;
+  // padding: 0px 32px;
+  // margin-bottom: 32px;
+}
+
+.fs-site-header .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  // Let the site title grow so that the navigation bar becomes right-aligned
+  // flex-grow: 1;
+
+  // margin-top: 16px;
+  // margin-bottom: 16px;
+}
+
+.site-title-dummy {
+  // Let the site title grow so that the navigation bar becomes right-aligned
+  // flex-grow: 1;
+}
+
+img.fs-site-icon {
+  // float: left;
+  // margin-top: 17px;
+  // margin-bottom: 16px;
+  // margin-right: 8px;
+  display: block;
+
+  // margin-top: 16px;
+  // margin-bottom: 16px;
+}
+
+// Margins must be removed so centering works correctly
+.fs-site-header h1 {
+  margin: 0px;
+}
+
+// We don't want FS-UAE to be split on the hyphen
+.fs-site-header h1 a {
+  text-wrap: nowrap;
+}
+
+.fs-site-header nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.fs-site-header nav ul {
+  display: flex;
+  gap: 24px;
+  margin: 0px;
+}
+
+.fs-site-header nav a {
+  // font-size: 16px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.fs-site-header li {
+  display: inline;
+  // flex-direction: row;
+  // line-height: 1;
+  // padding-left: 16px;
+}
+
+// // .fs-site-header h1 {
+// //   float: left;
+// //   margin: 0px;
+// // }
+
+// /*
+// .fs-site-header h1,
+// .fs-site-header h1 a {
+//   color: #ffffff;
+//   font-size: 22px;
+//   font-weight: 500;
+// }
+// */
+
+
+
+// h1.fs-site-title,
+// .fs-site-header ul {
+//   line-height: 73px;
+//   margin: 0px;
+// }
+
+// h1.fs-site-title {
+//   font-size: 18px;
+//   line-height: 73px;
+//   margin: 0px;
+//   font-weight: bold;
+// }
+
+// .fs-site-header nav {
+//   float: right;
+// }
+
+// .fs-site-header ul {
+//   /* position: absolute; */
+//   /* top: 0px; */
+//   /*
+//   right: 32px;
+//   display: inline;
+//   padding-left: 0px;
+//   */
+//   /* line-height: 64px; */
+//   /* margin: 0px; */
+// }
+
+// .fs-site-header ul {
+//   /* float: right;*/
+
+//   /* position: absolute; */
+//   /* top: 0px; */
+//   /*right: 32px;*/
+
+//   display: inline;
+//   /*
+//   padding-left: 0px;
+//   line-height: 60px;
+//   margin: 0px;
+//   */
+// }
+
+// .fs-site-header nav a,
+// .fs-site-header h1 a {
+//   padding-left: 8px;
+//   padding-right: 8px;
+//   padding-top: 4px;
+//   padding-bottom: 4px;
+//   color: #f0f0f0;
+//   /*font-size: 30px;*/
+//   text-decoration: none;
+//   background-color: transparent !important;
+// }

@@ -1,0 +1,82 @@
+div.hero-bg {
+  background-color: #913b91;
+}
+
+// We know how large the hero container will be at full size
+// @media (min-width: 1440px) {
+//     .hero {
+//         height: 307px;
+//     }
+// }
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+  padding-bottom: 6vw;
+  // padding-top: 24px;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    flex-direction: row;
+    gap: 48px;
+    padding-bottom: 72px;
+  }
+}
+
+
+.hero .image {
+  flex: 1;
+}
+
+.hero .image img {
+  height: auto;
+  max-width: 100%;
+}
+
+.hero .text {
+  color: white;
+  flex: 1;
+  font-size: 18px;
+}
+
+// .hero h1 {
+// }
+
+.title-with-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.button a {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: inline-block;
+  padding: 12px 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.1s ease-in-out;
+}
+
+.button a:hover {
+  background: #fff;
+  color: #663366;
+}
+
+.hero .button a {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}

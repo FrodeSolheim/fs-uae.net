@@ -4,3 +4,58 @@
 
 @import "minima";
 @import "fs-uae";
+@import "text";
+
+@import "header";
+@import "footer";
+@import "hero";
+
+@import "mobile";
+
+@import "debug";
+
+div.wrapper {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 6vw;
+  padding-left: 6vw;
+}
+
+.center {
+  text-align: center;
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+}
+
+@media (min-width: 800px) {
+  .two-columns {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.two-columns .column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.news-page .post-title {
+  // Need smaller post title font on news page
+  font-size: 26px;
+  // Add some margins between news articles
+  margin-top: 40px;
+}
+
+// Override pre from base theme
+pre,
+code {
+  @include relative-font-size(0.9375);
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,24 @@
+---
+layout: default
+title: News archive
+permalink: /news/archive/
+---
+
+<h1>News archive</h1>
+
+{% assign current_year = '' %}
+<ul class="post-list">
+{% for post in site.posts %}
+  {% assign y = post.date | date: "%Y" %}
+  {% if y != current_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 id="y{{ y }}">{{ y }}</h2>
+    <ul class="post-list">
+    {% assign current_year = y %}
+  {% endif %}
+  <li>
+    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    &mdash; <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

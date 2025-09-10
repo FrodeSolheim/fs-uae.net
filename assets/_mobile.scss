@@ -1,0 +1,25 @@
+@media (max-width: 639px) {
+  body,
+  .normal-font-size {
+    font-size: 14px;
+    font-size: 14px;
+  }
+
+  // On small screens, show the navigation links on top
+  .fs-site-header .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .fs-site-header nav {
+    justify-content: left;
+  }
+
+  div.site-title {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
