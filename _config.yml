@@ -21,9 +21,8 @@
 title: FS-UAE
 email: frode@fs-uae.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The cross-platform Amiga emulator for Windows, macOS and Linux, with a particular focus on games.
+  A user-friendly and database driven launcher, and an arcade mode frontend is also available.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fs-uae.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:

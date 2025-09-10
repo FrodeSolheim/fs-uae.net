@@ -4,10 +4,19 @@ This repository contains the code and templates needed to generated the [FS-UAE]
 
 Later, this repository will evolve with new/improved content, and I expect the scraped content to be gradually replaced.
 
+You need jekyll in order to build the site.
+
+To build a static version in `_dist`:
+```
+bundle exec jekyll build
+```
+
+To develop the site with automatic rebuilds:
+```
+bundle exec jekyll serve
+```
+
 Directories:
 
-- `public_html` - Contains some static content and is the target directory for the built site.
 - `_scraped` - Contains a scraped copy of the old fs-uae.net wordpress site as of 2025-09-06.
 - `templates/scraped` - Contains jinja2 templates based on the scraped pages (header and footer) are extracted to common templates (etc).
-
-You need Python 3 and Jinja 2 in order to build the `public_html` directory. Just run `python3 _scripts/make.py`.
