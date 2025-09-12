@@ -11,6 +11,9 @@ def import_option(path: str) -> None:
     with open(path, "r") as f:
         text = f.read()
     name = os.path.basename(path)
+    if name.endswith(".md"):
+        name = name[:-3]
+
     dest = os.path.join("docs", "options", name)
 
     dest_html = dest + ".html"

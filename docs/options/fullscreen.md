@@ -3,7 +3,7 @@ layout: option
 title: fullscreen
 tags: [docs, options]
 
-description: Start FS-UAE in fullscreen mode
+description: Start emulator in fullscreen mode
 default: 0
 example: 1
 type: boolean

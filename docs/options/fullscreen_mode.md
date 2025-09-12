@@ -3,7 +3,7 @@ layout: option
 title: fullscreen_mode
 tags: [docs, options]
 
-description: Fullscreen Mode
+description: Fullscreen mode
 default: desktop
 example: fullscreen
 type: Choice
@@ -14,5 +14,5 @@ the fake fullscreen support (a borderless window the size of the current
 display will be created instead of switching to real fullscreen).
 
 Value: fullscreen ("Fullscreen") - Classic fullscreen mode (SDL_FULLSCREEN)
-Value: desktop ("Fullscreen Desktop") - New fullscreen mode (SDL_FULLSCREEN_DESKTOP)
-Value: window ("Fullscreen Window") - Frameless window with same size as desktop
+Value: desktop ("Fullscreen desktop") - New fullscreen mode (SDL_FULLSCREEN_DESKTOP)
+Value: window ("Fullscreen window") - Frameless window with same size as desktop

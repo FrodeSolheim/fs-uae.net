@@ -26,7 +26,6 @@ PAL: 14.187580, NTSC: 14.318180
 8:
 PAL: 28.375160, NTSC: 28.636360
 
-If you want to freely specify frequency, set this option to 0 and use [uae_cpu_frequency]. When this option is non-0, [uae_cpu_frequency] will be
-ignored.
+If you want to freely specify frequency, set this option to 0 and use [uae_cpu_frequency]. When this option is non-0, [uae_cpu_frequency] will be ignored.
 
 This option is only intended to be used with cycle-exact CPU.
