@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Environment variables
+---
+
 # Environment variables
 
     SDL_MOUSE_FOCUS_CLICKTHROUGH=0

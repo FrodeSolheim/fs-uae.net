@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Latency
+---
+
 # Latency
 
 FIXME: Write more about latency and latency-related issues

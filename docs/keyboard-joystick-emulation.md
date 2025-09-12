@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Keyboard joystick emulation
+---
+
 # Keyboard joystick emulation
 
 FIXME: This document must be updated with more information FIXME: This document must updated with markdown formatting

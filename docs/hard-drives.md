@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Hard drives
+---
+
 # Hard drives
 
 When it comes to using emulated hard drives in FS-UAE, you have several choices:

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: G-Sync
+---
+
 # G-Sync
 
 FIXME:

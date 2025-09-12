@@ -1,3 +1,8 @@
+---
+layout: docs
+title: GameControllerDB
+---
+
 # GameControllerDB
 
 FIXME: Write about:

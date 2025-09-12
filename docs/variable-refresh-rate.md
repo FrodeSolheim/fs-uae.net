@@ -1,4 +1,9 @@
-# Variable Refresh Rate
+---
+layout: docs
+title: Variable refresh rate
+---
+
+# Variable refresh rate
 
 FS-UAE can be used with variable refresh rate hardware:
 

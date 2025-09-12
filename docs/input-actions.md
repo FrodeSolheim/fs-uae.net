@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Input actions
+---
+
 # Input actions
 
 Here are all the valid names for input actions listed. See [Input mapping](input-mapping.md) for information about how to use these action identifiers.

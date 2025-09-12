@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Floppy images
+---
+
 # Floppy disk images
 
 You cannot generally use Amiga floppies in a PC floppy drive, and FS-UAE does not support using real floppy drives. Instead, you need a floppy image – a file with a copy of the data contained on a floppy.

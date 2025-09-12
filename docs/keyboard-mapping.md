@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Keyboard mapping
+---
+
 # Keyboard mapping
 
 Not all Amiga keys are present on modern computer keyboards, and vice versa. Most keys are mapped like you would expect (F1 on your keyboard activates F1 on the emulated Amiga keyboard, etc).

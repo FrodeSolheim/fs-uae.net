@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Vsync
+---
+
 # Vsync tips and notes
 
 TODO: Write more about the performance overlay and how to look for problems

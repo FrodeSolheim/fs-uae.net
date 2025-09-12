@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Performance
+---
+
 # Performance
 
 1. Your device must be powerful enough to run the emulation.

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: High-DPI
+---
+
 # High-DPI / Hi-DPI notes
 
 ## macOS

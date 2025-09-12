@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Input mapping
+---
+
 # Input mapping
 
 All keyboard and joystick events can be mapped to any Amiga keyboard and joystick action, overriding default settings and (and the setup resulting from using the joystick_port_n options). A few examples of what you can do:

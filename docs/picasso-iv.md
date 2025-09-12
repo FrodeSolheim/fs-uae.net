@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Picasso IV
+---
+
 # Picasso IV emulation
 
 ## ROM

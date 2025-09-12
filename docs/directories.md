@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Directories
+---
+
 # Paths and directories
 
 By default, FS-UAE creates a number of directories in `Documents/FS-UAE` to store the files used by FS-UAE: CD-ROMs, Configurations, Controllers, Flash Memory, Floppies, Floppy Overlays, Hard Drives, Kickstarts, Logs, Save States.

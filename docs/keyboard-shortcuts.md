@@ -1,4 +1,9 @@
-# Keyboard shorcuts
+---
+layout: docs
+title: Keyboard shortcuts
+---
+
+# Keyboard shortcuts
 
 The following keyboard shortcuts are available by default. <kbd>Mod</kbd> means <kbd>Cmd</kbd> on OS X and <kbd>Alt</kbd> on other platforms, but it can be re-configured as another key. See the "modifier key" section for more information.
 

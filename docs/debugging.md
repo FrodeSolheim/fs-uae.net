@@ -1,4 +1,9 @@
-# Debugging FS-UAE
+---
+layout: docs
+title: Debugging
+---
+
+# Debugging
 
 This page contains some information on how you can better debug FS-UAE problems. In general, checking the contents of `FS-UAE.log.txt` is a good source of information, as is checking messages printed to stdout. You can make FS-UAE print log output to stdout with:
 
