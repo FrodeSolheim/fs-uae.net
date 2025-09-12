@@ -70,3 +70,16 @@ code {
 //   overflow-x: auto;
 //   overflow: auto; /* Adds scrollbars if content overflows */
 // }
+
+.outdated-warning {
+  background-color: #eeddaa;
+  font-size: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.notification {
+  // background-color: #eeeabb;
+  background-color: #eeddaa;
+  padding: 24px;
+}

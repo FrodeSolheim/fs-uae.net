@@ -12,5 +12,6 @@ templates:
 	rm -Rf _templates/scraped
 	mkdir -p _templates/scraped
 	python3 _scripts/create-templates-from-scraped.py
+	rm -Rf logs.html news/page/ docs/update.html
 
 .PHONY: public_html scrape templates

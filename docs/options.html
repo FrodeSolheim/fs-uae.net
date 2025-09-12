@@ -8,4 +8,14 @@ permalink: docs/options/
 <h1>Configuration options</h1>
 </main>
     
+{% assign docs_pages = site.pages | where_exp:"page", "page.tags contains 'docs'" | sort: "title" %}
 
+<ul>
+  {% for page in docs_pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a>
+        {% if page.description %}
+        &mdash; {{ page.description }}
+        {% endif %}
+    </li>
+  {% endfor %}
+</ul>

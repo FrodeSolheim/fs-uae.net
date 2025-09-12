@@ -1,0 +1,32 @@
+---
+layout: option
+title: network_card
+tags: [docs, options]
+
+description: Network Card
+default: 0
+example: a2065
+since: 2.6.10
+type: Choice
+---
+
+Use this option to enable a network card.
+
+Value: 0 ("None")
+
+The following values enables emulation of real sound cards:
+
+Value: a2065 (A2065)
+
+Code:
+
+    if c.network_card.explicit:
+        # FIXME: check supported
+        value = c.network_card.explicit
+        if f.matches(value, "a2065"):
+            value = "a2065"
+        else:
+            f.warning(value + ": invalid value")
+            value = "0"
+    else:
+        value = "0"

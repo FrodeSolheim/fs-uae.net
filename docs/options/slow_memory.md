@@ -1,0 +1,28 @@
+---
+layout: option
+title: slow_memory
+tags: [docs, options]
+
+description: Slow RAM
+default:
+example: 512
+type: Choice
+---
+
+Override the amount of "slow" memory, specified in KB. Must be a multiple
+of 256. The default value depends on [amiga_model].
+
+Value: 0 (0 MB)
+Value: 512 (512 KB)
+Value: 1024 (1 MB)
+Value: 1536 (1.5 MB)
+Value: 1792 (1.8 MB)
+
+Code:
+
+    if c.slow_memory.explicit:
+        value = c.slow_memory.explicit
+    elif c.amiga_model == "A500":
+        value = "512"
+    else:
+        value = "0"

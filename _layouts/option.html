@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="docs-two-columns">
+  <div class="docs-main-column">
+    {% if page.title %}
+      <h1>{{ page.title }}</h1>
+    {% endif %}
+    <p>
+      {% if page.description %}
+        {{ page.description }}
+      {% endif %}
+    </p>
+    <p>
+      {% if page.default %}
+        <b>Default:</b> {{ page.default }}<br>
+      {% endif %}
+      {% if page.example %}
+        <b>Example:</b> {{ page.example }}<br>
+      {% endif %}
+      {% if page.since %}
+        <b>Since:</b> {{ page.since }}<br>
+      {% endif %}
+      {% if page.type %}
+        <b>Type:</b> {{ page.type }}<br>
+      {% endif %}
+    </p>
+
+    {{ content }}
+  </div>
+  <div class="docs-sidebar-column">
+    {% include docs-menu.html %}
+  </div>
+</div>

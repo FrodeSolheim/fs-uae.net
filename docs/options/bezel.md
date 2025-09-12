@@ -1,0 +1,13 @@
+---
+layout: option
+title: bezel
+tags: [docs, options]
+
+description: Bezel
+default: 0
+example: 1
+type: Choice
+---
+
+Value: 1 ("Show Bezel")
+Value: 0 ("Hide Bezel")

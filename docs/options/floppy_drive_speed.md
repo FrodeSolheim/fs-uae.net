@@ -1,0 +1,32 @@
+---
+layout: option
+title: floppy_drive_speed
+tags: [docs, options]
+
+description: Floppy Drive Speed
+default: 100
+example: 800
+type: Choice
+---
+
+Set the speed of the emulated floppy drives, in percent. For example, you can
+specify 800 to get an 8x increase in speed. Use 0 to specify turbo mode.
+Turbo mode means that all floppy operations complete immediately. The default
+is 100 for most models.
+
+Value: 0 ("Turbo")
+Value: 100 (100%)
+Value: 200 (200 %)
+Value: 400 (400 %)
+Value: 800 (800 %)
+
+The only supported value is 100. Other speeds may or may not work with your
+games. The faster the emulated floppy drive speed, the less likely it is to
+work with (some) games.
+
+Code:
+
+    if c.floppy_drive_speed.explicit:
+        c.floppy_drive_speed = c.floppy_drive_speed.explicit
+    else:
+        c.floppy_drive_speed = "100"
