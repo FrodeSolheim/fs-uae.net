@@ -2,18 +2,14 @@
 
 ## Configuration options
 
-The configure script can be used to enable some additional features
-(but they might not work or even compile) and disable default features.
+The configure script can be used to enable some additional features (but they might not work or even compile) and disable default features.
 
-Please note, the only *supported* configuration is to build with the
-default option set or the ones listed below.  Other options are provided
-for testing and debugging purposes - and also for your convenience, in
-the cases where it happens to work ;-).
+Please note, the only _supported_ configuration is to build with the default option set or the ones listed below. Other options are provided for testing and debugging purposes - and also for your convenience, in the cases where it happens to work ;-).
 
 Supported options:
 
- * --with-libmpeg=builtin    For systems lacking libmpeg2.
- * --disable-jit             For platforms without UAE JIT support.
+- --with-libmpeg=builtin For systems lacking libmpeg2.
+- --disable-jit For platforms without UAE JIT support.
 
 ## Building on Ubuntu or Debian
 

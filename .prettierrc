@@ -1,3 +1,5 @@
 {
-  "printWidth": 100
+  "printWidth": 100,
+  "proseWrap": "never",
+  "tabWidth": 2
 }
