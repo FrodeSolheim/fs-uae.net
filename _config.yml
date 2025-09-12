@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-cache-bust
   - jekyll-feed
+  - jekyll-redirect-from
 
 permalink: /:categories/:year/:month/:day/:title/
 
