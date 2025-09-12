@@ -101,6 +101,9 @@ def import_option(path: str) -> None:
             f.write("\n")
 
 
+for item in os.listdir("../fs-uae-launcher/docs/options"):
+    import_option(os.path.join("../fs-uae-launcher/docs/options", item))
+
 for item in os.listdir("../fs-uae-3/doc/options"):
     import_option(os.path.join("../fs-uae-3/doc/options", item))
 
