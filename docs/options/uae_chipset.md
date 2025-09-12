@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_chipset
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default:
 example: aga

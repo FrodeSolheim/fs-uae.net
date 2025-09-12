@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_waiting_blits
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default:
 example: automatic

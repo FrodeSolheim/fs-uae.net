@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: name_of_theme_folder

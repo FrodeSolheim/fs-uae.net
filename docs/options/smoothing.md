@@ -1,7 +1,7 @@
 ---
 layout: option
 title: smoothing
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Smoothing
 default: auto

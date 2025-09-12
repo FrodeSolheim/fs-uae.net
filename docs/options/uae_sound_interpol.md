@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_sound_interpol
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default: anti
 example: sinc

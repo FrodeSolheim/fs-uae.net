@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fullscreen_width
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 1024
 since: 1.1.8

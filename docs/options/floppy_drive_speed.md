@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_speed
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Floppy Drive Speed
 default: 100

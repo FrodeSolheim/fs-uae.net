@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_3
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

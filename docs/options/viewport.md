@@ -1,7 +1,7 @@
 ---
 layout: option
 title: viewport
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 74 * 640 400 => * 20 * *
 ---

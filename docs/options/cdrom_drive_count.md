@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cdrom_drive_count
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: CD-ROM Drive Count
 default:

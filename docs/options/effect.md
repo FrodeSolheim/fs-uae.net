@@ -1,7 +1,7 @@
 ---
 layout: option
 title: effect
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Effect
 default: 2x

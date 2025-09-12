@@ -1,7 +1,7 @@
 ---
 layout: option
 title: automatic_input_grab
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Grab Input on Click
 default: 1

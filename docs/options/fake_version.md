@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fake_version
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 type: string
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: border
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Border
 default: 1

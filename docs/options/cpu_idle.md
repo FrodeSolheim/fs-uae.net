@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cpu_idle
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Relax host CPU usage when using fastest-possible CPU
 default:

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: low_resolution
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 0
 example: 1

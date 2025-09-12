@@ -1,7 +1,7 @@
 ---
 layout: option
 title: initial_input_grab
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Grab Input on FS-UAE Startup
 default:

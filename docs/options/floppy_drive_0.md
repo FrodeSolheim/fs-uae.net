@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_0
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: Lotus2/Disk1.adf
 ---

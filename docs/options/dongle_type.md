@@ -1,7 +1,7 @@
 ---
 layout: option
 title: dongle_type
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Hardware Dongle
 default: 0

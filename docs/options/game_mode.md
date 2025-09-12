@@ -1,7 +1,7 @@
 ---
 layout: option
 title: game_mode
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Use GameMode to optimize performance
 default: 1

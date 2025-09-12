@@ -1,7 +1,7 @@
 ---
 layout: option
 title: keyboard_key_insert
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Host Key INSERT
 default: action_key_2b

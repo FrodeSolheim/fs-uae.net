@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_a3000mem_size
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Size in megabytes of motherboard fast memory
 default:

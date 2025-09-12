@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cd32fmv
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

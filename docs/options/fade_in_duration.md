@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fade_in_duration
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Fade-in Duration on Start
 default: 500

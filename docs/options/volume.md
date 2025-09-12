@@ -1,7 +1,7 @@
 ---
 layout: option
 title: volume
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Main Volume
 default: 100

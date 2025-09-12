@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fade_out_duration
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 125
 example: 0

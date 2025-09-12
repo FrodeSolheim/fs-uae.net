@@ -1,7 +1,7 @@
 ---
 layout: option
 title: hard_drive_0_read_only
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 1
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: sub_title
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: Custom Sub Title

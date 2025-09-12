@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_fastmem_size
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Size in MB of Zorro-II Fast RAM expansion board
 default: 0

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cdfs
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: 0

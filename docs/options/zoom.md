@@ -1,7 +1,7 @@
 ---
 layout: option
 title: zoom
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Zoom Amiga display (crop)
 default: 692x540

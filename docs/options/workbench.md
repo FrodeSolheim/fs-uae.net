@@ -1,7 +1,7 @@
 ---
 layout: option
 title: workbench
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 since: 2.5.15
 ---

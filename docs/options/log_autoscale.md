@@ -1,7 +1,7 @@
 ---
 layout: option
 title: log_autoscale
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Log Autoscale Changes
 default: 0

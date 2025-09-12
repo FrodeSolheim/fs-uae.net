@@ -1,7 +1,7 @@
 ---
 layout: option
 title: joystick_port_3_autofire
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 since: 2.1.0
 ---

@@ -1,6 +1,6 @@
 ---
 layout: option
 title: primary_joystick
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 ---

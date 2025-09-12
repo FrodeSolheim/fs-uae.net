@@ -1,7 +1,7 @@
 ---
 layout: option
 title: controllers_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/Controllers
 example: path/to/dir

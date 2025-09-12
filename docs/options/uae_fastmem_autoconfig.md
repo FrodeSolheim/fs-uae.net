@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_fastmem_autoconfig
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Autoconfig Z2 Fast RAM
 default: 1

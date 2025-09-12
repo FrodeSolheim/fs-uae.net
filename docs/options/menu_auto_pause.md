@@ -1,7 +1,7 @@
 ---
 layout: option
 title: menu_auto_pause
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 0
 example: 1

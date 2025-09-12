@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_sana2
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: uae_sana2
 default: false

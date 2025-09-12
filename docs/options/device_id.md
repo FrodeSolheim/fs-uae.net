@@ -1,7 +1,7 @@
 ---
 layout: option
 title: device_id
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Device ID used with OpenRetro authentication
 default:

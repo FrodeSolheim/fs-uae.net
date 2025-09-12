@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fsaa
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Full-scene anti-aliasing (FSAA)
 default: 0

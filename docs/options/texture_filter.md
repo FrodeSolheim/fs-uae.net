@@ -1,7 +1,7 @@
 ---
 layout: option
 title: texture_filter
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Texture filter
 default: linear

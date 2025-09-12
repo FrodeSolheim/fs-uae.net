@@ -1,7 +1,7 @@
 ---
 layout: option
 title: stretch
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Stretch
 default: aspect

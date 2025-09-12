@@ -1,7 +1,7 @@
 ---
 layout: option
 title: save_disk
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Save Disk
 default: 1

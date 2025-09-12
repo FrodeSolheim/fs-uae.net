@@ -1,7 +1,7 @@
 ---
 layout: option
 title: min_first_line_pal
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: First rendered line (PAL)
 default: 26

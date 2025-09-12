@@ -1,7 +1,7 @@
 ---
 layout: option
 title: frame_time
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Frame time (ms)
 default: 0

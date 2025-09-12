@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_rtc
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Enable a real time clock (RTC) module.
 default: auto

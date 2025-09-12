@@ -1,7 +1,7 @@
 ---
 layout: option
 title: keyboard_key_less
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Host Key LESS
 default: action_key_30

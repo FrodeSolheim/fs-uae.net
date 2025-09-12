@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_count
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Floppy Drive Count
 default:

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uaenative_library
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

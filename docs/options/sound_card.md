@@ -1,7 +1,7 @@
 ---
 layout: option
 title: sound_card
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Sound Card
 default: 0

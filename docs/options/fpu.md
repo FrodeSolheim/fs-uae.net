@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fpu
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

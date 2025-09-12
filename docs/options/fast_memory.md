@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fast_memory
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Fast RAM
 default:

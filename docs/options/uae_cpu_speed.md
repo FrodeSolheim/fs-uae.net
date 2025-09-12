@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cpu_speed
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Enable/disable fastest possible CPU speed
 default:

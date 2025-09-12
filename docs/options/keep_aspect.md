@@ -1,7 +1,7 @@
 ---
 layout: option
 title: keep_aspect
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Keep aspect ratio when scaling (do not stretch)
 default: 0

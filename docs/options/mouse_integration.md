@@ -1,7 +1,7 @@
 ---
 layout: option
 title: mouse_integration
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

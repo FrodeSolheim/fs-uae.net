@@ -1,7 +1,7 @@
 ---
 layout: option
 title: rtg_scanlines
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Render scan lines in RTG graphics mode
 default: 0

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_feature
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Enable online database support (requires restart)
 default: 0

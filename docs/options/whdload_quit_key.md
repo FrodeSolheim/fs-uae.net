@@ -1,7 +1,7 @@
 ---
 layout: option
 title: whdload_quit_key
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: WHDLoad quit key
 default:

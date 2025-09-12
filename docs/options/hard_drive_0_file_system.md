@@ -1,7 +1,7 @@
 ---
 layout: option
 title: hard_drive_0_file_system
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: SmartFilesystem

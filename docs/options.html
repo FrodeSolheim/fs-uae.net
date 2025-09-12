@@ -6,11 +6,35 @@ permalink: docs/options/
 
 <main>
   <h1>Configuration options</h1>
-  {% assign docs_pages = site.pages | where_exp:"page", "page.tags contains 'docs'" | sort: "title"
-  %}
 
+  <h2>FS-UAE options</h2>
+  {% assign pages = site.pages | where_exp:"page", "page.tags contains 'fsuae_option'" | sort: "title" %}
   <ul>
-    {% for page in docs_pages %}
+    {% for page in pages %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      {% if page.description %} &mdash; {{ page.description }} {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Low-level UAE options</h2>
+  <p>This list of low-level UAE options is not exhaustive. These options correspond to the ones you would see in a WinUAE .uae configuration file, but with an added `uae_` prefix to make sure to avoid collisions with FS-UAE options.</p>
+  {% assign pages = site.pages | where_exp:"page", "page.tags contains 'uae_option'" | sort: "title" %}
+  <ul>
+    {% for page in pages %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      {% if page.description %} &mdash; {{ page.description }} {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2>FS-UAE Launcher options</h2>
+  <p>These options are typically not usable in .fs-uae configuration files, but are instead used in the FS-UAE Launcher settings file.</p>
+  {% assign pages = site.pages | where_exp:"page", "page.tags contains 'launcher_option'" | sort: "title" %}
+  <ul>
+    {% for page in pages %}
     <li>
       <a href="{{ page.url }}">{{ page.title }}</a>
       {% if page.description %} &mdash; {{ page.description }} {% endif %}

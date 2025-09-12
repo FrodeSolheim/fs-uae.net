@@ -1,7 +1,7 @@
 ---
 layout: option
 title: texture_format
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Video texture format (on the GPU)
 default:

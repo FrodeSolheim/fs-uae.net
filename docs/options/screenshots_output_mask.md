@@ -1,7 +1,7 @@
 ---
 layout: option
 title: screenshots_output_mask
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 7
 example: 3

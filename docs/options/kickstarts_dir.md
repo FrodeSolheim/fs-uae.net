@@ -1,7 +1,7 @@
 ---
 layout: option
 title: kickstarts_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/Kickstarts
 example: path/to/dir/with/kickstarts

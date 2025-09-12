@@ -1,7 +1,7 @@
 ---
 layout: option
 title: disable_aspect_correction
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 1
 since: 1.3.8

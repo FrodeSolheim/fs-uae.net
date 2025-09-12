@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_gfxcard_type
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

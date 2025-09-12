@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fullscreen_mode
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Fullscreen mode
 default: desktop

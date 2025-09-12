@@ -1,7 +1,7 @@
 ---
 layout: option
 title: base_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: (My) Documents/FS-UAE/
 ---

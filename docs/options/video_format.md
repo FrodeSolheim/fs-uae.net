@@ -1,7 +1,7 @@
 ---
 layout: option
 title: video_format
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Video buffer format and color depth
 default: bgra

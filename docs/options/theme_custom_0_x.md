@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_custom_0_x
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 1605
 ---

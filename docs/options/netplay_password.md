@@ -1,7 +1,7 @@
 ---
 layout: option
 title: netplay_password
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: UIafg4a23
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: crop
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Crop
 default: 1

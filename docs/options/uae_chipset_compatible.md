@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_chipset_compatible
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Enable default chipset features for a specific model
 default:

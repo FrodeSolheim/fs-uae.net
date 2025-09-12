@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_show_games
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Database Games
 default: 1

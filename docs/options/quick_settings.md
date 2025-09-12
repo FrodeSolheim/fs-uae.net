@@ -1,6 +1,6 @@
 ---
 layout: option
 title: quick_settings
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 ---

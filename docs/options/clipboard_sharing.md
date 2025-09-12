@@ -1,6 +1,6 @@
 ---
 layout: option
 title: clipboard_sharing
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---

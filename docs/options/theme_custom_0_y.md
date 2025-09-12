@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_custom_0_y
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

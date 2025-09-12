@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cart_file
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: audio_buffer_target_bytes
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Audio buffer target size (bytes)
 default: 8192

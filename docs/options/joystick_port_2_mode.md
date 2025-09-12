@@ -1,7 +1,7 @@
 ---
 layout: option
 title: joystick_port_2_mode
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: nothing
 example: joystick

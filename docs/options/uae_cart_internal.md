@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cart_internal
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default:
 example: hrtmon

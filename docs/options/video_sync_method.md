@@ -1,7 +1,7 @@
 ---
 layout: option
 title: video_sync_method
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Video synchronization method
 default: auto

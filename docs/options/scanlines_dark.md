@@ -1,7 +1,7 @@
 ---
 layout: option
 title: scanlines_dark
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 10
 example: 10

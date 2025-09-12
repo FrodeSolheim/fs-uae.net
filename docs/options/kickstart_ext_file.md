@@ -1,7 +1,7 @@
 ---
 layout: option
 title: kickstart_ext_file
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: path/to/extended-kickstart.rom
 ---

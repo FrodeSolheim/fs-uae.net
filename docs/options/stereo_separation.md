@@ -1,7 +1,7 @@
 ---
 layout: option
 title: stereo_separation
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Stereo Separation
 default: 70

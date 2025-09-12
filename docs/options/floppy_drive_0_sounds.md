@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_0_sounds
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: A500Real

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: bezel
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Bezel
 default: 0

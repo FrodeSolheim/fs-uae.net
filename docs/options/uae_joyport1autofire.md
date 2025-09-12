@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_joyport1autofire
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

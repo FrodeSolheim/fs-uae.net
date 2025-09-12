@@ -1,7 +1,7 @@
 ---
 layout: option
 title: launcher_theme
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Launcher Theme
 default: fusion

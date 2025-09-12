@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_server
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Game Database Server
 default: openretro.org

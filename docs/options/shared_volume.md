@@ -1,7 +1,7 @@
 ---
 layout: option
 title: shared_volume
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Add shared volume
 default: 0

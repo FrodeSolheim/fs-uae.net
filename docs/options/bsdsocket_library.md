@@ -1,7 +1,7 @@
 ---
 layout: option
 title: bsdsocket_library
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: UAE bsdsocket.library
 default: 0

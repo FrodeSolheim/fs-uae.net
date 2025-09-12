@@ -1,7 +1,7 @@
 ---
 layout: option
 title: joystick_port_1_mode
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Joystick Port 1
 default: joystick

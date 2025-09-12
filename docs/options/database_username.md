@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_username
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Game database user name
 default:

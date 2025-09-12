@@ -1,7 +1,7 @@
 ---
 layout: option
 title: launcher_config_feature
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Experimental Config Visualization (Requires Restart)
 default: 0

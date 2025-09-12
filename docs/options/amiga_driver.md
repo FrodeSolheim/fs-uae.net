@@ -1,7 +1,7 @@
 ---
 layout: option
 title: amiga_driver
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Amiga Game Driver
 default: fs-uae

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_z3mapping
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: JIT Direct compatible Z3 memory mapping
 default: auto

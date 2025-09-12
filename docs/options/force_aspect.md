@@ -1,7 +1,7 @@
 ---
 layout: option
 title: force_aspect
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Force Aspect
 default:

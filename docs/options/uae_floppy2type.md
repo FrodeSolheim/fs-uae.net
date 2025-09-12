@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_floppy2type
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: accelerator
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Accelerator Board
 default: 0

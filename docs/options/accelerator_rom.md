@@ -1,6 +1,6 @@
 ---
 layout: option
 title: accelerator_rom
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---

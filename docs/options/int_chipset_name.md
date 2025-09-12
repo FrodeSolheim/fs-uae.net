@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_chipset_name
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

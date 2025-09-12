@@ -1,7 +1,7 @@
 ---
 layout: option
 title: scale_y
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: -1.0
 example: 0.5

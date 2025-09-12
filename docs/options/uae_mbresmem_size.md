@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_mbresmem_size
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Size in megabytes of processor slot fast memory
 default:

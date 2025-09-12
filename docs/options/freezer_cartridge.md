@@ -1,7 +1,7 @@
 ---
 layout: option
 title: freezer_cartridge
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Freezer Cartridge
 default: 0

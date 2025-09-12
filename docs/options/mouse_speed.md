@@ -1,7 +1,7 @@
 ---
 layout: option
 title: mouse_speed
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Mouse Speed (%)
 default: 100

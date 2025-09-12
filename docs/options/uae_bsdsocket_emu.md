@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_bsdsocket_emu
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

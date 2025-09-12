@@ -1,7 +1,7 @@
 ---
 layout: option
 title: netplay_tag
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Net play tag (max 3 characters)
 default: UNK

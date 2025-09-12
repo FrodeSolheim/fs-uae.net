@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_model_name
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: hard_drives_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/Hard Drives
 ---

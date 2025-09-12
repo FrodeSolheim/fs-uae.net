@@ -1,7 +1,7 @@
 ---
 layout: option
 title: blizzard_scsi_kit
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Blizzard SCSI Kit
 default: 0

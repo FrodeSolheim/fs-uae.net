@@ -1,7 +1,7 @@
 ---
 layout: option
 title: assume_refresh_rate
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: 50

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: motherboard_ram
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Motherboard RAM
 default:

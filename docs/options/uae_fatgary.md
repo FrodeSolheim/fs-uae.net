@@ -1,6 +1,6 @@
 ---
 layout: option
 title: uae_fatgary
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: window_border
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Show window border and decorations
 default:

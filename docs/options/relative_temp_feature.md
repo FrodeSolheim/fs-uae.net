@@ -1,7 +1,7 @@
 ---
 layout: option
 title: relative_temp_feature
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Relative Temporary Directories
 default: 0

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_z3mem_start
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default: 0x10000000
 type: integer

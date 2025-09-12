@@ -1,7 +1,7 @@
 ---
 layout: option
 title: middle_click_ungrab
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Ungrab Input on Middle Mouse Button
 default: 1

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_overlays_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/Floppy Overlays
 example: path/to/floppy/overlays/dir

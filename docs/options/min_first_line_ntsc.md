@@ -1,7 +1,7 @@
 ---
 layout: option
 title: min_first_line_ntsc
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: First rendered line (NTSC)
 default: 21

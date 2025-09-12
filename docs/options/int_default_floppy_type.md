@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_default_floppy_type
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

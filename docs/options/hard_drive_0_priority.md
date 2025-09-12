@@ -1,7 +1,7 @@
 ---
 layout: option
 title: hard_drive_0_priority
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 0
 example: 6

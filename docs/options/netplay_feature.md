@@ -1,7 +1,7 @@
 ---
 layout: option
 title: netplay_feature
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Enable experimental net play GUI (requires restart)
 default: 0

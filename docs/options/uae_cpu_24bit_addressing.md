@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cpu_24bit_addressing
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

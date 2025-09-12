@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_volume
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Floppy Drive Volume
 default: 20

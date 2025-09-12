@@ -1,7 +1,7 @@
 ---
 layout: option
 title: window_x
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default:
 example: 100

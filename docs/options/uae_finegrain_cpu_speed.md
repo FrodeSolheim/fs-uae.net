@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_finegrain_cpu_speed
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

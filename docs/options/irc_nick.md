@@ -1,7 +1,7 @@
 ---
 layout: option
 title: irc_nick
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: IRC nickname
 default:

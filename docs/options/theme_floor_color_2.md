@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_floor_color_2
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: #111110
 since: 1.3.8

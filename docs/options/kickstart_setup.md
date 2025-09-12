@@ -1,7 +1,7 @@
 ---
 layout: option
 title: kickstart_setup
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Show kickstart setup page on startup when all ROMs are missing
 default: 1

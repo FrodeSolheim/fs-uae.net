@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_custom_0
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 since: 1.3.8
 ---

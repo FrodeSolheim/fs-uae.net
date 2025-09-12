@@ -1,7 +1,7 @@
 ---
 layout: option
 title: joystick_port_3
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: LOGITECH CORDLESS RUMBLEPAD 2 USB
 ---

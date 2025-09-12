@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fake_joysticks
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: window_width
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 960
 example: 960

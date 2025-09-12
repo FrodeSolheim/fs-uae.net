@@ -1,7 +1,7 @@
 ---
 layout: option
 title: hard_drive_3
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

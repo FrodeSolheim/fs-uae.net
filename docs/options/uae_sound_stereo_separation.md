@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_sound_stereo_separation
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 default: 10
 example: 7

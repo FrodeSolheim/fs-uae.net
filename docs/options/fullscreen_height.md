@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fullscreen_height
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 768
 since: 1.1.8

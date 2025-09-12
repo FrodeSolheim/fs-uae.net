@@ -1,7 +1,7 @@
 ---
 layout: option
 title: builtin_configs
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Include built-in configurations
 default: 1

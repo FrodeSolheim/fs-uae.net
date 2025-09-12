@@ -1,7 +1,7 @@
 ---
 layout: option
 title: console_debugger
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 0
 example: 1

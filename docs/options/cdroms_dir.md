@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cdroms_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/CD-ROMs
 ---

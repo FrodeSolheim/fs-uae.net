@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_locker
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: OpenRetro.org Locker
 default: 0

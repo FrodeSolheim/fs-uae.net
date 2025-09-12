@@ -1,7 +1,7 @@
 ---
 layout: option
 title: fullscreen
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Start emulator in fullscreen mode
 default: 0

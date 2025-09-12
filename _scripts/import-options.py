@@ -4,7 +4,7 @@ import os
 import re
 
 
-def import_option(path: str) -> None:
+def import_option(path: str, tag: str = "") -> None:
     if os.path.isdir(path):
         return
 
@@ -70,13 +70,21 @@ def import_option(path: str) -> None:
     # if not text.endswith("\n"):
     #     text = text + "\n"
 
+    if tag:
+        pass
+    else:
+        if name.startswith("uae_"):
+            tag = "uae_option"
+        else:
+            tag = "fsuae_option"
+
     dest_md = dest + ".md"
     with open(dest_md, "w") as f:
         f.write("---\n")
         f.write("layout: option\n")
         f.write(f"title: {name}\n")
         # f.write("permalink: /docs/options/\n")
-        f.write("tags: [docs, options]\n")
+        f.write(f"tags: [docs, options, {tag}]\n")
         f.write("\n")
         if "Description" in data:
             f.write(f"description: {data["Description"]}\n")
@@ -102,7 +110,7 @@ def import_option(path: str) -> None:
 
 
 for item in os.listdir("../fs-uae-launcher/docs/options"):
-    import_option(os.path.join("../fs-uae-launcher/docs/options", item))
+    import_option(os.path.join("../fs-uae-launcher/docs/options", item), "launcher_option")
 
 for item in os.listdir("../fs-uae-3/doc/options"):
     import_option(os.path.join("../fs-uae-3/doc/options", item))

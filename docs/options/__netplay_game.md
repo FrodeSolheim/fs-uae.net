@@ -1,6 +1,6 @@
 ---
 layout: option
 title: __netplay_game
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_overlay_image
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: overlay.png
 since: 1.3.8

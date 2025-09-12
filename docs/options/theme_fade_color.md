@@ -1,7 +1,7 @@
 ---
 layout: option
 title: theme_fade_color
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: #3c3b37
 ---

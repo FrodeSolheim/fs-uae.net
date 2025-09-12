@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_maprom
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

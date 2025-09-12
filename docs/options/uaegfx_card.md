@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uaegfx_card
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Deprecated: uaegfx_card
 default: 0

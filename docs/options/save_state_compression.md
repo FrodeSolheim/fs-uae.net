@@ -1,7 +1,7 @@
 ---
 layout: option
 title: save_state_compression
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: 1
 example: 0

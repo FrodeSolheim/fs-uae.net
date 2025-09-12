@@ -1,6 +1,6 @@
 ---
 layout: option
 title: search_path
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 ---

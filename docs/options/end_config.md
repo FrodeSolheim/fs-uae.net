@@ -1,7 +1,7 @@
 ---
 layout: option
 title: end_config
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 1
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: swap_ctrl_keys
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Swap left and right CTRL keys
 default: 0

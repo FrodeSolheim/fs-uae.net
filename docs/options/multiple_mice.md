@@ -1,7 +1,7 @@
 ---
 layout: option
 title: multiple_mice
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Support multiple mice
 type: boolean

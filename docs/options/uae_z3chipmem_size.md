@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_z3chipmem_size
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: 
 type: integer

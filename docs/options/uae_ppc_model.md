@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_ppc_model
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

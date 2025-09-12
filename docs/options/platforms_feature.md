@@ -1,7 +1,7 @@
 ---
 layout: option
 title: platforms_feature
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Enable Additional Platforms (Requires Restart)
 default: 0

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_show_unpublished
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Unpublished Games
 default: 0

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_drive_volume_empty
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Empty Floppy Drive Volume
 default: 25

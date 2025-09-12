@@ -1,7 +1,7 @@
 ---
 layout: option
 title: keyboard_input_grab
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Grab keyboard when input is grabbed
 default: 1

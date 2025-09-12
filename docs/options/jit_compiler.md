@@ -1,7 +1,7 @@
 ---
 layout: option
 title: jit_compiler
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: JIT Compiler
 default: 0

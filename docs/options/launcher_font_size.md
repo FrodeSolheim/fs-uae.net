@@ -1,7 +1,7 @@
 ---
 layout: option
 title: launcher_font_size
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Launcher Font Size
 default:

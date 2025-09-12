@@ -1,7 +1,7 @@
 ---
 layout: option
 title: log_flush
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Flush log after each log line
 type: boolean

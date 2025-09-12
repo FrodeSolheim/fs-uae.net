@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_cpu_name
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

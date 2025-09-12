@@ -1,7 +1,7 @@
 ---
 layout: option
 title: network_card
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Network Card
 default: 0

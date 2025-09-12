@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cpu_frequency
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Specify the frequency of the emulated CPU in cycle-exact modes
 default:

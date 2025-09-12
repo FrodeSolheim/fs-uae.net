@@ -1,7 +1,7 @@
 ---
 layout: option
 title: always_on_top
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

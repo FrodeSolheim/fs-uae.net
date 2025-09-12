@@ -1,7 +1,7 @@
 ---
 layout: option
 title: whdload_model
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Override WHDLoad Amiga model
 default: auto

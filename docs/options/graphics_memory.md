@@ -1,7 +1,7 @@
 ---
 layout: option
 title: graphics_memory
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Graphics Card RAM
 default:

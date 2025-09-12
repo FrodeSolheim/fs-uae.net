@@ -1,7 +1,7 @@
 ---
 layout: option
 title: log_input
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Log Input Events
 default: 0

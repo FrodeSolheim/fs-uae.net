@@ -1,7 +1,7 @@
 ---
 layout: option
 title: zorro_iii_memory
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Zorro III Fast Memory
 default:

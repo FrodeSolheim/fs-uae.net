@@ -1,7 +1,7 @@
 ---
 layout: option
 title: expect_version
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Expect Specific FS-UAE Version
 default:

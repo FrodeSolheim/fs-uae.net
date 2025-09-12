@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cpu
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: CPU
 default:

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: offline_mode
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Offline mode
 default: 0

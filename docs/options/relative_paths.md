@@ -1,7 +1,7 @@
 ---
 layout: option
 title: relative_paths
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Relative paths
 example: relative_paths = 0

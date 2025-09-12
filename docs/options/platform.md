@@ -1,7 +1,7 @@
 ---
 layout: option
 title: platform
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Platform
 default: amiga

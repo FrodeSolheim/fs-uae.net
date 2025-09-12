@@ -1,7 +1,7 @@
 ---
 layout: option
 title: logs_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [base_dir]/Logs
 example: path/to/logs_dir

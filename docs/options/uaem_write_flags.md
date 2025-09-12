@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uaem_write_flags
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Write .uaem metadata files
 default: 1

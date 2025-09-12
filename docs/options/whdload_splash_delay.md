@@ -1,7 +1,7 @@
 ---
 layout: option
 title: whdload_splash_delay
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Override WHDLoad splash delay
 default: 200

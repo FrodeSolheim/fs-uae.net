@@ -1,7 +1,7 @@
 ---
 layout: option
 title: chip_memory
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Chip RAM
 default:

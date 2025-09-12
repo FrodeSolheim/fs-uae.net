@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_sound_output
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Sound emulation
 default:

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: audio_frequency
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Audio output frequency
 default: 48000

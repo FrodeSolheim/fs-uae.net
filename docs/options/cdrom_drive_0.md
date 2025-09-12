@@ -1,7 +1,7 @@
 ---
 layout: option
 title: cdrom_drive_0
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: path/to/cue_or_iso
 ---

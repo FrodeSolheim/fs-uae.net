@@ -1,7 +1,7 @@
 ---
 layout: option
 title: joystick_port_0_autoswitch
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Automatic mouse/joystick mode for mouse port
 default: 1

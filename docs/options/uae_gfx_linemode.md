@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_gfx_linemode
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Controls how lines are doubled and interlaced modes are handled
 example: double2

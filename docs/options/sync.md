@@ -1,7 +1,7 @@
 ---
 layout: option
 title: sync
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

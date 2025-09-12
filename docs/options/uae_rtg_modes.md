@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_rtg_modes
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: RTG color modes
 default: 0x212

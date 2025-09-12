@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_ppc_cpu_idle
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 type: Choice
 ---

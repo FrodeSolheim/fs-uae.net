@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_fastmem_size_k
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 type: choice
 ---

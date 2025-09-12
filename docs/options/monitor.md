@@ -1,7 +1,7 @@
 ---
 layout: option
 title: monitor
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Monitor to display FS-UAE on (fullscreen)
 default: middle-left

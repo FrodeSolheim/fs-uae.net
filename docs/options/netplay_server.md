@@ -1,7 +1,7 @@
 ---
 layout: option
 title: netplay_server
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: 192.168.7.4
 ---

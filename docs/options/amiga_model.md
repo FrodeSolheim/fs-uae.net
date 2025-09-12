@@ -1,7 +1,7 @@
 ---
 layout: option
 title: amiga_model
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: A500
 example: A1200/020

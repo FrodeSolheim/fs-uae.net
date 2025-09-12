@@ -1,6 +1,6 @@
 ---
 layout: option
 title: x_whdload_version
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 ---

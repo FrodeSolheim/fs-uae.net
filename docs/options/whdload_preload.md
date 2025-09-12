@@ -1,7 +1,7 @@
 ---
 layout: option
 title: whdload_preload
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Override WHDLoad preload option
 default: 1

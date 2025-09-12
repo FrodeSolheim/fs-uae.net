@@ -1,6 +1,6 @@
 ---
 layout: option
 title: language
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---

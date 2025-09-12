@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_slirp_implementation
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Slirp Implementation
 default: auto

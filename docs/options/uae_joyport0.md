@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_joyport0
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 ---
 

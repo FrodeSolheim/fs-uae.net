@@ -1,7 +1,7 @@
 ---
 layout: option
 title: screenshots_output_dir
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: [Desktop directory]
 since: 2.1.28

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_ppc_model
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

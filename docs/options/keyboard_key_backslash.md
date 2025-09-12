@@ -1,7 +1,7 @@
 ---
 layout: option
 title: keyboard_key_backslash
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 description: Host Key BACKSLASH
 default: action_key_backslash

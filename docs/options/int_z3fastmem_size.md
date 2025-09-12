@@ -1,7 +1,7 @@
 ---
 layout: option
 title: int_z3fastmem_size
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

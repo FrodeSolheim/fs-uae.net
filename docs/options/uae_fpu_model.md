@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_fpu_model
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 type: choice
 ---

@@ -1,7 +1,7 @@
 ---
 layout: option
 title: grab_input
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

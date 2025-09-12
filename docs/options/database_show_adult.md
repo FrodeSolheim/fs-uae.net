@@ -1,7 +1,7 @@
 ---
 layout: option
 title: database_show_adult
-tags: [docs, options]
+tags: [docs, options, launcher_option]
 
 description: Adult-Themed Games
 default: 0

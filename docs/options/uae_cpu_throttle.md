@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_cpu_throttle
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: FIXME
 default:

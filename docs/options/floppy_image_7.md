@@ -1,7 +1,7 @@
 ---
 layout: option
 title: floppy_image_7
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 ---
 

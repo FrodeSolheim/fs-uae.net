@@ -1,7 +1,7 @@
 ---
 layout: option
 title: screenshots_output_prefix
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 default: fs-uae
 example: myscreens

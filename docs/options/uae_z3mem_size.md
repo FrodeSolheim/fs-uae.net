@@ -1,7 +1,7 @@
 ---
 layout: option
 title: uae_z3mem_size
-tags: [docs, options]
+tags: [docs, options, uae_option]
 
 description: Size in MB of Zorro-III Fast RAM expansion board
 type: integer

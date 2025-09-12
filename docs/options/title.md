@@ -1,7 +1,7 @@
 ---
 layout: option
 title: title
-tags: [docs, options]
+tags: [docs, options, fsuae_option]
 
 example: Custom Title
 ---
