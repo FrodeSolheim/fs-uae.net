@@ -31,6 +31,7 @@ github_username:  FrodeSolheim
 # Build settings
 theme: minima
 plugins:
+  - jekyll-cache-bust
   - jekyll-feed
 
 permalink: /:categories/:year/:month/:day/:title/
