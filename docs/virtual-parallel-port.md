@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Vpar
+redirect_from:
+  - /docs/vpar/
+title: Virtual parallel port
 ---
 
-FIXME: RENAME
+# Virtual parallel port
 
-# Virtual parallel port protocol (vpar) for Amiga Emulators
-
-Written by Christian Vogelgsang <chris@vogelgsang.org>
+Virtual parallel port protocol (vpar) for Amiga Emulators by Christian Vogelgsang <chris@vogelgsang.org>.
 
 # Introduction
 
