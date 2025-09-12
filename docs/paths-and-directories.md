@@ -1,6 +1,8 @@
 ---
 layout: docs
-title: Directories
+redirect_from:
+  - /docs/directories/
+title: Paths and directories
 ---
 
 # Paths and directories

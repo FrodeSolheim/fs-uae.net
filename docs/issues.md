@@ -1,6 +1,8 @@
 ---
 layout: docs
-title: Known Issues
+redirect_from:
+  - /docs/issues/
+title: Known issues
 ---
 
 # Known issues

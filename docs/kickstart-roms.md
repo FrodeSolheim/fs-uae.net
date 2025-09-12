@@ -1,6 +1,8 @@
 ---
 layout: docs
-title: Kickstarts
+redirect_from:
+  - /docs/kickstarts/
+title: Kickstart ROMs
 ---
 
 # Kickstart ROMs

@@ -1,6 +1,8 @@
 ---
 layout: docs
-title: Floppy images
+redirect_from:
+  - /docs/floppy-images/
+title: Floppy disk images
 ---
 
 # Floppy disk images
