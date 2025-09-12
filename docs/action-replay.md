@@ -36,7 +36,7 @@ The following ROM files are recognized for Action Replay Mk III:
 
 FS-UAE will find the ROM (regardless of name) if the file extension is .rom and it is stored in the Kickstarts directory. For FS-UAE Launcher, the name of the file does not matter, as long as it is indexed by the file scanner. But the SHA-1 checksum of the file must match one of the supported ROMs.
 
-## Related Options
+## Related options
 
 - [freezer_cartridge](options/freezer-cartridge.md)
 - [modifier_key](options/modifier-key.md)

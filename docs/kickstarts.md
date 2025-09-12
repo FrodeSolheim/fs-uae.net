@@ -3,11 +3,11 @@ layout: docs
 title: Kickstarts
 ---
 
-# Kickstarts
+# Kickstart ROMs
 
-For the best emulation experience, you should have copies of the original Kickstart ROMs for each of the Amiga model you want to use. Using the built-in replacement Kickstart is possible, but it is less compatible with Amiga software.
+For the best emulation experience, you should have copies of the original Kickstart ROMs for each of the Amiga model you want to use. Using the built-in kickstart replacement (from the [AROS project](https://aros.sourceforge.io/)) is possible, but it is less compatible with Amiga software.
 
-## Getting Kickstarts via Amiga Forever
+## Getting Kickstart ROMs via Amiga Forever
 
 You can purchase Amiga Forever Plus or Premium edition in order to get licensed versions of Kickstart ROMs for all supported Amiga models.
 
@@ -20,7 +20,7 @@ There is also a value edition, but this only provides kickstart ROM for Amiga 50
 
 Please note that FS-UAE / Frode Solheim is not affiliated with Amiga Forever, and this project gets no provisions from the sale of Amiga Forever. This information is only provided as a convenience to the users of FS-UAE.
 
-## Extracting Kickstarts from Real Amiga Computers
+## Extracting Kickstart ROMs from real Amiga computers
 
 By using a tool such as Transrom or Grabkick, you can extract the ROM from your own Amiga and copy it over to your computer. Here are some guides:
 
@@ -30,7 +30,7 @@ By using a tool such as Transrom or Grabkick, you can extract the ROM from your 
 
 Please note that I don’t provide support for extracting / transferring Amiga ROM files, but you can probably get help on the [English Amiga Board](http://eab.abime.net/) if you are stuck.
 
-## Using the Replacement ROM
+## Using the replacement ROM
 
 FS-UAE will automatically use the replacement AROS ROM when:
 

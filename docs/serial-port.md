@@ -19,7 +19,7 @@ It is also possible to have FS-UAE wait during boot until you connect to the ser
 
     serial_port = tcp://127.0.0.1:1234/wait
 
-## Connecting to a Serial Device
+## Connecting to a serial device
 
 On Linux and OS X (and other Unix-like systems, probably), you can use the following option to emulate an Amiga serial port using a real device:
 

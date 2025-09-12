@@ -5,7 +5,7 @@ redirect_from:
 title: WHDLoad support
 ---
 
-# WHDLoad support
+# WHDLoad
 
 [WHDLoad](http://whdload.de/) is a sofware solution used to (primarily) allow floppy-based games to be installed to an Amiga hard drive and run from Workbench. Custom WHDLoad "slaves" are written for each game, which patches the game to work on modern HD-based Amigas.
 
@@ -37,7 +37,7 @@ You can run fs-uae-launcher with the path to a WHDLoad game archive. The Launche
 
 You can disable the progress dialog opened by FS-UAE Launcher by including the `--no-gui` parameter.
 
-> FIXME: Write about launching games using game / variant UUIDs.
+FIXME: Write about launching games using game / variant UUIDs.
 
 ## Saving Games
 

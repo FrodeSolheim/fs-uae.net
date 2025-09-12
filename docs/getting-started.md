@@ -3,7 +3,12 @@ layout: docs
 title: Getting started
 ---
 
-# Getting Started
+# Getting started
+
+TODO: Split into:
+
+- Getting started with FS-UAE (only)
+- Getting started with FS-UAE Launcher
 
 This page will help you get started using FS-UAE. It is quite easy to get FS-UAE up and running with your favorite games, as long as you have access to [Kickstart ROM images](kickstarts.md) and floppy image files for your games.
 
@@ -13,17 +18,17 @@ The next step is to install Kickstart ROMs for the Amiga models you wish to emul
 
 Finally, you should have some software you want to run, for instance games. Amiga Forever comes with a selection of software and games, and there are several web sites with legal Amiga downloads:
 
-- Full versions of many games: [http://www.amigafuture.de/downloads.php?cat=6](http://www.amigafuture.de/downloads.php?cat=6)
-- [Team 17 games](http://www.dream17.info/downloads.php?cat=1)
+- Full versions of many games: [https://www.amigafuture.de/app.php/dlext/index?cat=6](https://www.amigafuture.de/app.php/dlext/index?cat=6)
+- [Team 17 games](https://dream17.abime.net/downloads.php?cat=1)
 - [Gremlin games](http://gremlinworld.emuunlim.com/amiga.htm)
 - [Some Factor 5 games](http://www.factor5.de/downloads.shtml)
-- [List of downloadable games](https://openretro.org/reports/downloadable-games)
+- [List of downloadable games](https://openretro.org/reports/downloadable-games) on OpenRetro.org
 
 When you start FS-UAE Launcher, it should be quite straight-forward how to select the floppy disk images and start the emulation :)
 
 While you are running the emulation, press <kbd>F12</kbd> to open the menu. From this menu, you can quit, change floppies, restart the emulation, save states, and more. Depending on your keyboard and operating systems, you may need to press more than just <kbd>F12</kbd> alone, for example <kbd>Fn+F12</kbd> on some laptops, or even <kbd>Fn+Cmd+F12</kbd> on Mac laptops.
 
-## Starting FS-UAE for the First Time
+## Starting FS-UAE for the first time
 
 The following information is useful if you want to run FS-UAE manually without FS-UAE Launcher. If you are using FS-UAE Launcher, you do not need the rest of these instructions.
 
@@ -39,7 +44,7 @@ If you want to play a game from a floppy disk image (ADF), copy the file (or fil
 
 > **Note:** It is not a requirement to copy the ADF files here, read the detailed documentation if you want to learn how to have the disk files stored wherever you like.
 
-## Creating a Configuration File
+## Creating a configuration file
 
 The last thing you need to do is to create a configuration file for FS-UAE. Download [Default.fs-uae](https://fs-uae.net/files/Default.fs-uae) and save this file in the Configurations folder (right-click the link and choose "Save link as", or similar option in your browser).
 
@@ -55,7 +60,7 @@ should be changed to reflect the name of the floppy you want to boot. If, for in
 
     floppy_drive_0 = Lotus Turbo Challenge 2 (1991)(Gremlin)[cr CPY].adf
 
-## Booting the Game
+## Booting the game
 
 When you now start FS-UAE, Lotus 2 (or the game you configured) should boot :)
 
@@ -63,7 +68,7 @@ If you had a recognized and supported gamepad or joystick controller connected w
 
 If you do not have a joystick or gamepad connected, the cursor keys and right ctrl/alt key on your keyboard will be used to emulate the primary Amiga joystick.
 
-## Configuring a Multi-Disk Game
+## Configuring a multi-disk game
 
 When a game has multiple floppy disks, there are two ways to set this up in FS-UAE. One way is to use multiple floppy drives, and put one disk in each drive like you would on a real Amiga with multiple drives:
 
@@ -78,12 +83,12 @@ When a game has more than 4 floppies, or the game supports just one floppy drive
     floppy_image_0 = Pinball Dreams (Disk 1 of 2)[cr FLT].ad
     floppy_image_1 = Pinball Dreams (Disk 2 of 2)[cr FLT].adf
 
-You are then able to swap floppies using the FS-UAE (F12) menu. In the above example, Disk 1 is inserted in drive 0, and both Disk 1 and Disk 2 is added to the floppy image list. You can add up to 20 floppies to the floppy image list using the floppy*image*\* options.
+You are then able to swap floppies using the FS-UAE (F12) menu. In the above example, Disk 1 is inserted in drive 0, and both Disk 1 and Disk 2 is added to the floppy image list. You can add up to 20 floppies to the floppy image list using the floppy*image*... options.
 
 ## Troubleshooting
 
 If you encounter any issue, please see if your problem is listed in the FAQ. If not, you are welcome to post a question in the support forum. I monitor this forum myself, and everyone else there is nice and will help you if they can :)
 
-## More Information and Configuration Options
+## More information and configuration options
 
 Head over to the Documentation section on [https://fs-uae.net/docs](https://fs-uae.net/docs) if you want to explore the options and features FS-UAE can offer!

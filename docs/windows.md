@@ -3,15 +3,19 @@ layout: docs
 title: Windows
 ---
 
-# Notes for Windows Users
+# Notes for Windows users
 
 This document has some information specific to the Windows version of FS-UAE.
+
+## Performance
+
+To ensure best and most stable performance, go to Control Panel, and in Power Options, change power plan to `High performance` (might be found under `Show additional plans`.
 
 ## Amiga Forever
 
 FS-UAE Launcher should automatically find Amiga [kickstarts](kickstarts.md) from [Amiga Forever](amiga-forever.md) if you have that installed. If not, please report it. Remember that you may have to start the Amiga Forever Player at least one in order for the `rom.key` file to be written to disk.
 
-## OpenGL Drivers
+## OpenGL drivers
 
 FS-UAE requires working and accelerated OpenGL drivers (it does not use DirectX/Direct3D). OpenGL drivers are usually bundled with the display drivers for your graphics card - so they should already be present on your system.
 
@@ -21,7 +25,7 @@ If you suspect problems with your OpenGL graphics driver, you can download and r
 
 There has been reported a case where FS-UAE only starts briefly, with the window disappearing immediately after appear. The problem turned out to be an issue with the OpenGL drivers. The aforementioned GLView program didn't even start (aborted with a System.AccessViolationException error). A reinstall of current display drivers fixed the problem for both GLView and FS-UAE.
 
-## Conflicting Software
+## Conflicting software
 
 The following software has been reported by users to cause problems for FS-UAE:
 
