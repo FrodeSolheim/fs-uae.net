@@ -3,6 +3,7 @@ _site
 .jekyll-metadata
 .obsidian/
 .sass-cache
+/_scripts/publish
 /processed
 /public_html/**/*.html
 vendor

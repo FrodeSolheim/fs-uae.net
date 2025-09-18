@@ -1,0 +1,23 @@
+---
+layout: download
+title: Download
+permalink: /download/fedora/
+---
+
+<h2>Fedora</h2>
+<p>
+  To get the latest version,
+  <b
+    >first visit my
+    <a href="https://software.opensuse.org/download.html?project=home%3AFrodeSolheim&package=fs-uae">Fedora package repository</a>
+    and add it to your system</b
+  >
+  using the commands listed there. If you skip this step you may get an outdated version from your Fedora distribution. Then, to install FS-UAE as well as the Launcher and the Arcade frontends:
+</p>
+<!-- FIXME: Not sure if kernel-modules-extra must be manually installed anymore -->
+<pre>sudo dnf install fs-uae fs-uae-launcher fs-uae-arcade kernel-modules-extra</pre>
+
+<p>Alternatively, you can download the generic <a href="/download/linux/">Linux version</a> which should work on most recent Linux distributions.</p>
+
+<h2>Plugins</h2>
+{%- include plugins-linux.html -%}
