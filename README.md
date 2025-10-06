@@ -26,3 +26,7 @@ bundle exec jekyll build
 
 - `_scraped` - Contains a scraped copy of the old fs-uae.net wordpress site as of 2025-09-06.
 - `templates/scraped` - Contains jinja2 templates based on the scraped pages (header and footer) are extracted to common templates (etc).
+
+## Known issues
+
+- The documentation (from .md files) often contains links which don't resolve after processing to html. Partially because the website uses a file.md -> directory/ structure for the generated site. Ideally, there would be a link format which made sense/works both when reading/browsing the .md files directly, and when the using the generated site. But on the surface, it does not look like that's going to work, and the links must either be changed in source, or they need to be transformed someshow before/when generating the website.
